@@ -154,5 +154,15 @@ namespace Roguelite.Tests
             yield return null;
             Assert.That(player.GetComponent<PlayerInputReader>().AttackPressed, Is.True);
         }
+
+        [UnityTest]
+        public IEnumerator LeftMouseClickReachesCombatAndDamagesTarget()
+        {
+            yield return SceneManager.LoadSceneAsync("CombatArena");
+            GameObject.Find("Player").SendMessage("OnApplicationFocus", true);
+            InputSystem.QueueStateEvent(mouse, new MouseState { position = new Vector2(Screen.width, Screen.height / 2f), buttons = 1 });
+            yield return new WaitForSeconds(0.16f);
+            Assert.That(GameObject.Find("TrainingDummy").GetComponent<HealthBody>().Current, Is.EqualTo(28));
+        }
     }
 }

@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Game/Scenes/PlayerArena.unity
     guid: c86430a66358afb40b8abdad01cfd97f
+  - enabled: 1
+    path: Assets/_Game/Scenes/CombatArena.unity
+    guid: 3b887e4cb499e304182091835d0ffb09
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

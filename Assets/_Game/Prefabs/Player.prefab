@@ -18,6 +18,10 @@ GameObject:
   - component: {fileID: 8725380654226596556}
   - component: {fileID: 6890312222198921926}
   - component: {fileID: 7228503653597669378}
+  - component: {fileID: 280622602257447510}
+  - component: {fileID: 4957297321113577325}
+  - component: {fileID: 3098077039475181860}
+  - component: {fileID: 3042940758504270682}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -250,6 +254,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d770de76940c58c479bd7aa00cd60242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Game.Runtime::Roguelite.PlayerMotor2D
+--- !u!114 &280622602257447510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324993907067876480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a55859614f71f034ab38b29f238e8339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.Runtime::Roguelite.PlayerHealth
+  team: 1
+  maximumHealth: 40
+  armor: 0
+  stats: {fileID: 11400000, guid: dbb233aa15215da4da8c5acb6dfca19c, type: 2}
+--- !u!114 &4957297321113577325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324993907067876480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce975077a0351c418778106fa5ad410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.Runtime::Roguelite.Hurtbox
+  health: {fileID: 280622602257447510}
+--- !u!114 &3098077039475181860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324993907067876480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1ebcffaf8dbb94a92523dd6a970d46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.Runtime::Roguelite.PlayerCombat
+  attack: {fileID: 11400000, guid: 884eecc0e9ded6649882b95e12621eb9, type: 2}
+--- !u!114 &3042940758504270682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324993907067876480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5d07b16f4c93c4d91e30058dd79aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.Runtime::Roguelite.HitFeedback
 --- !u!1 &8612123665634215972
 GameObject:
   m_ObjectHideFlags: 0

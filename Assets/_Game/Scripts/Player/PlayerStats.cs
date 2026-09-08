@@ -4,6 +4,7 @@ namespace Roguelite
     [CreateAssetMenu(menuName = "Roguelite/Player Stats")]
     public sealed class PlayerStats : ScriptableObject
     {
+        [Min(1)] public float maximumHealth = 100;
         [Min(0.1f)] public float moveSpeed = 5;
         [Min(1)] public float sprintMultiplier = 1.5f;
         [Min(0.1f)] public float dashDistance = 3;
