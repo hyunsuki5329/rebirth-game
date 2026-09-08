@@ -16,9 +16,12 @@ namespace Roguelite
         public bool PathComplete { get; private set; }
         public RewardService Rewards { get; } = new RewardService();
         public event Action PathCompleted;
+        private bool rewardPending;
+        private void LateUpdate() => SettleRoomReward();
         private void Start() { if (Run == null) BeginRun(initialSeed); }
         public void BeginRun(int seed)
         {
+            rewardPending = false;
             RemoveRoom();
             if (Player != null) { Player.gameObject.SetActive(false); Destroy(Player.gameObject); }
             Run = new RunState(seed); Graph = new RoomGraph(seed); PathComplete = false;
@@ -30,6 +33,7 @@ namespace Roguelite
         public bool Advance(bool shortcut = false)
         {
             if (Room == null || !Room.IsClear || Player.IsDead || PathComplete) return false;
+            SettleRoomReward();
             int next = Graph.Next(Run.RoomIndex, shortcut);
             if (next < 0) { PathComplete = true; PathCompleted?.Invoke(); return true; }
             RemoveRoom();
@@ -55,9 +59,22 @@ namespace Roguelite
             Player.GetComponent<PlayerMotor2D>().Teleport(Room.entry);
             Room.Cleared += GrantReward;
             Room.exit.Entered += OnExit;
+            if (Player.TryGetComponent<MomentumSystem>(out var momentum)) momentum.BeginRoom();
             Room.Initialize(Player);
         }
-        private void GrantReward() => Rewards.GrantRoom(Run, Run.RoomIndex, Room.definition.gold);
+        private void GrantReward()
+        {
+            if (Player.TryGetComponent<MomentumSystem>(out var momentum))
+                momentum.ClearRoom(Room.Enemies.Count > 0);
+            rewardPending = true;
+        }
+        private void SettleRoomReward()
+        {
+            if (!rewardPending || Room == null) return;
+            rewardPending = false;
+            Rewards.GoldMultiplier = Player.TryGetComponent<MomentumSystem>(out var momentum) ? momentum.GoldMultiplier : 1;
+            Rewards.GrantRoom(Run, Run.RoomIndex, Room.definition.gold);
+        }
         private void OnExit() => Advance();
         private void RemoveRoom()
         {

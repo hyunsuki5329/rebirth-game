@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 4957297321113577325}
   - component: {fileID: 3098077039475181860}
   - component: {fileID: 3042940758504270682}
+  - component: {fileID: 5442902368254765961}
+  - component: {fileID: 7163020560831492048}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -308,6 +310,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5d07b16f4c93c4d91e30058dd79aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Game.Runtime::Roguelite.HitFeedback
+--- !u!114 &5442902368254765961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324993907067876480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 345935c1c72a4793aa5c763abe02b9f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.Runtime::Roguelite.ComboSystem
+  definitions:
+  - {fileID: 11400000, guid: 8ed2b8ebd1cfb104eb923743289a2e65, type: 2}
+  - {fileID: 11400000, guid: 80425a4144f078f43936337657cbd0ae, type: 2}
+--- !u!114 &7163020560831492048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324993907067876480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a56462d09bcb4032b925509817e7d5ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.Runtime::Roguelite.MomentumSystem
+  config: {fileID: 11400000, guid: 8affbc8444dc4024c946144bb94fbead, type: 2}
 --- !u!1 &8612123665634215972
 GameObject:
   m_ObjectHideFlags: 0

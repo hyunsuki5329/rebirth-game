@@ -72,7 +72,8 @@ namespace Roguelite.Tests
                     Assert.That(room.IsClear, Is.True);
                     Assert.That(room.exit.IsOpen, Is.True);
                     Assert.That(clears, Is.EqualTo(1));
-                    Assert.That(dungeon.Run.Gold, Is.EqualTo(before + room.definition.gold));
+                    yield return null; // Reward settles after final hit/kill event callbacks.
+                    Assert.That(dungeon.Run.Gold, Is.EqualTo(before + Roguelite.Core.RewardCalculator.Gold(room.definition.gold, dungeon.Rewards.GoldMultiplier)));
                     Assert.That(dungeon.Rewards.GrantRoom(dungeon.Run, dungeon.Run.RoomIndex, 999), Is.False);
                     combatRooms++;
                 }

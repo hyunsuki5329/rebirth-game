@@ -34,6 +34,8 @@ namespace Roguelite
             status.text = $"M4 Dungeon test | Room {dungeon.Run.RoomIndex + 1} | Gold {dungeon.Run.Gold}\n" +
                 (dungeon.Player.IsDead ? "Defeated. Click New Run." : dungeon.PathComplete ? "Boss entrance reached (combat follows in M8)." :
                 dungeon.Room.IsClear ? "Room clear. Walk into the green exit on the right." : "Defeat all enemies to unlock the exit.");
+            if (dungeon.Player.TryGetComponent<MomentumSystem>(out var momentum))
+                status.text += $"\nMomentum {momentum.Model.Value:0} | Gold x{momentum.GoldMultiplier:0.00} | Combo {dungeon.Player.GetComponent<ComboSystem>().LastCompleted ?? "-"}";
         }
         private static Text MakeText(Transform parent, Vector2 position, Vector2 size)
         {
