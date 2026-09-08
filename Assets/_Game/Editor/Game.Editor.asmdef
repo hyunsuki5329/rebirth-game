@@ -1,5 +1,5 @@
 {
   "name": "Game.Editor",
-  "references": ["Game.Core", "Game.Runtime"],
+  "references": ["Game.Core", "Game.Runtime", "Unity.InputSystem"],
   "includePlatforms": ["Editor"]
 }

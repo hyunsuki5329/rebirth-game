@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="9" result="Failed(Child)" total="9" passed="2" failed="7" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-08 04:09:35Z" end-time="2026-09-08 04:09:35Z" duration="0.0454817">
+  <test-suite type="TestSuite" id="1000" name="My Game" fullname="My Game" runstate="Runnable" testcasecount="9" result="Failed" site="Child" start-time="2026-09-08 04:09:35Z" end-time="2026-09-08 04:09:35Z" duration="0.045482" total="9" passed="2" failed="7" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1013" name="Game.EditModeTests.dll" fullname="D:/Unity Project/My Game/.validation/Library/ScriptAssemblies/Game.EditModeTests.dll" runstate="Runnable" testcasecount="9" result="Failed" site="Child" start-time="2026-09-08 04:09:35Z" end-time="2026-09-08 04:09:35Z" duration="0.041070" total="9" passed="2" failed="7" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="9048" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1014" name="Roguelite" fullname="Roguelite" runstate="Runnable" testcasecount="9" result="Failed" site="Child" start-time="2026-09-08 04:09:35Z" end-time="2026-09-08 04:09:35Z" duration="0.040779" total="9" passed="2" failed="7" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1015" name="Tests" fullname="Roguelite.Tests" runstate="Runnable" testcasecount="9" result="Failed" site="Child" start-time="2026-09-08 04:09:35Z" end-time="2026-09-08 04:09:35Z" duration="0.040691" total="9" passed="2" failed="7" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1001" name="FoundationTests" fullname="Roguelite.Tests.FoundationTests" classname="Roguelite.Tests.FoundationTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-08 04:09:35Z" end-time="2026-09-08 04:09:35Z" duration="0.029913" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1002" name="PlayerTestSceneSupportsVisibleZeroGravity2DPhysics" fullname="Roguelite.Tests.FoundationTests.PlayerTestSceneSupportsVisibleZeroGravity2DPhysics" methodname="PlayerTestSceneSupportsVisibleZeroGravity2DPhysics" classname="Roguelite.Tests.FoundationTests" runstate="Runnable" seed="195730723" result="Passed" start-time="2026-09-08 04:09:35Z" end-time="2026-09-08 04:09:35Z" duration="0.018063" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1003" name="MovementRulesTests" fullname="Roguelite.Tests.MovementRulesTests" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" testcasecount="8" result="Failed" site="Child" start-time="2026-09-08 04:09:35Z" end-time="2026-09-08 04:09:35Z" duration="0.009915" total="8" passed="1" failed="7" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1011" name="DashCooldownStartsAtEndAndRejectsRepeatedStarts" fullname="Roguelite.Tests.MovementRulesTests.DashCooldownStartsAtEndAndRejectsRepeatedStarts" methodname="DashCooldownStartsAtEndAndRejectsRepeatedStarts" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="510782054" result="Failed" start-time="2026-09-08 04:09:35Z" end-time="2026-09-08 04:09:35Z" duration="0.004249" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+                <stack-trace><![CDATA[at Roguelite.Tests.MovementRulesTests.DashCooldownStartsAtEndAndRejectsRepeatedStarts () [0x00014] in D:\Unity Project\My Game\.validation\Assets\_Game\Tests\EditMode\MovementRulesTests.cs:31
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1012" name="InvalidDashDurationCannotCreateInfiniteSpeed" fullname="Roguelite.Tests.MovementRulesTests.InvalidDashDurationCannotCreateInfiniteSpeed" methodname="InvalidDashDurationCannotCreateInfiniteSpeed" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="1815487172" result="Failed" start-time="2026-09-08 04:09:35Z" end-time="2026-09-08 04:09:35Z" duration="0.000981" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Expected: <System.ArgumentOutOfRangeException>
+  But was:  null
+]]></message>
+                <stack-trace><![CDATA[at Roguelite.Tests.MovementRulesTests.InvalidDashDurationCannotCreateInfiniteSpeed () [0x00000] in D:\Unity Project\My Game\.validation\Assets\_Game\Tests\EditMode\MovementRulesTests.cs:44
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1009" name="MovementClampsDiagonalButPreservesAnalogMagnitude" fullname="Roguelite.Tests.MovementRulesTests.MovementClampsDiagonalButPreservesAnalogMagnitude" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-09-08 04:09:35Z" end-time="2026-09-08 04:09:35Z" duration="0.003278" total="5" passed="1" failed="4" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1004" name="MovementClampsDiagonalButPreservesAnalogMagnitude(1,0,False,5)" fullname="Roguelite.Tests.MovementRulesTests.MovementClampsDiagonalButPreservesAnalogMagnitude(1,0,False,5)" methodname="MovementClampsDiagonalButPreservesAnalogMagnitude" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="630849278" result="Failed" start-time="2026-09-08 04:09:35Z" end-time="2026-09-08 04:09:35Z" duration="0.002154" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: 5.0f +/- 0.0001d
+  But was:  0.0d
+]]></message>
+                  <stack-trace><![CDATA[at Roguelite.Tests.MovementRulesTests.MovementClampsDiagonalButPreservesAnalogMagnitude (System.Single x, System.Single y, System.Boolean sprint, System.Single expected) [0x00013] in D:\Unity Project\My Game\.validation\Assets\_Game\Tests\EditMode\MovementRulesTests.cs:17
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case id="1005" name="MovementClampsDiagonalButPreservesAnalogMagnitude(1,1,False,5)" fullname="Roguelite.Tests.MovementRulesTests.MovementClampsDiagonalButPreservesAnalogMagnitude(1,1,False,5)" methodname="MovementClampsDiagonalButPreservesAnalogMagnitude" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="1702473052" result="Failed" start-time="2026-09-08 04:09:35Z" end-time="2026-09-08 04:09:35Z" duration="0.000160" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: 5.0f +/- 0.0001d
+  But was:  0.0d
+]]></message>
+                  <stack-trace><![CDATA[at Roguelite.Tests.MovementRulesTests.MovementClampsDiagonalButPreservesAnalogMagnitude (System.Single x, System.Single y, System.Boolean sprint, System.Single expected) [0x00013] in D:\Unity Project\My Game\.validation\Assets\_Game\Tests\EditMode\MovementRulesTests.cs:17
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case id="1006" name="MovementClampsDiagonalButPreservesAnalogMagnitude(1,1,True,7.5f)" fullname="Roguelite.Tests.MovementRulesTests.MovementClampsDiagonalButPreservesAnalogMagnitude(1,1,True,7.5f)" methodname="MovementClampsDiagonalButPreservesAnalogMagnitude" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="1219166102" result="Failed" start-time="2026-09-08 04:09:35Z" end-time="2026-09-08 04:09:35Z" duration="0.000119" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: 7.5f +/- 0.0001d
+  But was:  0.0d
+]]></message>
+                  <stack-trace><![CDATA[at Roguelite.Tests.MovementRulesTests.MovementClampsDiagonalButPreservesAnalogMagnitude (System.Single x, System.Single y, System.Boolean sprint, System.Single expected) [0x00013] in D:\Unity Project\My Game\.validation\Assets\_Game\Tests\EditMode\MovementRulesTests.cs:17
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case id="1007" name="MovementClampsDiagonalButPreservesAnalogMagnitude(0,0,True,0)" fullname="Roguelite.Tests.MovementRulesTests.MovementClampsDiagonalButPreservesAnalogMagnitude(0,0,True,0)" methodname="MovementClampsDiagonalButPreservesAnalogMagnitude" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="56219317" result="Passed" start-time="2026-09-08 04:09:35Z" end-time="2026-09-08 04:09:35Z" duration="0.000042" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1008" name="MovementClampsDiagonalButPreservesAnalogMagnitude(0.5f,0,False,2.5f)" fullname="Roguelite.Tests.MovementRulesTests.MovementClampsDiagonalButPreservesAnalogMagnitude(0.5f,0,False,2.5f)" methodname="MovementClampsDiagonalButPreservesAnalogMagnitude" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="495792391" result="Failed" start-time="2026-09-08 04:09:35Z" end-time="2026-09-08 04:09:35Z" duration="0.000076" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: 2.5f +/- 0.0001d
+  But was:  0.0d
+]]></message>
+                  <stack-trace><![CDATA[at Roguelite.Tests.MovementRulesTests.MovementClampsDiagonalButPreservesAnalogMagnitude (System.Single x, System.Single y, System.Boolean sprint, System.Single expected) [0x00013] in D:\Unity Project\My Game\.validation\Assets\_Game\Tests\EditMode\MovementRulesTests.cs:17
+]]></stack-trace>
+                </failure>
+              </test-case>
+            </test-suite>
+            <test-case id="1010" name="SprintReleaseImmediatelyRestoresWalkingSpeed" fullname="Roguelite.Tests.MovementRulesTests.SprintReleaseImmediatelyRestoresWalkingSpeed" methodname="SprintReleaseImmediatelyRestoresWalkingSpeed" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="306652365" result="Failed" start-time="2026-09-08 04:09:35Z" end-time="2026-09-08 04:09:35Z" duration="0.000191" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Expected: 6
+  But was:  0.0f
+]]></message>
+                <stack-trace><![CDATA[at Roguelite.Tests.MovementRulesTests.SprintReleaseImmediatelyRestoresWalkingSpeed () [0x00000] in D:\Unity Project\My Game\.validation\Assets\_Game\Tests\EditMode\MovementRulesTests.cs:23
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[Saving results to: C:/Users/User/AppData/LocalLow/DefaultCompany/My Game\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

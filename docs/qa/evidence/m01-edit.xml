@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="10" result="Passed" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-08 04:16:17Z" end-time="2026-09-08 04:16:17Z" duration="0.0472887">
+  <test-suite type="TestSuite" id="1000" name="My Game" fullname="My Game" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-09-08 04:16:17Z" end-time="2026-09-08 04:16:17Z" duration="0.047289" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1015" name="Game.EditModeTests.dll" fullname="D:/Unity Project/My Game/.validation/Library/ScriptAssemblies/Game.EditModeTests.dll" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-09-08 04:16:17Z" end-time="2026-09-08 04:16:17Z" duration="0.037584" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="6156" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1016" name="Roguelite" fullname="Roguelite" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-09-08 04:16:17Z" end-time="2026-09-08 04:16:17Z" duration="0.037255" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1017" name="Tests" fullname="Roguelite.Tests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-09-08 04:16:17Z" end-time="2026-09-08 04:16:17Z" duration="0.037118" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="FoundationTests" fullname="Roguelite.Tests.FoundationTests" classname="Roguelite.Tests.FoundationTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-08 04:16:17Z" end-time="2026-09-08 04:16:17Z" duration="0.025513" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1002" name="PlayerTestSceneSupportsVisibleZeroGravity2DPhysics" fullname="Roguelite.Tests.FoundationTests.PlayerTestSceneSupportsVisibleZeroGravity2DPhysics" methodname="PlayerTestSceneSupportsVisibleZeroGravity2DPhysics" classname="Roguelite.Tests.FoundationTests" runstate="Runnable" seed="374491068" result="Passed" start-time="2026-09-08 04:16:17Z" end-time="2026-09-08 04:16:17Z" duration="0.016301" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1003" name="MovementRulesTests" fullname="Roguelite.Tests.MovementRulesTests" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-09-08 04:16:17Z" end-time="2026-09-08 04:16:17Z" duration="0.006749" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1011" name="DashCooldownStartsAtEndAndRejectsRepeatedStarts" fullname="Roguelite.Tests.MovementRulesTests.DashCooldownStartsAtEndAndRejectsRepeatedStarts" methodname="DashCooldownStartsAtEndAndRejectsRepeatedStarts" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="623233316" result="Passed" start-time="2026-09-08 04:16:17Z" end-time="2026-09-08 04:16:17Z" duration="0.001417" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1012" name="InvalidDashDurationCannotCreateInfiniteSpeed" fullname="Roguelite.Tests.MovementRulesTests.InvalidDashDurationCannotCreateInfiniteSpeed" methodname="InvalidDashDurationCannotCreateInfiniteSpeed" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="1216087433" result="Passed" start-time="2026-09-08 04:16:17Z" end-time="2026-09-08 04:16:17Z" duration="0.001923" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1009" name="MovementClampsDiagonalButPreservesAnalogMagnitude" fullname="Roguelite.Tests.MovementRulesTests.MovementClampsDiagonalButPreservesAnalogMagnitude" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-09-08 04:16:17Z" end-time="2026-09-08 04:16:17Z" duration="0.001780" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1004" name="MovementClampsDiagonalButPreservesAnalogMagnitude(1,0,False,5)" fullname="Roguelite.Tests.MovementRulesTests.MovementClampsDiagonalButPreservesAnalogMagnitude(1,0,False,5)" methodname="MovementClampsDiagonalButPreservesAnalogMagnitude" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="2048734160" result="Passed" start-time="2026-09-08 04:16:17Z" end-time="2026-09-08 04:16:17Z" duration="0.000634" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1005" name="MovementClampsDiagonalButPreservesAnalogMagnitude(1,1,False,5)" fullname="Roguelite.Tests.MovementRulesTests.MovementClampsDiagonalButPreservesAnalogMagnitude(1,1,False,5)" methodname="MovementClampsDiagonalButPreservesAnalogMagnitude" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="861341236" result="Passed" start-time="2026-09-08 04:16:17Z" end-time="2026-09-08 04:16:17Z" duration="0.000083" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1006" name="MovementClampsDiagonalButPreservesAnalogMagnitude(1,1,True,7.5f)" fullname="Roguelite.Tests.MovementRulesTests.MovementClampsDiagonalButPreservesAnalogMagnitude(1,1,True,7.5f)" methodname="MovementClampsDiagonalButPreservesAnalogMagnitude" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="729979441" result="Passed" start-time="2026-09-08 04:16:17Z" end-time="2026-09-08 04:16:17Z" duration="0.000047" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1007" name="MovementClampsDiagonalButPreservesAnalogMagnitude(0,0,True,0)" fullname="Roguelite.Tests.MovementRulesTests.MovementClampsDiagonalButPreservesAnalogMagnitude(0,0,True,0)" methodname="MovementClampsDiagonalButPreservesAnalogMagnitude" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="15624898" result="Passed" start-time="2026-09-08 04:16:17Z" end-time="2026-09-08 04:16:17Z" duration="0.000039" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1008" name="MovementClampsDiagonalButPreservesAnalogMagnitude(0.5f,0,False,2.5f)" fullname="Roguelite.Tests.MovementRulesTests.MovementClampsDiagonalButPreservesAnalogMagnitude(0.5f,0,False,2.5f)" methodname="MovementClampsDiagonalButPreservesAnalogMagnitude" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="1357797380" result="Passed" start-time="2026-09-08 04:16:17Z" end-time="2026-09-08 04:16:17Z" duration="0.000044" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1010" name="SprintReleaseImmediatelyRestoresWalkingSpeed" fullname="Roguelite.Tests.MovementRulesTests.SprintReleaseImmediatelyRestoresWalkingSpeed" methodname="SprintReleaseImmediatelyRestoresWalkingSpeed" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="360235415" result="Passed" start-time="2026-09-08 04:16:17Z" end-time="2026-09-08 04:16:17Z" duration="0.000120" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1013" name="PlayerPrefabTests" fullname="Roguelite.Tests.PlayerPrefabTests" classname="Roguelite.Tests.PlayerPrefabTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-08 04:16:17Z" end-time="2026-09-08 04:16:17Z" duration="0.003715" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1014" name="PlayerPrefabHasSeparatedInputAndSinglePhysicsMotor" fullname="Roguelite.Tests.PlayerPrefabTests.PlayerPrefabHasSeparatedInputAndSinglePhysicsMotor" methodname="PlayerPrefabHasSeparatedInputAndSinglePhysicsMotor" classname="Roguelite.Tests.PlayerPrefabTests" runstate="Runnable" seed="1579306960" result="Passed" start-time="2026-09-08 04:16:17Z" end-time="2026-09-08 04:16:17Z" duration="0.003229" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/User/AppData/LocalLow/DefaultCompany/My Game\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
