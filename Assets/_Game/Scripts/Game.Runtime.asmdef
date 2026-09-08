@@ -1,0 +1,5 @@
+{
+  "name": "Game.Runtime",
+  "rootNamespace": "Roguelite",
+  "references": ["Game.Core", "Unity.InputSystem", "Unity.ugui"]
+}

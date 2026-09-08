@@ -1,0 +1,5 @@
+{
+  "name": "Game.Core",
+  "rootNamespace": "Roguelite.Core",
+  "noEngineReferences": true
+}
