@@ -16,6 +16,13 @@ namespace Roguelite
             dash = GetComponent<PlayerDash>();
         }
         public void Knockback(Vector2 velocity) => impulse = velocity;
+        public void Teleport(Vector2 position)
+        {
+            impulse = Vector2.zero;
+            body.linearVelocity = Vector2.zero;
+            body.position = position;
+            transform.position = position;
+        }
         private void FixedUpdate()
         {
             if (!CanMove) { body.linearVelocity = Vector2.zero; return; }

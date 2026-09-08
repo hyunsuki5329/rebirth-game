@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Game/Scenes/EnemyArena.unity
     guid: 7e280ccf4bcedaa4fa0b2c31c8905d2d
+  - enabled: 1
+    path: Assets/_Game/Scenes/DungeonArena.unity
+    guid: 10cb27efc167b1a4f8e77505ac3ac0c3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

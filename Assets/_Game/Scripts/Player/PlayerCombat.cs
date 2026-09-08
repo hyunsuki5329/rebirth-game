@@ -9,6 +9,7 @@ namespace Roguelite
         private PlayerAim aim;
         private PlayerMovement movement;
         private HealthBody health;
+        private CombatEffects effects;
         private Vector2 direction;
         private float impactAt, readyAt, activeDuration;
         private bool pending;
@@ -22,6 +23,7 @@ namespace Roguelite
         {
             input = GetComponent<PlayerInputReader>(); aim = GetComponent<PlayerAim>();
             movement = GetComponent<PlayerMovement>(); health = GetComponent<HealthBody>();
+            effects = GetComponent<CombatEffects>() ?? gameObject.AddComponent<CombatEffects>();
         }
         private void Update()
         {
@@ -46,6 +48,7 @@ namespace Roguelite
         private void Strike()
         {
             var go = new GameObject("Player attack", typeof(CircleCollider2D), typeof(Hitbox));
+            effects.Track(go);
             go.transform.position = transform.position;
             var collider = go.GetComponent<CircleCollider2D>();
             collider.radius = attack.range; collider.isTrigger = true;
@@ -57,6 +60,7 @@ namespace Roguelite
         private void ShowVisual(Color color, float duration)
         {
             var visual = new GameObject("Attack range", typeof(AttackVisual));
+            effects.Track(visual);
             visual.transform.position = transform.position;
             visual.GetComponent<AttackVisual>().Initialize(attack.range, attack.arc, direction, color, duration);
         }

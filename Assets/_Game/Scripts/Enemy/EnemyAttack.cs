@@ -7,6 +7,7 @@ namespace Roguelite
     {
         public EnemyData data;
         private HealthBody owner;
+        private CombatEffects effects;
         private float impactAt, activeUntil, readyAt;
         private bool pending;
         private GameObject preview;
@@ -14,7 +15,11 @@ namespace Roguelite
         public bool IsBusy => Time.time < readyAt;
         public bool IsActive => !pending && Time.time < activeUntil;
         public event Action Fired;
-        private void Awake() => owner = GetComponent<HealthBody>();
+        private void Awake()
+        {
+            owner = GetComponent<HealthBody>();
+            effects = GetComponent<CombatEffects>() ?? gameObject.AddComponent<CombatEffects>();
+        }
         public bool TryBegin(Vector2 facing)
         {
             if (!isActiveAndEnabled || owner.IsDead || IsBusy || facing.sqrMagnitude < 0.001f) return false;
@@ -39,6 +44,7 @@ namespace Roguelite
         private void FireMelee()
         {
             var go = new GameObject("Enemy attack", typeof(CircleCollider2D), typeof(Hitbox));
+            effects.Track(go);
             go.layer = LayerMask.NameToLayer("Hitbox");
             go.transform.position = transform.position;
             if (data.attackKind == EnemyAttackKind.Charge) go.transform.SetParent(transform, true);
@@ -52,6 +58,7 @@ namespace Roguelite
         private void FireProjectile()
         {
             var go = new GameObject("Enemy projectile", typeof(SpriteRenderer), typeof(CircleCollider2D), typeof(Rigidbody2D), typeof(Projectile));
+            effects.Track(go);
             go.layer = LayerMask.NameToLayer("Projectile");
             go.transform.position = transform.position + (Vector3)Direction * 0.6f;
             go.transform.localScale = new Vector3(0.25f, 0.25f, 1);
@@ -64,6 +71,7 @@ namespace Roguelite
         private GameObject ShowVisual(Color color, float duration, float range, float arc)
         {
             var go = new GameObject("Enemy telegraph", typeof(AttackVisual));
+            effects.Track(go);
             go.transform.position = transform.position;
             go.GetComponent<AttackVisual>().Initialize(range, arc, Direction, color, duration);
             return go;

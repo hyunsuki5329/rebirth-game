@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa92eb3212c04f649586ec686cc5bad6, type: 3}
+  m_Name: Elite
+  m_EditorClassIdentifier: Game.Runtime::Roguelite.RoomDefinition
+  id: Elite
+  kind: 2
+  gold: 10
+  enemies:
+  - prefab: {fileID: 9096405584398822511, guid: 44e68f59f6848ee468c276c640113702, type: 3}
+    position: {x: 0, y: -1}
+  - prefab: {fileID: 5731744979702034691, guid: 32b1e186009e16d49ba90d394e650649, type: 3}
+    position: {x: 3, y: 2}
