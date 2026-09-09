@@ -53,7 +53,7 @@
 | 공간 | 1개 테마, MainMenu/Hub/Dungeon 씬, Room Prefab 6개 내외 재사용 |
 | 적 | Chaser/Ranged/Charger 3종, 기존 적 기반 Elite modifier 1종 |
 | Boss | 1종, 예고가 있는 서로 다른 공격 패턴 2개 |
-| 무기 | Dagger/Sword/Greatsword 3개, 공격 주기·범위·이동 제약·Combo 차이 |
+| 무기 | Dagger/Sword/Greatsword/Bow 4개, 공격 주기·범위·이동 제약·Combo 차이. Bow는 사용자의 추가 요청으로 범위 확장 |
 | 아이템 | 데이터 기반 런 전용 아이템 3개, 보상 선택으로 빌드 변화 |
 | Combo | 행동 순서 기반 정의 2개, 무기별 정의 연결 |
 | Evolution | Dagger 진화 1개, 조건 달성 후 관통 파동 등 공격 동작 변화 |
@@ -251,12 +251,13 @@ Core/Runtime/EditMode/PlayMode asmdef를 최소 분리하고 기능마다 어셈
 
 ## Milestone 6 — Weapons + Evolution
 
-**Goal:** 3개 무기 스타일, 런 빌드 변화와 1개 진화를 체험한다.
+**Goal:** 4개 무기 스타일(사용자 추가 요청 Bow 포함), 런 빌드 변화와 1개 진화를 체험한다.
 
 **Implementation Tasks**
 - [ ] Dagger의 빠른 짧은 연계, Sword의 중간 범위 부채꼴, Greatsword의 긴 준비/넓은 타격/큰 넉백을 데이터와 공격 구현으로 구분한다.
 - [ ] 공격 중 이동 배율과 무기별 Combo 정의를 적용한다. 현재 테스트 씬에 임시 무기 선택 UI를 제공하고 실제 Hub 연결은 M9에서 수행한다.
 - [ ] 아이템 3개와 Seed 기반 보상 선택, 중복 처리 규칙을 구현한다.
+- [ ] 사용자 추가 요청인 Bow를 네 번째 무기로 제공한다. 기존 마우스 조준/왼쪽 클릭 계약을 유지하고 단일 화살의 명중, 벽 차단, 수명, 방 전환 정리와 Momentum 연계를 검증한다.
 - [ ] Dagger Combo 3회 성공을 초기 진화 조건으로 두고 진화 후 Combo 마무리에 관통 파동을 추가한다. 조건은 데이터화하며 해당 무기를 선택하면 한 런 안에 달성 가능하게 한다.
 
 **Dependencies:** M5.

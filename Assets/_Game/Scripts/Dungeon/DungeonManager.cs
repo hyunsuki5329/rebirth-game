@@ -9,6 +9,9 @@ namespace Roguelite
         public RoomController[] combatRooms;
         public RoomController rewardRoom, shortcutRoom, eliteRoom, bossRoom;
         public int initialSeed = 123;
+        public ItemData[] rewardItems;
+        public int cappedItemGold = 5;
+        public ItemData[] PendingRewards { get; private set; } = Array.Empty<ItemData>();
         public RunState Run { get; private set; }
         public PlayerHealth Player { get; private set; }
         public RoomController Room { get; private set; }
@@ -22,6 +25,7 @@ namespace Roguelite
         public void BeginRun(int seed)
         {
             rewardPending = false;
+            PendingRewards = Array.Empty<ItemData>();
             RemoveRoom();
             if (Player != null) { Player.gameObject.SetActive(false); Destroy(Player.gameObject); }
             Run = new RunState(seed); Graph = new RoomGraph(seed); PathComplete = false;
@@ -32,7 +36,7 @@ namespace Roguelite
         }
         public bool Advance(bool shortcut = false)
         {
-            if (Room == null || !Room.IsClear || Player.IsDead || PathComplete) return false;
+            if (Room == null || !Room.IsClear || Player.IsDead || PathComplete || PendingRewards.Length > 0) return false;
             SettleRoomReward();
             int next = Graph.Next(Run.RoomIndex, shortcut);
             if (next < 0) { PathComplete = true; PathCompleted?.Invoke(); return true; }
@@ -56,6 +60,12 @@ namespace Roguelite
                 default: prefab = bossRoom; break;
             }
             Room = Instantiate(prefab);
+            if (node.Kind == RoomKind.Reward && rewardItems != null && rewardItems.Length > 0)
+            {
+                var choices = WeaponStats.RewardChoices(Run.Seed, node.Id, 2, rewardItems.Length);
+                PendingRewards = new ItemData[choices.Length];
+                for (int i = 0; i < choices.Length; i++) PendingRewards[i] = rewardItems[choices[i]];
+            }
             Player.GetComponent<PlayerMotor2D>().Teleport(Room.entry);
             Room.Cleared += GrantReward;
             Room.exit.Entered += OnExit;
@@ -76,6 +86,12 @@ namespace Roguelite
             Rewards.GrantRoom(Run, Run.RoomIndex, Room.definition.gold);
         }
         private void OnExit() => Advance();
+        public bool ChooseReward(int choice)
+        {
+            if (choice < 0 || choice >= PendingRewards.Length || Player.IsDead) return false;
+            if (!Player.GetComponent<RunInventory>().Add(PendingRewards[choice])) Run.Award("item-cap-" + Run.RoomIndex, cappedItemGold);
+            PendingRewards = Array.Empty<ItemData>(); return true;
+        }
         private void RemoveRoom()
         {
             if (Room == null) return;

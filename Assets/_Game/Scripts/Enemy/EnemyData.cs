@@ -5,6 +5,7 @@ namespace Roguelite
     [CreateAssetMenu(menuName = "Roguelite/Enemy")]
     public sealed class EnemyData : ScriptableObject
     {
+        public Sprite projectileSprite;
         public string id;
         public float health = 30;
         public float moveSpeed = 2.5f;

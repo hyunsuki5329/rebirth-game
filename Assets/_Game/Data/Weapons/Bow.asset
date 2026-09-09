@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ab6f65fa765450780008bf9cdb4dbcf, type: 3}
+  m_Name: Bow
+  m_EditorClassIdentifier: Game.Runtime::Roguelite.WeaponData
+  id: bow
+  heldSprite: {fileID: 21300000, guid: c52c8057c0c142bbbd0986aa82ead2f9, type: 3}
+  heldHeight: 2
+  sizeHeldByWidth: 0
+  attack: {fileID: 11400000, guid: d8df9c7b413c5304986db8701043d19e, type: 2}
+  combos:
+  - {fileID: 11400000, guid: 80425a4144f078f43936337657cbd0ae, type: 2}
+  comboWindowBonus: 0
+  color: {r: 0.3, g: 0.8, b: 0.7, a: 1}
+  canEvolve: 0
+  evolutionComboId: dagger-chain
+  evolutionCombos: 3
+  waveDamage: 18
+  waveSpeed: 10
+  waveLifetime: 0.8
+  waveSprite: {fileID: 0}

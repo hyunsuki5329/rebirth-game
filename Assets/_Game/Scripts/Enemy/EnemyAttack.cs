@@ -66,6 +66,14 @@ namespace Roguelite
             go.GetComponent<SpriteRenderer>().color = new Color(1, 0.75f, 0.15f);
             go.GetComponent<CircleCollider2D>().isTrigger = true;
             go.GetComponent<CircleCollider2D>().radius = 0.5f;
+            if (data.projectileSprite != null)
+            {
+                go.transform.localScale = Vector3.one;
+                go.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(Direction.y, Direction.x) * Mathf.Rad2Deg);
+                go.GetComponent<SpriteRenderer>().sprite = data.projectileSprite;
+                go.GetComponent<SpriteRenderer>().sortingOrder = 6;
+                go.GetComponent<CircleCollider2D>().radius = 0.125f;
+            }
             go.GetComponent<Projectile>().Initialize(owner, Direction, data.projectileSpeed, data.attack.damage, data.attack.knockback, data.projectileLifetime);
         }
         private GameObject ShowVisual(Color color, float duration, float range, float arc)

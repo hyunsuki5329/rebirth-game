@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 namespace Roguelite
 {
@@ -11,6 +12,7 @@ namespace Roguelite
         private InputActionMap map;
         private InputAction move, aim, sprint, dash, attack;
         private bool blocked;
+        private readonly System.Collections.Generic.List<RaycastResult> uiHits = new System.Collections.Generic.List<RaycastResult>();
         public Vector2 Move { get; private set; }
         public Vector2 AimScreen { get; private set; }
         public bool SprintHeld { get; private set; }
@@ -46,7 +48,14 @@ namespace Roguelite
             AimScreen = aim.ReadValue<Vector2>();
             SprintHeld = sprint.IsPressed();
             DashPressed = dash.WasPressedThisFrame();
-            AttackPressed = attack.WasPressedThisFrame();
+            AttackPressed = attack.WasPressedThisFrame() && !PointerOverUI();
+        }
+        private bool PointerOverUI()
+        {
+            if (EventSystem.current == null) return false;
+            uiHits.Clear();
+            EventSystem.current.RaycastAll(new PointerEventData(EventSystem.current) { position = AimScreen }, uiHits);
+            return uiHits.Count > 0;
         }
     }
 }

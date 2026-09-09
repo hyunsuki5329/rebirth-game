@@ -77,6 +77,7 @@ namespace Roguelite.Tests
                     Assert.That(dungeon.Rewards.GrantRoom(dungeon.Run, dungeon.Run.RoomIndex, 999), Is.False);
                     combatRooms++;
                 }
+                if (dungeon.PendingRewards.Length > 0) Assert.That(dungeon.ChooseReward(0), Is.True);
                 Assert.That(dungeon.Advance(), Is.True);
                 yield return null;
                 Assert.That(room == null, Is.True, "Previous room and its enemies must be destroyed.");

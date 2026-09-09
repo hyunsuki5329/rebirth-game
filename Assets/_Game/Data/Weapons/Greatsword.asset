@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ab6f65fa765450780008bf9cdb4dbcf, type: 3}
+  m_Name: Greatsword
+  m_EditorClassIdentifier: Game.Runtime::Roguelite.WeaponData
+  id: greatsword
+  heldSprite: {fileID: 21300000, guid: 8f2b94af2f2649d980e82b79b8dcddf6, type: 3}
+  heldHeight: 2.3
+  sizeHeldByWidth: 1
+  attack: {fileID: 11400000, guid: d8efd2d47ed09d94d8040c060edf0d5a, type: 2}
+  combos:
+  - {fileID: 11400000, guid: 80425a4144f078f43936337657cbd0ae, type: 2}
+  comboWindowBonus: 0.5
+  color: {r: 0.4, g: 0.6, b: 1, a: 1}
+  canEvolve: 0
+  evolutionComboId: dagger-chain
+  evolutionCombos: 3
+  waveDamage: 18
+  waveSpeed: 10
+  waveLifetime: 0.8
+  waveSprite: {fileID: 7482667652216324306, guid: 768701d2a04602c4f92c8457209ea0e9, type: 3}

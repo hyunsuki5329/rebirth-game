@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3466f48967b47819cba57d67b37bb5d, type: 3}
   m_Name: Ranged
   m_EditorClassIdentifier: Game.Runtime::Roguelite.EnemyData
+  projectileSprite: {fileID: 21300000, guid: cecb46bbc1d26514998b137d4791e06c, type: 3}
   id: ranged
   health: 24
   moveSpeed: 2.5

@@ -24,6 +24,9 @@ GameObject:
   - component: {fileID: 3042940758504270682}
   - component: {fileID: 5442902368254765961}
   - component: {fileID: 7163020560831492048}
+  - component: {fileID: 5902923975640053708}
+  - component: {fileID: 5623307943447529940}
+  - component: {fileID: 2227909656200913727}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -73,7 +76,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: e55b236362c101545b52a131339d6a98, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96,8 +99,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 768701d2a04602c4f92c8457209ea0e9, type: 3}
-  m_Color: {r: 0.2, g: 0.9, b: 0.8, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 4263c94022e241e39ce107bf1f653a16, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -144,7 +147,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.6650392, y: 2.5000002}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -338,6 +341,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Game.Runtime::Roguelite.MomentumSystem
   config: {fileID: 11400000, guid: 8affbc8444dc4024c946144bb94fbead, type: 2}
+--- !u!114 &5902923975640053708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324993907067876480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bfc2f390639447e945d1e7b382a65d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.Runtime::Roguelite.WeaponController
+  weapons:
+  - {fileID: 11400000, guid: ae57d103dbd66ff42adc6f987e6141f9, type: 2}
+  - {fileID: 11400000, guid: 499794bc660bb414e85c33e72156a64c, type: 2}
+  - {fileID: 11400000, guid: 423acb2dc444a4b428737e0311260242, type: 2}
+  - {fileID: 11400000, guid: d738e88b6818d9f4691bd718a44f2f0d, type: 2}
+  tintBodyWithWeapon: 0
+--- !u!114 &5623307943447529940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324993907067876480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a70135e510e44c77939d99493e375953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.Runtime::Roguelite.RunInventory
+--- !u!114 &2227909656200913727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324993907067876480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9226af3af1a54264a1ca99c858fea0da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.Runtime::Roguelite.HeldWeaponVisual
 --- !u!1 &8612123665634215972
 GameObject:
   m_ObjectHideFlags: 0
