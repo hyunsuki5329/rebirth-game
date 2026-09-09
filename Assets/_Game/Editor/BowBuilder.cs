@@ -47,6 +47,7 @@ namespace Roguelite.Editor
                 AssetDatabase.CreateAsset(bow.attack, "Assets/_Game/Data/Weapons/BowAttack.asset"); AssetDatabase.CreateAsset(bow, path);
             }
             bow.heldSprite = AssetDatabase.LoadAssetAtPath<Sprite>(art + "Bow.png");
+            bow.heldFlipX = true; bow.heldGrip = new Vector2(0.435f, 0.5f);
             bow.attack.projectileSprite = AssetDatabase.LoadAssetAtPath<Sprite>(arrowPath);
             if (bow.heldSprite == null || bow.attack.projectileSprite == null)
                 throw new System.InvalidOperationException("Bow sprite import did not produce a Sprite asset.");

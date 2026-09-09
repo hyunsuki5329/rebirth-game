@@ -8,6 +8,8 @@ namespace Roguelite
         public Sprite heldSprite;
         public float heldHeight = 1.25f;
         public bool sizeHeldByWidth;
+        public bool heldFlipX;
+        public Vector2 heldGrip = new Vector2(0.28f, 0.5f);
         public AttackDefinition attack;
         public ComboDefinition[] combos;
         public float comboWindowBonus;

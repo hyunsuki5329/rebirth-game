@@ -32,6 +32,7 @@ namespace Roguelite.Editor
             player.GetComponent<SpriteRenderer>().sharedMaterial = material;
             player.GetComponent<WeaponController>().tintBodyWithWeapon = false;
             if (player.GetComponent<HeldWeaponVisual>() == null) player.AddComponent<HeldWeaponVisual>();
+            player.GetComponent<HeldWeaponVisual>().handSprite = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/_Game/Art/Square.png");
             var aim = player.transform.Find("AimIndicator"); if (aim != null) aim.gameObject.SetActive(false);
             PrefabUtility.SaveAsPrefabAsset(player, path); PrefabUtility.UnloadPrefabContents(player);
             ApplyEnemy("Chaser", slime); ApplyEnemy("Ranged", goblin); ApplyEnemy("Charger", boar);

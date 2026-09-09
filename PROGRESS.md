@@ -34,3 +34,6 @@ M7–M13 in order, each with tests and commit; outstanding human playtests. Full
 
 ## Next Action
 This requested Bow/art checkpoint is complete. Await continuation before starting M7 Dangerous Shortcut.
+
+## Latest follow-up — weapon grip
+Bow orientation corrected; all weapons use explicit grip anchoring with hand markers. Added melee swing, Bow drawing-hand/recoil and front/back layering. EditMode 40/40 and PlayMode 41/41 passed; no game exceptions or compile errors in final logs. Independent review completed. Source Editor shows updated rendering; final visual feel remains MANUAL_PLAYTEST_REQUIRED. M7 has not started.

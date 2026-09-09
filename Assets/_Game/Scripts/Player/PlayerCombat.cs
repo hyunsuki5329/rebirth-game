@@ -13,6 +13,8 @@ namespace Roguelite
         private Vector2 direction;
         private float impactAt, readyAt, activeDuration;
         private bool pending;
+        private float startedAt;
+        public float AttackNormalizedTime => IsAttacking ? Mathf.InverseLerp(startedAt, readyAt, Time.time) : 1;
         public float DamageMultiplier { get; set; } = 1;
         public float SpeedMultiplier { get; set; } = 1;
         public float ItemSpeedMultiplier { get; set; } = 1;
@@ -38,6 +40,7 @@ namespace Roguelite
         {
             if (!isActiveAndEnabled || health.IsDead || IsAttacking || facing.sqrMagnitude < 0.001f) return false;
             direction = facing.normalized;
+            startedAt = Time.time;
             float speed = Mathf.Max(0.1f, SpeedMultiplier * ItemSpeedMultiplier);
             activeDuration = attack.activeTime / speed;
             impactAt = Time.time + attack.windup / speed;

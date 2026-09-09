@@ -38,3 +38,5 @@ ONE standalone GOBLIN ARCHER enemy sprite for an original 2D top-down pixel-art 
 
 ### Boar
 ONE standalone charging BOAR enemy sprite for an original 2D top-down pixel-art action roguelite. Transparent RGBA background, no text, no sheet, no ground shadow, no glow or scenery. A compact stocky wild boar with warm russet-brown fur, dark spiky mane, broad orange-brown snout, short ivory tusks, determined eyes, four short sturdy legs. Full body, slightly top-down three-quarter front view, head lowered ready to charge. Rounded heavy silhouette clearly different from a slime and goblin. Cute fierce monster, no blood or gore, no accessories. Authentic chunky low-resolution 40x32 logical-pixel game art enlarged crisply, dark outline, limited 8-color palette, square pixel clusters, NO smooth gradients or antialiasing. Centered with modest transparent margins, original design.
+
+Weapon-grip follow-up: artwork is anchored by per-weapon heldGrip coordinates; Bow's left-facing source is mirrored at rendering time. Small hands, melee swing and Bow drawing/recoil are procedural visual poses synchronized to the existing attack. No source image or Input Contract was changed.

@@ -383,6 +383,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9226af3af1a54264a1ca99c858fea0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Game.Runtime::Roguelite.HeldWeaponVisual
+  handSprite: {fileID: 7482667652216324306, guid: 768701d2a04602c4f92c8457209ea0e9, type: 3}
+  handAnchor: {x: 0, y: -0.34}
+  reach: 0.43
 --- !u!1 &8612123665634215972
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,6 +16,8 @@ MonoBehaviour:
   heldSprite: {fileID: 21300000, guid: c52c8057c0c142bbbd0986aa82ead2f9, type: 3}
   heldHeight: 2
   sizeHeldByWidth: 0
+  heldFlipX: 1
+  heldGrip: {x: 0.435, y: 0.5}
   attack: {fileID: 11400000, guid: d8df9c7b413c5304986db8701043d19e, type: 2}
   combos:
   - {fileID: 11400000, guid: 80425a4144f078f43936337657cbd0ae, type: 2}
