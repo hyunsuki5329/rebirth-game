@@ -60,10 +60,13 @@ namespace Roguelite
                 status.text += $"\nMomentum {momentum.Model.Value:0} | Gold x{momentum.GoldMultiplier:0.00} | Combo {dungeon.Player.GetComponent<ComboSystem>().LastCompleted ?? "-"}";
             if (dungeon.Player.TryGetComponent<WeaponController>(out var weapon) && weapon.Current != null)
                 status.text += $" | {weapon.Current.id}" + (weapon.Current.canEvolve ? $" {(weapon.Progress.Evolved ? "EVOLVED" : weapon.Progress.ComboCount + "/" + weapon.Current.evolutionCombos)}" : "");
+            if (dungeon.Run.RoomIndex == 3)
+                status.text += "\nChoose: green rectangle = Safe (2 fights) / orange diamond = Dangerous (1 elite + ground blasts).";
             for (int i = 0; i < rewardButtons.Length; i++)
             {
                 rewardButtons[i].gameObject.SetActive(i < dungeon.PendingRewards.Length);
-                if (i < dungeon.PendingRewards.Length) rewardButtons[i].GetComponentInChildren<Text>().text = "Choose " + dungeon.PendingRewards[i].id;
+                if (i < dungeon.PendingRewards.Length) rewardButtons[i].GetComponentInChildren<Text>().text =
+                    (dungeon.PendingRewardStacks > 1 ? "Rare " : "Choose ") + dungeon.PendingRewards[i].id + " x" + dungeon.PendingRewardStacks;
             }
         }
         private static Text MakeText(Transform parent, Vector2 position, Vector2 size)

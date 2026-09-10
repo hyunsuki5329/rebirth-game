@@ -11,6 +11,9 @@ namespace Roguelite
         public int initialSeed = 123;
         public ItemData[] rewardItems;
         public int cappedItemGold = 5;
+        public ShortcutRules shortcutRules;
+        public int PendingRewardStacks { get; private set; } = 1;
+        public bool? ChosenShortcut { get; private set; }
         public ItemData[] PendingRewards { get; private set; } = Array.Empty<ItemData>();
         public RunState Run { get; private set; }
         public PlayerHealth Player { get; private set; }
@@ -26,6 +29,7 @@ namespace Roguelite
         {
             rewardPending = false;
             PendingRewards = Array.Empty<ItemData>();
+            PendingRewardStacks = 1; ChosenShortcut = null;
             RemoveRoom();
             if (Player != null) { Player.gameObject.SetActive(false); Destroy(Player.gameObject); }
             Run = new RunState(seed); Graph = new RoomGraph(seed); PathComplete = false;
@@ -38,6 +42,8 @@ namespace Roguelite
         {
             if (Room == null || !Room.IsClear || Player.IsDead || PathComplete || PendingRewards.Length > 0) return false;
             SettleRoomReward();
+            if (PendingRewards.Length > 0) return false;
+            if (Run.RoomIndex == 3) ChosenShortcut = shortcut;
             int next = Graph.Next(Run.RoomIndex, shortcut);
             if (next < 0) { PathComplete = true; PathCompleted?.Invoke(); return true; }
             RemoveRoom();
@@ -71,6 +77,9 @@ namespace Roguelite
             Room.exit.Entered += OnExit;
             if (Player.TryGetComponent<MomentumSystem>(out var momentum)) momentum.BeginRoom();
             Room.Initialize(Player);
+            if (Room.TryGetComponent<ShortcutController>(out var choice)) choice.Bind(this);
+            if (node.Kind == RoomKind.Elite && shortcutRules != null)
+                foreach (var enemy in Room.Enemies) enemy.gameObject.AddComponent<EliteModifier>().Initialize(Player, shortcutRules);
         }
         private void GrantReward()
         {
@@ -83,14 +92,25 @@ namespace Roguelite
             if (!rewardPending || Room == null) return;
             rewardPending = false;
             Rewards.GoldMultiplier = Player.TryGetComponent<MomentumSystem>(out var momentum) ? momentum.GoldMultiplier : 1;
-            Rewards.GrantRoom(Run, Run.RoomIndex, Room.definition.gold);
+            bool elite = Graph.Nodes[Run.RoomIndex].Kind == RoomKind.Elite;
+            int gold = Room.definition.gold;
+            if (elite && shortcutRules != null) gold = RewardCalculator.Gold(gold, shortcutRules.eliteGoldMultiplier);
+            bool granted = Rewards.GrantRoom(Run, Run.RoomIndex, gold);
+            if (granted && shortcutRules != null && (Run.RoomIndex == 5 || elite) && rewardItems.Length > 0)
+            {
+                PendingRewardStacks = shortcutRules.IsRare(Run.Seed, Run.RoomIndex, elite) ? shortcutRules.rareStacks : 1;
+                var choices = WeaponStats.RewardChoices(Run.Seed, Run.RoomIndex, 2, rewardItems.Length);
+                PendingRewards = new ItemData[choices.Length];
+                for (int i = 0; i < choices.Length; i++) PendingRewards[i] = rewardItems[choices[i]];
+            }
         }
         private void OnExit() => Advance();
         public bool ChooseReward(int choice)
         {
             if (choice < 0 || choice >= PendingRewards.Length || Player.IsDead) return false;
-            if (!Player.GetComponent<RunInventory>().Add(PendingRewards[choice])) Run.Award("item-cap-" + Run.RoomIndex, cappedItemGold);
-            PendingRewards = Array.Empty<ItemData>(); return true;
+            for (int i = 0; i < PendingRewardStacks; i++)
+                if (!Player.GetComponent<RunInventory>().Add(PendingRewards[choice])) Run.Award("item-cap-" + Run.RoomIndex + "-" + i, cappedItemGold);
+            PendingRewards = Array.Empty<ItemData>(); PendingRewardStacks = 1; return true;
         }
         private void RemoveRoom()
         {

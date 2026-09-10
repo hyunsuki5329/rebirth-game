@@ -5,11 +5,12 @@ namespace Roguelite
     public sealed class RoomExit : MonoBehaviour
     {
         public bool IsOpen { get; private set; }
+        public Color openColor = Color.green;
         public event Action Entered;
         public void SetOpen(bool value)
         {
             IsOpen = value;
-            GetComponent<SpriteRenderer>().color = value ? Color.green : Color.red;
+            GetComponent<SpriteRenderer>().color = value ? openColor : Color.red;
         }
         private void OnTriggerEnter2D(Collider2D other)
         {

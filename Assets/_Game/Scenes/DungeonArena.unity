@@ -317,6 +317,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c33dbfbb582f22044b3557a0928622ab, type: 2}
   - {fileID: 11400000, guid: 04ca991a15929eb498913bdbb79bb5d3, type: 2}
   cappedItemGold: 5
+  shortcutRules: {fileID: 11400000, guid: fc3680ebcab784740bbb1c8de5793afe, type: 2}
 --- !u!4 &1850055255
 Transform:
   m_ObjectHideFlags: 0

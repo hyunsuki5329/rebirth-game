@@ -20,6 +20,8 @@ Unity에서 `Roguelite > Play Vertical Slice`를 선택한다. DungeonArena를 �
 - 다른 Combo: Dash → 공격 → 공격. 단계 사이에는 1초 이내에 다음 행동을 한다. 공격 Cooldown에 거절된 클릭은 Combo로 세지 않는다.
 - New Run 버튼은 HP, 아이템, 진화, Momentum과 획득 Gold를 초기화한다.
 
-현재는 M6 개발 단계의 전투/던전 테스트다. Boss 입구는 아직 임시 끝 지점이며 Main Menu, Hub, Rebirth, Save는 후속 Milestone에서 연결한다.
+현재는 M7 개발 단계의 전투/던전 테스트다. Boss 입구는 아직 임시 끝 지점이며 Main Menu, Hub, Rebirth, Save는 후속 Milestone에서 연결한다.
 
 확인할 사항: 이동·달리기·Dash 감각, 마우스 조준, 공격 범위와 적 예고 식별, Combo 수행 난도, 무기별 차이, UI 가독성. 인간 조작 검증은 `MANUAL_PLAYTEST_REQUIRED` 상태이며 자동 테스트로 대체 완료했다고 기록하지 않는다.
+
+M7 경로 선택: 갈림길에서 위쪽 초록 사각형 출구는 일반 전투 2방, 아래쪽 주황 마름모 출구는 정예 전투 1방으로 이어진다. 정예의 주황 바닥 표시를 피하면 추가 공격을 회피할 수 있다. 경로 종료 후 아이템을 선택해야 다음 방으로 이동한다. Rare 보상은 2스택이며 상한 초과분은 Gold로 전환된다.
