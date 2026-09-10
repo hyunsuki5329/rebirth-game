@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Game.Runtime::Roguelite.GameBootstrap
   config: {fileID: 11400000, guid: b0c4e70f3788d4d4abf3bc40b319c7a9, type: 2}
+  rebirthConfig: {fileID: 11400000, guid: 81c6995ab14d195459fbbb4cdb8b780a, type: 2}
 --- !u!114 &3091751155243701176
 MonoBehaviour:
   m_ObjectHideFlags: 0

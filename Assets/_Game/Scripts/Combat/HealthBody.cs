@@ -16,8 +16,10 @@ namespace Roguelite
         public event Action<Vector2> KnockbackRequested;
         public event Action Died;
         protected virtual void Awake()
+        { ResetHealth(maximumHealth); }
+        protected void ResetHealth(float maximum)
         {
-            state = new HealthState(maximumHealth);
+            state = new HealthState(maximum);
             state.Died += () => Died?.Invoke();
         }
         public float Receive(float damage, Vector2 impulse)

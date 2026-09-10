@@ -10,6 +10,10 @@ namespace Roguelite
         public RoomController rewardRoom, shortcutRoom, eliteRoom, bossRoom;
         public int initialSeed = 123;
         public bool autoStart = true;
+        public int WorldThreat { get; set; }
+        public float PermanentGoldMultiplier { get; set; } = 1;
+        public float ThreatGoldMultiplier { get; set; } = 1;
+        public float ThreatProjectileSpread { get; set; } = 20;
         public ItemData[] rewardItems;
         public int cappedItemGold = 5;
         public ShortcutRules shortcutRules;
@@ -101,6 +105,12 @@ namespace Roguelite
             Room.exit.Entered += OnExit;
             if (Player.TryGetComponent<MomentumSystem>(out var momentum)) momentum.BeginRoom();
             Room.Initialize(Player);
+            foreach (var enemy in Room.Enemies)
+                if (enemy.data.attackKind == EnemyAttackKind.Projectile)
+                {
+                    enemy.GetComponent<EnemyAttack>().ProjectileCount = WorldThreatSystem.ProjectileCount(WorldThreat);
+                    enemy.GetComponent<EnemyAttack>().ProjectileSpread = ThreatProjectileSpread;
+                }
             Boss = Room.GetComponentInChildren<BossController>();
             if (Room.TryGetComponent<ShortcutController>(out var choice)) choice.Bind(this);
             if (node.Kind == RoomKind.Elite && shortcutRules != null)
@@ -117,6 +127,7 @@ namespace Roguelite
             if (!rewardPending || Room == null) return;
             rewardPending = false;
             Rewards.GoldMultiplier = Player.TryGetComponent<MomentumSystem>(out var momentum) ? momentum.GoldMultiplier : 1;
+            Rewards.GoldMultiplier *= PermanentGoldMultiplier * ThreatGoldMultiplier;
             bool elite = Graph.Nodes[Run.RoomIndex].Kind == RoomKind.Elite;
             int gold = Room.definition.gold;
             if (elite && shortcutRules != null) gold = RewardCalculator.Gold(gold, shortcutRules.eliteGoldMultiplier);
@@ -134,7 +145,8 @@ namespace Roguelite
         {
             if (choice < 0 || choice >= PendingRewards.Length || Player.IsDead) return false;
             for (int i = 0; i < PendingRewardStacks; i++)
-                if (!Player.GetComponent<RunInventory>().Add(PendingRewards[choice])) Run.Award("item-cap-" + Run.RoomIndex + "-" + i, cappedItemGold);
+                if (!Player.GetComponent<RunInventory>().Add(PendingRewards[choice])) Run.Award("item-cap-" + Run.RoomIndex + "-" + i,
+                    RewardCalculator.Gold(cappedItemGold, PermanentGoldMultiplier * ThreatGoldMultiplier), cappedItemGold);
             PendingRewards = Array.Empty<ItemData>(); PendingRewardStacks = 1; return true;
         }
         private void RemoveRoom()

@@ -13,6 +13,9 @@ namespace Roguelite
         private Button start, continueButton, menuButton;
         private Button[] weapons;
         private readonly Button[] rewards = new Button[2];
+        private Button rebirth;
+        private Button[] upgrades;
+        private Text rebirthText;
         private void Start()
         {
             session = GetComponent<GameBootstrap>();
@@ -34,16 +37,25 @@ namespace Roguelite
                 weapons[i] = ButtonAt(hub.transform, session.config.weapons[i].name, 40 + i * 230, 190, () => session.SelectWeapon(index));
             }
             start = ButtonAt(hub.transform, "Enter Dungeon", 40, 275, () => session.StartRun());
-            TextAt(hub.transform, "Choose a weapon. Each run starts with fresh HP, items, Momentum and evolution.\nWASD move | Left Shift hold sprint | Space dash | Mouse aim | Left click attack", 40, 350, 20);
+            rebirthText = TextAt(hub.transform, "", 40, 350, 18);
+            rebirth = ButtonAt(hub.transform, "Rebirth", 40, 465, () => session.Rebirth());
+            upgrades = new Button[session.rebirthConfig != null ? session.rebirthConfig.upgrades.Length : 0];
+            for (int i = 0; i < upgrades.Length; i++)
+            {
+                int index = i; var upgrade = session.rebirthConfig.upgrades[i];
+                upgrades[i] = ButtonAt(hub.transform, upgrade.name, 280 + i * 230, 465, () => session.BuyUpgrade(index));
+            }
+            TextAt(hub.transform, "Each run starts with fresh HP, items, Momentum and evolution.\nWASD move | Left Shift hold sprint | Space dash | Mouse aim | Left click attack", 40, 600, 18);
             result = Panel(canvas.transform, "Run Result"); TextAt(result.transform, "RUN RESULT", 40, 40, 36);
             resultText = TextAt(result.transform, "", 40, 110, 25);
-            continueButton = ButtonAt(result.transform, "Return to Hub", 40, 315, () => session.OpenHub());
+            resultText.rectTransform.sizeDelta = new Vector2(1150, 250);
+            continueButton = ButtonAt(result.transform, "Return to Hub", 40, 400, () => session.OpenHub());
             hud = new GameObject("Dungeon HUD", typeof(RectTransform)); hud.transform.SetParent(canvas.transform, false); Stretch(hud.GetComponent<RectTransform>());
             hudText = TextAt(hud.transform, "", 18, 16, 20);
             for (int i = 0; i < rewards.Length; i++)
             {
                 int choice = i;
-                rewards[i] = ButtonAt(hud.transform, "Reward", 18 + i * 225, 155, () => session.Dungeon.ChooseReward(choice));
+                rewards[i] = ButtonAt(hud.transform, "Reward", 18 + i * 225, 185, () => session.Dungeon.ChooseReward(choice));
             }
         }
         private void Update()
@@ -53,19 +65,35 @@ namespace Roguelite
             menu.SetActive(phase == RunFlowPhase.MainMenu); hub.SetActive(phase == RunFlowPhase.Hub);
             result.SetActive(phase == RunFlowPhase.Result); hud.SetActive(phase == RunFlowPhase.Dungeon);
             menuButton.interactable = start.interactable = continueButton.interactable = !session.IsLoading;
-            hubText.text = $"Bank Gold: {session.Profile.bankGold} | Victories: {session.Profile.totalClears}\nSelected: {session.config.weapons[session.SelectedWeapon].name}";
+            hubText.text = $"Bank Gold: {session.Profile.bankGold} | Victories: {session.Profile.totalClears}\n" +
+                $"Rebirth {session.Profile.rebirthCount} | Points {session.Profile.rebirthPoints} | Gold x{session.Profile.permanentGoldMultiplier:0.00} | Threat {session.Profile.rebirthCount}\nSelected: {session.config.weapons[session.SelectedWeapon].name}";
+            rebirth.interactable = session.CanRebirth;
+            if (session.RebirthRules != null)
+            {
+                rebirthText.text = $"Rebirth: requires a victory and {session.RebirthRules.Cost(session.Profile)} Bank Gold. Spend the cost; gain 1 Point.\n" +
+                    $"Keep upgrades/unlocks. Next Gold x{session.RebirthRules.Multiplier(session.Profile.rebirthCount + 1):0.00}; Threat +1.\nThreat 1+: ranged enemies fire 3 arrows; threat Gold x{session.rebirthConfig.threatGoldMultiplier:0.00}.";
+                for (int i = 0; i < upgrades.Length; i++)
+                {
+                    var upgrade = session.rebirthConfig.upgrades[i]; bool owned = System.Array.IndexOf(session.Profile.upgradeIds, upgrade.id) >= 0;
+                    upgrades[i].interactable = !session.IsLoading && !owned && session.Profile.rebirthPoints >= upgrade.pointCost;
+                    var label = upgrades[i].GetComponentInChildren<Text>();
+                    label.fontSize = 18;
+                    string effect = upgrade.stat == PermanentStat.MaximumHealth ? $"+{upgrade.value:0} max HP" : $"+{upgrade.value:0.00}s combo window";
+                    label.text = upgrade.name + (owned ? " (owned)" : $" ({upgrade.pointCost} pt)") + "\n" + effect;
+                }
+            }
             for (int i = 0; i < weapons.Length; i++)
             {
                 weapons[i].interactable = !session.IsLoading;
                 weapons[i].GetComponent<Image>().color = i == session.SelectedWeapon ? new Color(0.4f, 0.9f, 0.8f) : Color.white;
             }
             var summary = session.Flow.Result;
-            if (summary != null) resultText.text = $"{summary.Outcome}\nEarned Gold: {summary.EarnedGold}\nRetained: {summary.Retention:P0} = {summary.RetainedGold}\nBank Gold: {session.Profile.bankGold}";
+            if (summary != null) resultText.text = $"{summary.Outcome}\nBase Gold: {summary.BaseGold}\nPermanent Gold x{session.Profile.permanentGoldMultiplier:0.00}\nEarned after bonuses: {summary.EarnedGold}\nRetained: {summary.Retention:P0} = {summary.RetainedGold}\nBank Gold: {session.Profile.bankGold}";
             if (session.Dungeon != null && session.Dungeon.Player != null)
             {
                 var dungeon = session.Dungeon; var player = dungeon.Player;
-                hudText.text = $"HP {player.Current:0}/{player.Maximum:0} | Gold {dungeon.Run.Gold} | Room {dungeon.Run.RoomIndex + 1}\n" +
-                    $"{player.GetComponent<WeaponController>().Current.name} | Momentum {player.GetComponent<MomentumSystem>().Model.Value:0}\n" +
+                hudText.text = $"HP {player.Current:0}/{player.Maximum:0} | Gold {dungeon.Run.Gold} (base {dungeon.Run.BaseGold}) | Room {dungeon.Run.RoomIndex + 1}\n" +
+                    $"{player.GetComponent<WeaponController>().Current.name} | Momentum {player.GetComponent<MomentumSystem>().Model.Value:0} | Gold x{dungeon.PermanentGoldMultiplier:0.00} | Threat {dungeon.WorldThreat}\n" +
                     (dungeon.Room.IsClear ? "Room clear: use an exit." : "Defeat enemies to unlock the exit.");
                 var weapon = player.GetComponent<WeaponController>();
                 hudText.text += $"\nCombo: {player.GetComponent<ComboSystem>().LastCompleted ?? "-"}" +

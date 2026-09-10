@@ -6,6 +6,8 @@ namespace Roguelite
     public sealed class EnemyAttack : MonoBehaviour
     {
         public EnemyData data;
+        public int ProjectileCount { get; set; } = 1;
+        public float ProjectileSpread { get; set; } = 20;
         private HealthBody owner;
         private CombatEffects effects;
         private float impactAt, activeUntil, readyAt;
@@ -30,7 +32,7 @@ namespace Roguelite
             pending = true;
             preview = ShowVisual(new Color(1, 0.3f, 0.15f, 0.2f), data.attack.windup,
                 data.attackKind == EnemyAttackKind.Charge ? data.chargeSpeed * data.attack.activeTime : data.attack.range,
-                data.attackKind == EnemyAttackKind.Charge ? 18 : data.attack.arc);
+                data.attackKind == EnemyAttackKind.Charge ? 18 : data.attack.arc + (ProjectileCount - 1) * ProjectileSpread);
             return true;
         }
         private void Update()
@@ -57,10 +59,18 @@ namespace Roguelite
         }
         private void FireProjectile()
         {
+            for (int i = 0; i < ProjectileCount; i++)
+            {
+                var facing = (Vector2)(Quaternion.Euler(0, 0, (i - (ProjectileCount - 1) * 0.5f) * ProjectileSpread) * Direction);
+                CreateProjectile(facing);
+            }
+        }
+        private void CreateProjectile(Vector2 shotDirection)
+        {
             var go = new GameObject("Enemy projectile", typeof(SpriteRenderer), typeof(CircleCollider2D), typeof(Rigidbody2D), typeof(Projectile));
             effects.Track(go);
             go.layer = LayerMask.NameToLayer("Projectile");
-            go.transform.position = transform.position + (Vector3)Direction * 0.6f;
+            go.transform.position = transform.position + (Vector3)shotDirection * 0.6f;
             go.transform.localScale = new Vector3(0.25f, 0.25f, 1);
             go.GetComponent<SpriteRenderer>().sprite = GetComponent<SpriteRenderer>().sprite;
             go.GetComponent<SpriteRenderer>().color = new Color(1, 0.75f, 0.15f);
@@ -69,12 +79,12 @@ namespace Roguelite
             if (data.projectileSprite != null)
             {
                 go.transform.localScale = Vector3.one;
-                go.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(Direction.y, Direction.x) * Mathf.Rad2Deg);
+                go.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(shotDirection.y, shotDirection.x) * Mathf.Rad2Deg);
                 go.GetComponent<SpriteRenderer>().sprite = data.projectileSprite;
                 go.GetComponent<SpriteRenderer>().sortingOrder = 6;
                 go.GetComponent<CircleCollider2D>().radius = 0.125f;
             }
-            go.GetComponent<Projectile>().Initialize(owner, Direction, data.projectileSpeed, data.attack.damage, data.attack.knockback, data.projectileLifetime);
+            go.GetComponent<Projectile>().Initialize(owner, shotDirection, data.projectileSpeed, data.attack.damage, data.attack.knockback, data.projectileLifetime);
         }
         private GameObject ShowVisual(Color color, float duration, float range, float arc)
         {

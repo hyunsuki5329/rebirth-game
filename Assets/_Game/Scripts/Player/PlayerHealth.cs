@@ -4,6 +4,7 @@ namespace Roguelite
     public sealed class PlayerHealth : HealthBody
     {
         public PlayerStats stats;
+        public void ApplyPermanentHealthBonus(float bonus) => ResetHealth(stats.maximumHealth + bonus);
         protected override void Awake()
         {
             team = 0;

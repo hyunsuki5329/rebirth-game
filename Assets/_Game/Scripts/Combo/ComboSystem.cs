@@ -6,6 +6,7 @@ namespace Roguelite
     public sealed class ComboSystem : MonoBehaviour
     {
         public ComboDefinition[] definitions;
+        public float PermanentWindowBonus { get; set; }
         public Func<double> Clock { get; set; } = () => Time.timeAsDouble;
         public string LastCompleted { get; private set; }
         public int CompletedCount { get; private set; }
@@ -22,7 +23,7 @@ namespace Roguelite
         public void SetDefinitions(ComboDefinition[] values, float extraWindow = 0)
         {
             var rules = new ComboRule[values.Length];
-            for (int i = 0; i < values.Length; i++) rules[i] = values[i].CreateRule(extraWindow);
+            for (int i = 0; i < values.Length; i++) rules[i] = values[i].CreateRule(extraWindow + PermanentWindowBonus);
             recognizer = new ComboRecognizer(rules); LastCompleted = null;
         }
         private void OnEnable() { combat.AttackStarted += OnAttack; dash.Started += OnDash; health.Died += ResetProgress; }

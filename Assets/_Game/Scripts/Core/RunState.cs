@@ -7,13 +7,15 @@ namespace Roguelite.Core
         public int Seed { get; }
         public int RoomIndex { get; set; }
         public int Gold { get; private set; }
+        public int BaseGold { get; private set; }
         private readonly System.Collections.Generic.HashSet<string> rewardedRooms = new System.Collections.Generic.HashSet<string>();
         public RunState(int seed) { Seed = seed; }
-        public bool Award(string roomId, int gold)
+        public bool Award(string roomId, int gold, int? baseGold = null)
         {
             if (string.IsNullOrEmpty(roomId)) throw new ArgumentException("Room ID is required.", nameof(roomId));
             if (!rewardedRooms.Add(roomId)) return false;
             Gold = checked(Gold + Math.Max(0, gold));
+            BaseGold = checked(BaseGold + Math.Max(0, baseGold ?? gold));
             return true;
         }
     }

@@ -7,10 +7,11 @@ namespace Roguelite.Core
         public string RunId { get; }
         public RunOutcome Outcome { get; }
         public int EarnedGold { get; }
+        public int BaseGold { get; }
         public int RetainedGold { get; }
         public float Retention { get; }
-        public RunResult(string id, RunOutcome outcome, int earned, int retained, float retention)
-        { RunId = id; Outcome = outcome; EarnedGold = earned; RetainedGold = retained; Retention = retention; }
+        public RunResult(string id, RunOutcome outcome, int earned, int retained, float retention, int baseGold)
+        { RunId = id; Outcome = outcome; EarnedGold = earned; RetainedGold = retained; Retention = retention; BaseGold = baseGold; }
     }
     public sealed class RunFlow
     {
@@ -38,7 +39,7 @@ namespace Roguelite.Core
             int retained = RewardCalculator.Gold(run.Gold, retention);
             int bank = checked(Profile.bankGold + retained);
             int clears = checked(Profile.totalClears + (outcome == RunOutcome.Victory ? 1 : 0));
-            Result = new RunResult(run.Id, outcome, run.Gold, retained, retention);
+            Result = new RunResult(run.Id, outcome, run.Gold, retained, retention, run.BaseGold);
             Profile.bankGold = bank; Profile.totalClears = clears; Profile.lastSettledRunId = run.Id;
             Phase = RunFlowPhase.Result; return true;
         }

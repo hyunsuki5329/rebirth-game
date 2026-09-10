@@ -21,7 +21,11 @@ Unity에서 `Roguelite > Play Vertical Slice`를 선택한다. MainMenu를 열�
 - 보스는 방향 예고 돌진과 바닥 순차 폭발을 번갈아 사용한다. 공격 후 Recovery가 반격 구간이다.
 - 결과 화면은 획득 Gold와 보존율을 표시한다. Victory는 100%, Death는 50%를 Bank Gold에 한 번만 정산한다. `Return to Hub` 후 다시 시작하면 HP, 아이템, 진화, Momentum과 Run Gold는 초기화된다.
 
-현재 M9 Profile은 메모리에서만 유지된다. Rebirth와 디스크 Save는 후속 Milestone에서 연결한다.
+- 첫 승리 후 Bank Gold가 100 이상이면 Hub의 `Rebirth`를 사용할 수 있다. 비용을 소비하고 Point 1, 영구 Gold 배율 2배와 Threat 1을 얻는다. 기존 Unlock과 영구 Upgrade는 유지된다.
+- Vitality는 Point 1로 다음 런 최대 HP를 20 늘린다. Focus는 Point 1로 Combo 단계 사이 허용 시간을 0.25초 늘린다. 각 Upgrade는 한 번만 구매한다.
+- Threat 1부터 원거리 적이 3방향 화살을 발사한다. Threat 보상 배율 1.2배는 영구 Gold 배율과 별도로 적용된다.
+
+현재 Profile은 메모리에서만 유지된다. Unity Play를 종료하면 초기화되며 디스크 Save는 M11에서 연결한다.
 
 개발용 `Assets/_Game/Scenes/DungeonArena.unity`에는 즉시 무기 교체와 `New Run` 버튼이 남아 있다. 실제 메뉴/Hub 흐름 검증은 MainMenu에서 시작한다.
 

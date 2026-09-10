@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-10 14:55:27Z" end-time="2026-09-10 14:55:51Z" duration="24.3963816">
+  <test-suite type="TestSuite" id="1085" name="My Game" fullname="My Game" runstate="Runnable" testcasecount="56" result="Passed" start-time="2026-09-10 14:55:27Z" end-time="2026-09-10 14:55:51Z" duration="24.396382" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1079" name="Game.PlayModeTests.dll" fullname="D:/Unity Project/My Game/.validation/Library/ScriptAssemblies/Game.PlayModeTests.dll" runstate="Runnable" testcasecount="56" result="Passed" start-time="2026-09-10 14:55:27Z" end-time="2026-09-10 14:55:51Z" duration="24.390068" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="19188" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1080" name="Roguelite" fullname="Roguelite" runstate="Runnable" testcasecount="56" result="Passed" start-time="2026-09-10 14:55:27Z" end-time="2026-09-10 14:55:51Z" duration="24.389264" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1081" name="Tests" fullname="Roguelite.Tests" runstate="Runnable" testcasecount="56" result="Passed" start-time="2026-09-10 14:55:27Z" end-time="2026-09-10 14:55:51Z" duration="24.388706" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1055" name="RebirthSessionTests" fullname="Roguelite.Tests.RebirthSessionTests" classname="Roguelite.Tests.RebirthSessionTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-10 14:55:27Z" end-time="2026-09-10 14:55:51Z" duration="24.387078" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1056" name="ThreeFreshProfilesReachFirstRebirthThenEarnFasterOnNextRunWithoutRewardCheats" fullname="Roguelite.Tests.RebirthSessionTests.ThreeFreshProfilesReachFirstRebirthThenEarnFasterOnNextRunWithoutRewardCheats" methodname="ThreeFreshProfilesReachFirstRebirthThenEarnFasterOnNextRunWithoutRewardCheats" classname="Roguelite.Tests.RebirthSessionTests" runstate="Runnable" seed="1413749309" result="Passed" start-time="2026-09-10 14:55:27Z" end-time="2026-09-10 14:55:51Z" duration="24.378170" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="Timeout" value="600000" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[BALANCE_RUN threat=0 outcome=Victory seconds=11.21 baseGold=80 earned=116 hp=100
+BALANCE_RUN threat=1 outcome=Victory seconds=10.84 baseGold=80 earned=280 hp=100
+BALANCE_SESSION sample=1 successesToFirstRebirth=1 deaths=0 beforeEarned=116 afterEarned=280 commonTarget=200 expectedRunsBefore=2 expectedRunsAfter=1
+BALANCE_RUN threat=0 outcome=Victory seconds=11.18 baseGold=80 earned=116 hp=100
+BALANCE_RUN threat=1 outcome=Victory seconds=10.84 baseGold=80 earned=280 hp=100
+BALANCE_SESSION sample=2 successesToFirstRebirth=1 deaths=0 beforeEarned=116 afterEarned=280 commonTarget=200 expectedRunsBefore=2 expectedRunsAfter=1
+BALANCE_RUN threat=0 outcome=Victory seconds=11.20 baseGold=80 earned=116 hp=100
+BALANCE_RUN threat=1 outcome=Victory seconds=10.84 baseGold=80 earned=280 hp=100
+BALANCE_SESSION sample=3 successesToFirstRebirth=1 deaths=0 beforeEarned=116 afterEarned=280 commonTarget=200 expectedRunsBefore=2 expectedRunsAfter=1
+Saving results to: C:/Users/User/AppData/LocalLow/DefaultCompany/My Game\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

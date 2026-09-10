@@ -1,7 +1,7 @@
 # Vertical Slice Progress
 
 ## Current Milestone
-M9 — Main Menu, Hub and run settlement validated. M6 committed as b5881e6; weapon-grip follow-up committed as dfb55d3.
+M10 — Rebirth and World Threat validated. EditMode 47/47 and PlayMode 56/56 passed; independent review complete. M9 committed as 7155aba.
 
 ## Completed Work
 - M0 foundation (a859db1), M1 player/input (3706a6a), M2 combat (ad5bc2b), M3 enemies (f2f9f37), M4 rooms (4f4e2ae), M5 Momentum/Combo (65701e3).
@@ -27,13 +27,13 @@ Source Editor startup/screenshots confirmed applied artwork and Bow selection. T
 MANUAL_PLAYTEST_REQUIRED — responsiveness, combat feel, ordinary-player combo difficulty and visual readability. Art currently uses static idle sprites and rotating held weapons. Human-only checks do not prevent subsequent implementation under the user's instructions.
 
 ## Known Issues
-No known failing M0–M6 automated check. Main Menu, Hub, Rebirth, Save and Windows build remain subsequent milestones. Referenced .github/agents prompt files remain absent; their contents are not inferred.
+No known failing M0–M10 automated check. Profile remains memory-only until M11; pause/settings integration and Windows build remain M12/M13. Referenced .github/agents prompt files remain absent; their contents are not inferred.
 
 ## Remaining Work
-M10–M13 in order, each with tests and commit; outstanding human playtests. Full goal remains unfinished.
+M11–M13 in order, each with tests and commit; outstanding human playtests. Full goal remains unfinished.
 
 ## Next Action
-Commit M9, then implement Rebirth and World Threat in M10.
+Commit validated M10, then implement M11 Save/Load with complete Profile fields, safe fallback and retry UI.
 
 ## Latest follow-up — weapon grip
 Bow orientation corrected; all weapons use explicit grip anchoring with hand markers. Added melee swing, Bow drawing-hand/recoil and front/back layering. EditMode 40/40 and PlayMode 41/41 passed; no game exceptions or compile errors in final logs. Independent review completed. Source Editor shows updated rendering; final visual feel remains MANUAL_PLAYTEST_REQUIRED. M7 follow-up completed; see docs/qa/m07.md.
@@ -46,3 +46,6 @@ Two-pattern Rift Warden, locked Boss room, HP/phase HUD and one-time Victory/Dea
 
 ## M9 completed
 MainMenu/Hub/Dungeon scenes, owned in-memory session, active-Run-ID settlement, Victory 100% and Death 50% retention, result UI and Hub weapon selection implemented. New runs reset actor state and keep Bank Gold. Actual mouse UI tests pass. EditMode 44/44, PlayMode 53/53. Review complete. Save remains M11; M8 committed as d24b2b6.
+
+## M10 completed
+Data-driven Rebirth cost/multiplier, one-time HP/Combo upgrades, preserved meta state, Threat 1 three-arrow behavior and separate Threat Gold factor implemented. Three fresh-profile Safe Route sessions without reward/health cheats each reached first Rebirth after one win; actual earnings rose from 116 to 280 on the next run. Expected runs to a common 200 Gold goal decreased from two to one using the permanent factor alone. Full EditMode 47/47 and PlayMode 56/56 passed; no compile/critical game exceptions in final logs. Independent review complete. See docs/qa/m10.md for methodology and evidence. MANUAL_PLAYTEST_REQUIRED for human pacing, growth feel and UI readability; disk persistence remains M11.
