@@ -1,7 +1,7 @@
 # Vertical Slice Progress
 
 ## Current Milestone
-M8 — Boss validated; M9 is next. M6 committed as b5881e6; weapon-grip follow-up committed as dfb55d3.
+M9 — Main Menu, Hub and run settlement validated. M6 committed as b5881e6; weapon-grip follow-up committed as dfb55d3.
 
 ## Completed Work
 - M0 foundation (a859db1), M1 player/input (3706a6a), M2 combat (ad5bc2b), M3 enemies (f2f9f37), M4 rooms (4f4e2ae), M5 Momentum/Combo (65701e3).
@@ -30,10 +30,10 @@ MANUAL_PLAYTEST_REQUIRED — responsiveness, combat feel, ordinary-player combo 
 No known failing M0–M6 automated check. Main Menu, Hub, Rebirth, Save and Windows build remain subsequent milestones. Referenced .github/agents prompt files remain absent; their contents are not inferred.
 
 ## Remaining Work
-M9–M13 in order, each with tests and commit; outstanding human playtests. Full goal remains unfinished.
+M10–M13 in order, each with tests and commit; outstanding human playtests. Full goal remains unfinished.
 
 ## Next Action
-Commit M8, then implement M9 Main Menu, Hub and one-time run settlement.
+Commit M9, then implement Rebirth and World Threat in M10.
 
 ## Latest follow-up — weapon grip
 Bow orientation corrected; all weapons use explicit grip anchoring with hand markers. Added melee swing, Bow drawing-hand/recoil and front/back layering. EditMode 40/40 and PlayMode 41/41 passed; no game exceptions or compile errors in final logs. Independent review completed. Source Editor shows updated rendering; final visual feel remains MANUAL_PLAYTEST_REQUIRED. M7 follow-up completed; see docs/qa/m07.md.
@@ -43,3 +43,6 @@ Two physical routes, elite telegraphed ground attacks, seeded rare x2 rewards an
 
 ## M8 completed
 Two-pattern Rift Warden, locked Boss room, HP/phase HUD and one-time Victory/Death signal implemented. Same-frame Death wins. EditMode 42/42 and PlayMode 51/51 passed; four weapons kill the active Boss, recovery windows are measured and physical Dash permits dodge/counterattack. Review completed. Ordinary play feel remains MANUAL_PLAYTEST_REQUIRED. M7 committed as 7080b4d.
+
+## M9 completed
+MainMenu/Hub/Dungeon scenes, owned in-memory session, active-Run-ID settlement, Victory 100% and Death 50% retention, result UI and Hub weapon selection implemented. New runs reset actor state and keep Bank Gold. Actual mouse UI tests pass. EditMode 44/44, PlayMode 53/53. Review complete. Save remains M11; M8 committed as d24b2b6.

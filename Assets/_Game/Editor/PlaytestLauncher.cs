@@ -29,9 +29,9 @@ namespace Roguelite.Editor
         {
             if (EditorApplication.isPlaying) return;
             if (!EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()) return;
-            EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Single);
+            EditorSceneManager.OpenScene("Assets/_Game/Scenes/MainMenu.unity", OpenSceneMode.Single);
             EditorApplication.isPlaying = true;
-            Debug.Log("ROGUELITE_PLAYTEST_READY: DungeonArena. WASD move, Left Shift hold sprint, Space dash, mouse aim, left click attack.");
+            Debug.Log("ROGUELITE_PLAYTEST_READY: MainMenu. Enter Hub, choose a weapon, then Enter Dungeon.");
         }
         [MenuItem("Roguelite/Open Dungeon Test Scene")]
         public static void Open()

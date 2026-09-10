@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-10 07:21:17Z" end-time="2026-09-10 07:21:18Z" duration="0.8074037">
+  <test-suite type="TestSuite" id="1079" name="My Game" fullname="My Game" runstate="Runnable" testcasecount="53" result="Passed" start-time="2026-09-10 07:21:17Z" end-time="2026-09-10 07:21:18Z" duration="0.807404" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1073" name="Game.PlayModeTests.dll" fullname="D:/Unity Project/My Game/.validation/Library/ScriptAssemblies/Game.PlayModeTests.dll" runstate="Runnable" testcasecount="53" result="Passed" start-time="2026-09-10 07:21:17Z" end-time="2026-09-10 07:21:18Z" duration="0.801893" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="22804" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1074" name="Roguelite" fullname="Roguelite" runstate="Runnable" testcasecount="53" result="Passed" start-time="2026-09-10 07:21:17Z" end-time="2026-09-10 07:21:18Z" duration="0.801144" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1075" name="Tests" fullname="Roguelite.Tests" runstate="Runnable" testcasecount="53" result="Passed" start-time="2026-09-10 07:21:17Z" end-time="2026-09-10 07:21:18Z" duration="0.800624" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1060" name="RunLoopInputTests" fullname="Roguelite.Tests.RunLoopInputTests" classname="Roguelite.Tests.RunLoopInputTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-10 07:21:17Z" end-time="2026-09-10 07:21:18Z" duration="0.799154" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1061" name="MouseNavigatesMenuWeaponRewardAndResultButtons" fullname="Roguelite.Tests.RunLoopInputTests.MouseNavigatesMenuWeaponRewardAndResultButtons" methodname="MouseNavigatesMenuWeaponRewardAndResultButtons" classname="Roguelite.Tests.RunLoopInputTests" runstate="Runnable" seed="2136012470" result="Passed" start-time="2026-09-10 07:21:17Z" end-time="2026-09-10 07:21:18Z" duration="0.791136" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/User/AppData/LocalLow/DefaultCompany/My Game\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

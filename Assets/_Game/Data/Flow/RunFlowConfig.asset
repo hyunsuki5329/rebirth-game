@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d073d0ddee14b6394909860497d518b, type: 3}
+  m_Name: RunFlowConfig
+  m_EditorClassIdentifier: Game.Runtime::Roguelite.RunFlowConfig
+  weapons:
+  - {fileID: 11400000, guid: ae57d103dbd66ff42adc6f987e6141f9, type: 2}
+  - {fileID: 11400000, guid: 499794bc660bb414e85c33e72156a64c, type: 2}
+  - {fileID: 11400000, guid: 423acb2dc444a4b428737e0311260242, type: 2}
+  - {fileID: 11400000, guid: d738e88b6818d9f4691bd718a44f2f0d, type: 2}
+  victoryRetention: 1
+  deathRetention: 0.5
+  firstSeed: 123

@@ -9,6 +9,7 @@ namespace Roguelite
         public RoomController[] combatRooms;
         public RoomController rewardRoom, shortcutRoom, eliteRoom, bossRoom;
         public int initialSeed = 123;
+        public bool autoStart = true;
         public ItemData[] rewardItems;
         public int cappedItemGold = 5;
         public ShortcutRules shortcutRules;
@@ -46,7 +47,7 @@ namespace Roguelite
                 }
             RunEnded?.Invoke(Outcome);
         }
-        private void Start() { if (Run == null) BeginRun(initialSeed); }
+        private void Start() { if (autoStart && Run == null) BeginRun(initialSeed); }
         public void BeginRun(int seed)
         {
             rewardPending = false;

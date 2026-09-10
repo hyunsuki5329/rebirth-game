@@ -1,8 +1,8 @@
 # 직접 플레이 테스트
 
-Unity에서 `Roguelite > Play Vertical Slice`를 선택한다. DungeonArena를 열고 Play Mode로 전환한다. 변경 중인 씬이 있으면 Unity의 저장 확인을 먼저 처리한다.
+Unity에서 `Roguelite > Play Vertical Slice`를 선택한다. MainMenu를 열고 Play Mode로 전환한다. 변경 중인 씬이 있으면 Unity의 저장 확인을 먼저 처리한다.
 
-메뉴가 보이지 않으면 `Assets/_Game/Scenes/DungeonArena.unity`를 열고 상단 ▶ Play를 누른다. Game 뷰를 클릭한 뒤 조작한다. Play를 다시 누르면 종료한다.
+메뉴가 보이지 않으면 `Assets/_Game/Scenes/MainMenu.unity`를 열고 상단 ▶ Play를 누른다. `Enter Hub` → 무기 선택 → `Enter Dungeon`으로 시작한다. Game 뷰를 클릭한 뒤 조작하며 Play를 다시 누르면 종료한다.
 
 | 조작 | 기능 |
 |---|---|
@@ -12,16 +12,17 @@ Unity에서 `Roguelite > Play Vertical Slice`를 선택한다. DungeonArena를 �
 | 마우스 위치 | 조준 |
 | 마우스 왼쪽 클릭 | 공격 |
 
-- 화면 위 Dagger / Sword / Greatsword / Bow 버튼으로 무기를 선택한다. 공격 중에는 교체되지 않는다. 버튼 클릭은 공격 입력으로 전달되지 않는다.
-- Bow는 마우스 방향으로 활을 들고 왼쪽 클릭당 화살 1발을 발사한다. 초기 피해 16, 발사 주기 0.5초, 화살 속도 14, 수명 0.6초다. 화살은 적 한 명 또는 벽에 닿으면 사라지며 무기 교체/방 전환/새 런에서도 정리된다.
-- 적을 모두 처치하고 오른쪽 초록 출구로 이동한다.
-- 보상방에서는 표시된 아이템 중 하나를 클릭한 뒤 출구로 이동한다.
+- Hub에서 Dagger / Sword / Greatsword / Bow 중 하나를 선택한다.
+- Bow는 클릭당 화살 1발을 발사한다. 초기 피해 16, 발사 주기 0.5초, 화살 속도 14, 수명 0.6초다. 적 또는 벽에 닿으면 사라진다.
+- 적을 모두 처치한 뒤 출구로 이동한다. 보상이 나오면 하나를 선택해야 다음 방으로 이동한다.
+- 갈림길의 초록 사각형은 일반 전투 2방, 주황 마름모는 정예 전투 1방이다. 정예의 주황 바닥 표시를 피하면 추가 공격을 회피할 수 있다. Rare 보상은 2스택이며 상한 초과분은 Gold로 전환된다.
 - Dagger Combo: 공격 → 공격 → Dash → 공격. 실제 명중을 동반하여 3회 완성하면 진화한다.
-- 다른 Combo: Dash → 공격 → 공격. 단계 사이에는 1초 이내에 다음 행동을 한다. 공격 Cooldown에 거절된 클릭은 Combo로 세지 않는다.
-- New Run 버튼은 HP, 아이템, 진화, Momentum과 획득 Gold를 초기화한다.
+- 다른 Combo: Dash → 공격 → 공격. 단계 사이에는 1초 이내에 다음 행동을 한다. Cooldown에 거절된 공격 클릭은 Combo로 세지 않는다.
+- 보스는 방향 예고 돌진과 바닥 순차 폭발을 번갈아 사용한다. 공격 후 Recovery가 반격 구간이다.
+- 결과 화면은 획득 Gold와 보존율을 표시한다. Victory는 100%, Death는 50%를 Bank Gold에 한 번만 정산한다. `Return to Hub` 후 다시 시작하면 HP, 아이템, 진화, Momentum과 Run Gold는 초기화된다.
 
-현재는 M8 개발 단계의 전투/던전 테스트다. 마지막 방의 보스는 방향 예고 돌진과 바닥 순차 폭발을 번갈아 사용한다. 공격 후 Recovery가 반격 구간이다. Victory/Death까지 진행할 수 있으며 Main Menu, Hub, Rebirth, Save는 후속 Milestone에서 연결한다.
+현재 M9 Profile은 메모리에서만 유지된다. Rebirth와 디스크 Save는 후속 Milestone에서 연결한다.
 
-확인할 사항: 이동·달리기·Dash 감각, 마우스 조준, 공격 범위와 적 예고 식별, Combo 수행 난도, 무기별 차이, UI 가독성. 인간 조작 검증은 `MANUAL_PLAYTEST_REQUIRED` 상태이며 자동 테스트로 대체 완료했다고 기록하지 않는다.
+개발용 `Assets/_Game/Scenes/DungeonArena.unity`에는 즉시 무기 교체와 `New Run` 버튼이 남아 있다. 실제 메뉴/Hub 흐름 검증은 MainMenu에서 시작한다.
 
-M7 경로 선택: 갈림길에서 위쪽 초록 사각형 출구는 일반 전투 2방, 아래쪽 주황 마름모 출구는 정예 전투 1방으로 이어진다. 정예의 주황 바닥 표시를 피하면 추가 공격을 회피할 수 있다. 경로 종료 후 아이템을 선택해야 다음 방으로 이동한다. Rare 보상은 2스택이며 상한 초과분은 Gold로 전환된다.
+MANUAL_PLAYTEST_REQUIRED — 이동·달리기·Dash 감각, 공격·예고 가독성, Combo 난도, 경로 선택 및 보스 난이도. 자동 검증을 인간 조작 테스트 완료로 기록하지 않는다.
