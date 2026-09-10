@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Game.Runtime::Roguelite.RoomDefinition
   id: BossEntrance
   kind: 4
-  gold: 0
-  enemies: []
+  gold: 35
+  enemies:
+  - prefab: {fileID: 4375543343722254848, guid: 51ebd83116ed812429f8dd7dc5cf89e6, type: 3}
+    position: {x: 0, y: 0}

@@ -1,7 +1,7 @@
 # Vertical Slice Progress
 
 ## Current Milestone
-M7 — Dangerous Shortcut validated. M6 committed as b5881e6; weapon-grip follow-up committed as dfb55d3.
+M8 — Boss validated; M9 is next. M6 committed as b5881e6; weapon-grip follow-up committed as dfb55d3.
 
 ## Completed Work
 - M0 foundation (a859db1), M1 player/input (3706a6a), M2 combat (ad5bc2b), M3 enemies (f2f9f37), M4 rooms (4f4e2ae), M5 Momentum/Combo (65701e3).
@@ -27,16 +27,19 @@ Source Editor startup/screenshots confirmed applied artwork and Bow selection. T
 MANUAL_PLAYTEST_REQUIRED — responsiveness, combat feel, ordinary-player combo difficulty and visual readability. Art currently uses static idle sprites and rotating held weapons. Human-only checks do not prevent subsequent implementation under the user's instructions.
 
 ## Known Issues
-No known failing M0–M6 automated check. Main Menu, Hub, Boss, Rebirth, Save and Windows build are not implemented yet. Referenced .github/agents prompt files remain absent; their contents are not inferred.
+No known failing M0–M6 automated check. Main Menu, Hub, Rebirth, Save and Windows build remain subsequent milestones. Referenced .github/agents prompt files remain absent; their contents are not inferred.
 
 ## Remaining Work
-M8–M13 in order, each with tests and commit; outstanding human playtests. Full goal remains unfinished.
+M9–M13 in order, each with tests and commit; outstanding human playtests. Full goal remains unfinished.
 
 ## Next Action
-Commit M7 checkpoint, then implement M8 Boss.
+Commit M8, then implement M9 Main Menu, Hub and one-time run settlement.
 
 ## Latest follow-up — weapon grip
 Bow orientation corrected; all weapons use explicit grip anchoring with hand markers. Added melee swing, Bow drawing-hand/recoil and front/back layering. EditMode 40/40 and PlayMode 41/41 passed; no game exceptions or compile errors in final logs. Independent review completed. Source Editor shows updated rendering; final visual feel remains MANUAL_PLAYTEST_REQUIRED. M7 follow-up completed; see docs/qa/m07.md.
 
 ## M7 completed
 Two physical routes, elite telegraphed ground attacks, seeded rare x2 rewards and capped-stack conversion implemented. EditMode 41/41, PlayMode 46/46 passed. Six same-build real-combat route comparisons reached Boss entrance; Dangerous traded 14 HP for less time and more Gold. Review completed. Human movement/avoidance and route readability remain MANUAL_PLAYTEST_REQUIRED. Boss combat begins at M8.
+
+## M8 completed
+Two-pattern Rift Warden, locked Boss room, HP/phase HUD and one-time Victory/Death signal implemented. Same-frame Death wins. EditMode 42/42 and PlayMode 51/51 passed; four weapons kill the active Boss, recovery windows are measured and physical Dash permits dodge/counterattack. Review completed. Ordinary play feel remains MANUAL_PLAYTEST_REQUIRED. M7 committed as 7080b4d.

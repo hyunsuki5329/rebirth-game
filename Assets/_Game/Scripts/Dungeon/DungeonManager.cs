@@ -20,16 +20,39 @@ namespace Roguelite
         public RoomController Room { get; private set; }
         public RoomGraph Graph { get; private set; }
         public bool PathComplete { get; private set; }
+        public BossController Boss { get; private set; }
+        private RunConclusion conclusion = new RunConclusion();
+        public RunOutcome Outcome => conclusion.Outcome;
+        public event Action<RunOutcome> RunEnded;
         public RewardService Rewards { get; } = new RewardService();
         public event Action PathCompleted;
         private bool rewardPending;
-        private void LateUpdate() => SettleRoomReward();
+        private void LateUpdate()
+        {
+            SettleRoomReward();
+            if (Player == null || Run == null) return;
+            bool bossDead = Room != null && Graph.Nodes[Run.RoomIndex].Kind == RoomKind.Boss && Room.IsClear && Room.Enemies.Count > 0;
+            if (!conclusion.Resolve(Player.IsDead, bossDead)) return;
+            PathComplete = true;
+            Player.GetComponent<PlayerInputReader>().SetBlocked(true);
+            Player.GetComponent<PlayerMotor2D>().CanMove = false;
+            Player.GetComponent<PlayerCombat>().enabled = false;
+            Player.GetComponent<CombatEffects>().Clear();
+            foreach (var enemy in Room.Enemies)
+                if (enemy != null)
+                {
+                    enemy.GetComponent<EnemyAI>().enabled = false; enemy.GetComponent<EnemyAttack>().enabled = false;
+                    enemy.GetComponent<CombatEffects>().Clear();
+                }
+            RunEnded?.Invoke(Outcome);
+        }
         private void Start() { if (Run == null) BeginRun(initialSeed); }
         public void BeginRun(int seed)
         {
             rewardPending = false;
             PendingRewards = Array.Empty<ItemData>();
             PendingRewardStacks = 1; ChosenShortcut = null;
+            conclusion = new RunConclusion();
             RemoveRoom();
             if (Player != null) { Player.gameObject.SetActive(false); Destroy(Player.gameObject); }
             Run = new RunState(seed); Graph = new RoomGraph(seed); PathComplete = false;
@@ -77,6 +100,7 @@ namespace Roguelite
             Room.exit.Entered += OnExit;
             if (Player.TryGetComponent<MomentumSystem>(out var momentum)) momentum.BeginRoom();
             Room.Initialize(Player);
+            Boss = Room.GetComponentInChildren<BossController>();
             if (Room.TryGetComponent<ShortcutController>(out var choice)) choice.Bind(this);
             if (node.Kind == RoomKind.Elite && shortcutRules != null)
                 foreach (var enemy in Room.Enemies) enemy.gameObject.AddComponent<EliteModifier>().Initialize(Player, shortcutRules);
@@ -117,6 +141,7 @@ namespace Roguelite
             if (Room == null) return;
             Room.Cleared -= GrantReward; Room.exit.Entered -= OnExit;
             Room.gameObject.SetActive(false); Destroy(Room.gameObject); Room = null;
+            Boss = null;
         }
         private void OnDestroy() { RemoveRoom(); if (Player != null) Destroy(Player.gameObject); }
     }

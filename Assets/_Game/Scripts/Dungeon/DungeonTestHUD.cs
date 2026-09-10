@@ -54,7 +54,7 @@ namespace Roguelite
         {
             if (status == null || dungeon.Run == null) return;
             status.text = $"Dungeon test | HP {dungeon.Player.Current:0}/{dungeon.Player.Maximum:0} | Room {dungeon.Run.RoomIndex + 1} | Gold {dungeon.Run.Gold}\n" +
-                (dungeon.Player.IsDead ? "Defeated. Click New Run." : dungeon.PathComplete ? "Boss entrance reached (combat follows in M8)." :
+                (dungeon.Player.IsDead ? "Defeated. Click New Run." : dungeon.Outcome == Roguelite.Core.RunOutcome.Victory ? "Victory! Boss defeated. Click New Run." :
                 dungeon.Room.IsClear ? "Room clear. Walk into the green exit on the right." : "Defeat all enemies to unlock the exit.");
             if (dungeon.Player.TryGetComponent<MomentumSystem>(out var momentum))
                 status.text += $"\nMomentum {momentum.Model.Value:0} | Gold x{momentum.GoldMultiplier:0.00} | Combo {dungeon.Player.GetComponent<ComboSystem>().LastCompleted ?? "-"}";
@@ -62,6 +62,11 @@ namespace Roguelite
                 status.text += $" | {weapon.Current.id}" + (weapon.Current.canEvolve ? $" {(weapon.Progress.Evolved ? "EVOLVED" : weapon.Progress.ComboCount + "/" + weapon.Current.evolutionCombos)}" : "");
             if (dungeon.Run.RoomIndex == 3)
                 status.text += "\nChoose: green rectangle = Safe (2 fights) / orange diamond = Dangerous (1 elite + ground blasts).";
+            if (dungeon.Boss != null)
+            {
+                var health = dungeon.Boss.GetComponent<EnemyHealth>();
+                status.text += $"\nRIFT WARDEN | {health.Current:0}/{health.Maximum:0} HP | {dungeon.Boss.Phase}";
+            }
             for (int i = 0; i < rewardButtons.Length; i++)
             {
                 rewardButtons[i].gameObject.SetActive(i < dungeon.PendingRewards.Length);

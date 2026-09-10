@@ -1,7 +1,8 @@
 param(
     [ValidateSet('EditMode','PlayMode','Method')][string]$Mode = 'EditMode',
     [string]$Tag = 'latest',
-    [string]$Method = ''
+    [string]$Method = '',
+    [string]$TestFilter = ''
 )
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path $PSScriptRoot -Parent
@@ -37,6 +38,7 @@ $xml = Join-Path $resultRoot "$Tag.xml"
 $argsList = @('-batchmode','-nographics','-projectPath', ('"' + $validationRoot + '"'), '-logFile', ('"' + $log + '"'))
 if ($Mode -eq 'Method') { $argsList += @('-executeMethod', $Method, '-quit') }
 else { $argsList += @('-runTests','-testPlatform',$Mode,'-testResults',('"' + $xml + '"')) }
+if ($TestFilter) { $argsList += @('-testFilter', $TestFilter) }
 $process = Start-Process -FilePath $unityExe -ArgumentList $argsList -WindowStyle Hidden -PassThru
 $process.Id | Set-Content (Join-Path $resultRoot "$Tag.pid")
 Write-Output "Started Unity PID $($process.Id). Log: $log"
