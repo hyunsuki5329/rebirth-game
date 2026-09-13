@@ -25,7 +25,7 @@ Unity에서 `Roguelite > Play Vertical Slice`를 선택한다. MainMenu를 열�
 - Vitality는 Point 1로 다음 런 최대 HP를 20 늘린다. Focus는 Point 1로 Combo 단계 사이 허용 시간을 0.25초 늘린다. 각 Upgrade는 한 번만 구매한다.
 - Threat 1부터 원거리 적이 3방향 화살을 발사한다. Threat 보상 배율 1.2배는 영구 Gold 배율과 별도로 적용된다.
 
-현재 Profile은 메모리에서만 유지된다. Unity Play를 종료하면 초기화되며 디스크 Save는 M11에서 연결한다.
+메타 성장과 설정은 `Application.persistentDataPath/profile.json`에 저장한다. 기본 Windows 위치는 `%USERPROFILE%/AppData/LocalLow/DefaultCompany/My Game/profile.json`이다. 결과 정산, Rebirth, Upgrade 구매, 볼륨 변경 시 저장하며 런 중간 이어하기는 제공하지 않는다. MainMenu와 Hub의 `Vol -` / `Vol +`로 전체 볼륨을 변경한다. 저장 실패가 표시되면 현재 세션을 종료하기 전에 `Retry Save`를 사용한다. 손상/지원하지 않는 저장은 `.corrupt-*` 원본을 보존하고 정상 백업 또는 새 Profile로 복구한다.
 
 개발용 `Assets/_Game/Scenes/DungeonArena.unity`에는 즉시 무기 교체와 `New Run` 버튼이 남아 있다. 실제 메뉴/Hub 흐름 검증은 MainMenu에서 시작한다.
 

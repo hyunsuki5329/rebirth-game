@@ -39,7 +39,7 @@ namespace Roguelite.Tests
             InputSystem.settings.editorInputBehaviorInPlayMode = editorBehavior;
 #endif
             foreach (var session in Object.FindObjectsByType<GameBootstrap>(FindObjectsSortMode.None)) Object.Destroy(session.gameObject);
-            yield return null;
+            yield return null; SaveSessionFixture.Cleanup();
         }
         private IEnumerator Ready(GameBootstrap s)
         {
@@ -102,7 +102,7 @@ namespace Roguelite.Tests
         {
             for (int sample = 0; sample < 3; sample++)
             {
-                yield return SceneManager.LoadSceneAsync("MainMenu"); yield return null; yield return null;
+                yield return SaveSessionFixture.Load();
                 var session = Object.FindFirstObjectByType<GameBootstrap>();
                 Assert.That(session.Profile.bankGold, Is.Zero); session.OpenHub(); yield return Ready(session); session.SelectWeapon(3);
                 int successes = 0, deaths = 0, baseline = 0;

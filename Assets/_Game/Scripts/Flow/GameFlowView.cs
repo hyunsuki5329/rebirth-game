@@ -57,6 +57,7 @@ namespace Roguelite
                 int choice = i;
                 rewards[i] = ButtonAt(hud.transform, "Reward", 18 + i * 225, 185, () => session.Dungeon.ChooseReward(choice));
             }
+            canvas.AddComponent<SettingsView>().Initialize(session);
         }
         private void Update()
         {
@@ -114,14 +115,14 @@ namespace Roguelite
         }
         private static void Stretch(RectTransform rect)
         { rect.anchorMin = Vector2.zero; rect.anchorMax = Vector2.one; rect.offsetMin = rect.offsetMax = Vector2.zero; }
-        private static Text TextAt(Transform parent, string text, float x, float y, int size)
+        internal static Text TextAt(Transform parent, string text, float x, float y, int size)
         {
             var go = new GameObject("Label", typeof(RectTransform), typeof(Text)); go.transform.SetParent(parent, false);
             Place(go.GetComponent<RectTransform>(), x, y, 1150, 180);
             var label = go.GetComponent<Text>(); label.text = text; label.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             label.fontSize = size; label.color = Color.white; label.raycastTarget = false; return label;
         }
-        private static Button ButtonAt(Transform parent, string text, float x, float y, UnityEngine.Events.UnityAction action)
+        internal static Button ButtonAt(Transform parent, string text, float x, float y, UnityEngine.Events.UnityAction action)
         {
             var go = new GameObject(text, typeof(RectTransform), typeof(Image), typeof(Button)); go.transform.SetParent(parent, false);
             Place(go.GetComponent<RectTransform>(), x, y, 210, 48);

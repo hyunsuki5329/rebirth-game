@@ -1,7 +1,7 @@
 # Vertical Slice Progress
 
 ## Current Milestone
-M10 — Rebirth and World Threat validated. EditMode 47/47 and PlayMode 56/56 passed; independent review complete. M9 committed as 7155aba.
+M11 — Save/Load validated. EditMode 57/57, PlayMode 59/59 ordinary tests and two separate-process relaunch checks 1/1 each passed. M10 committed as ae04d21; M11 ready for commit.
 
 ## Completed Work
 - M0 foundation (a859db1), M1 player/input (3706a6a), M2 combat (ad5bc2b), M3 enemies (f2f9f37), M4 rooms (4f4e2ae), M5 Momentum/Combo (65701e3).
@@ -27,13 +27,13 @@ Source Editor startup/screenshots confirmed applied artwork and Bow selection. T
 MANUAL_PLAYTEST_REQUIRED — responsiveness, combat feel, ordinary-player combo difficulty and visual readability. Art currently uses static idle sprites and rotating held weapons. Human-only checks do not prevent subsequent implementation under the user's instructions.
 
 ## Known Issues
-No known failing M0–M10 automated check. Profile remains memory-only until M11; pause/settings integration and Windows build remain M12/M13. Referenced .github/agents prompt files remain absent; their contents are not inferred.
+No known failing M0–M11 automated check. Pause integration and Windows build remain M12/M13. Human pacing/feel/readability checks remain MANUAL_PLAYTEST_REQUIRED. Referenced .github/agents prompt files remain absent; their contents are not inferred.
 
 ## Remaining Work
-M11–M13 in order, each with tests and commit; outstanding human playtests. Full goal remains unfinished.
+M12–M13 in order, each with tests and commit; outstanding human playtests. Full goal remains unfinished.
 
 ## Next Action
-Commit validated M10, then implement M11 Save/Load with complete Profile fields, safe fallback and retry UI.
+Commit validated M11, then begin M12 pause/input/time integration, HUD cooldown and complete normal-route/shortcut/death/evolution flow checks. Do not mark the goal complete before M13 build and execution QA.
 
 ## Latest follow-up — weapon grip
 Bow orientation corrected; all weapons use explicit grip anchoring with hand markers. Added melee swing, Bow drawing-hand/recoil and front/back layering. EditMode 40/40 and PlayMode 41/41 passed; no game exceptions or compile errors in final logs. Independent review completed. Source Editor shows updated rendering; final visual feel remains MANUAL_PLAYTEST_REQUIRED. M7 follow-up completed; see docs/qa/m07.md.
@@ -49,3 +49,8 @@ MainMenu/Hub/Dungeon scenes, owned in-memory session, active-Run-ID settlement, 
 
 ## M10 completed
 Data-driven Rebirth cost/multiplier, one-time HP/Combo upgrades, preserved meta state, Threat 1 three-arrow behavior and separate Threat Gold factor implemented. Three fresh-profile Safe Route sessions without reward/health cheats each reached first Rebirth after one win; actual earnings rose from 116 to 280 on the next run. Expected runs to a common 200 Gold goal decreased from two to one using the permanent factor alone. Full EditMode 47/47 and PlayMode 56/56 passed; no compile/critical game exceptions in final logs. Independent review complete. See docs/qa/m10.md for methodology and evidence. MANUAL_PLAYTEST_REQUIRED for human pacing, growth feel and UI readability; disk persistence remains M11.
+
+## M11 completed
+Added schemaVersion 1 envelope, Profile Settings, stable-ID/value validation and a file store with temporary-file flush/replace, backup recovery and preservation of corrupt/unsupported primary and backup originals. Expected I/O failures return an explicit error without changing the caller's Profile or previous valid file. Failed preservation blocks writes. GameBootstrap now loads/saves through persistentDataPath by default; settlement, Rebirth, purchases and volume changes save, with failure/retry and recovery notices. Tests use isolated QA profiles. Session tests 5/5 and separate Unity-process write/read checks 1/1 each passed. Review's backup-preservation issue reproduced, fixed and re-reviewed; final EditMode 57/57 passed. The first full PlayMode run exposed a volume-click test failure; the cause and final resolution are recorded below.
+
+Final resolution: reproduced duplicate EventSystems in the test fixture, moved isolated session creation to sceneLoaded after old-scene cleanup, and added a one-EventSystem assertion. Affected sequence 9/9 and final full PlayMode 59/59 ordinary tests passed. Both explicit relaunch tests were then rerun in separate processes, 1/1 each. No compile/critical game errors or duplicate EventSystem warnings in final logs; independent review complete. M11 verifiable DoD is satisfied; docs/qa/m11.md records evidence and manual limitations.

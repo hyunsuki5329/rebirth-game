@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-13 10:41:55Z" end-time="2026-09-13 10:41:55Z" duration="0.0637303">
+  <test-suite type="TestSuite" id="1000" name="My Game" fullname="My Game" runstate="Runnable" testcasecount="57" result="Failed" site="Child" start-time="2026-09-13 10:41:55Z" end-time="2026-09-13 10:41:55Z" duration="0.063730" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1085" name="Game.EditModeTests.dll" fullname="D:/Unity Project/My Game/.validation/Library/ScriptAssemblies/Game.EditModeTests.dll" runstate="Runnable" testcasecount="57" result="Failed" site="Child" start-time="2026-09-13 10:41:55Z" end-time="2026-09-13 10:41:55Z" duration="0.056921" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="24736" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1086" name="Roguelite" fullname="Roguelite" runstate="Runnable" testcasecount="57" result="Failed" site="Child" start-time="2026-09-13 10:41:55Z" end-time="2026-09-13 10:41:55Z" duration="0.055515" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1087" name="Tests" fullname="Roguelite.Tests" runstate="Runnable" testcasecount="57" result="Failed" site="Child" start-time="2026-09-13 10:41:55Z" end-time="2026-09-13 10:41:55Z" duration="0.054881" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1069" name="SaveSerializationTests" fullname="Roguelite.Tests.SaveSerializationTests" classname="Roguelite.Tests.SaveSerializationTests" runstate="Runnable" testcasecount="9" result="Failed" site="Child" start-time="2026-09-13 10:41:55Z" end-time="2026-09-13 10:41:55Z" duration="0.053113" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1076" name="InvalidPrimaryAndBackupBothSurviveFallbackAndLaterSaves" fullname="Roguelite.Tests.SaveSerializationTests.InvalidPrimaryAndBackupBothSurviveFallbackAndLaterSaves" methodname="InvalidPrimaryAndBackupBothSurviveFallbackAndLaterSaves" classname="Roguelite.Tests.SaveSerializationTests" runstate="Runnable" seed="288064746" result="Failed" start-time="2026-09-13 10:41:55Z" end-time="2026-09-13 10:41:55Z" duration="0.044093" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Expected: 2
+  But was:  1
+]]></message>
+                <stack-trace><![CDATA[at Roguelite.Tests.SaveSerializationTests.InvalidPrimaryAndBackupBothSurviveFallbackAndLaterSaves () [0x0009b] in D:\Unity Project\My Game\.validation\Assets\_Game\Tests\EditMode\SaveSerializationTests.cs:70
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[Saving results to: C:/Users/User/AppData/LocalLow/DefaultCompany/My Game\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

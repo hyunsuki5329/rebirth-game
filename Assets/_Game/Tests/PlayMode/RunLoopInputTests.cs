@@ -26,7 +26,7 @@ namespace Roguelite.Tests
             InputSystem.settings.editorInputBehaviorInPlayMode = InputSettings.EditorInputBehaviorInPlayMode.AllDeviceInputAlwaysGoesToGameView;
 #endif
             mouse = InputSystem.AddDevice<Mouse>();
-            yield return SceneManager.LoadSceneAsync("MainMenu"); yield return null; yield return null;
+            yield return SaveSessionFixture.Load();
         }
         [UnityTearDown]
         public IEnumerator TearDown()
@@ -36,13 +36,17 @@ namespace Roguelite.Tests
             InputSystem.settings.editorInputBehaviorInPlayMode = editorBehavior;
 #endif
             foreach (var session in Object.FindObjectsByType<GameBootstrap>(FindObjectsSortMode.None)) Object.Destroy(session.gameObject);
-            yield return null;
+            yield return null; SaveSessionFixture.Cleanup();
         }
         private IEnumerator Click(string name)
         {
+            Assert.That(Object.FindObjectsByType<UnityEngine.EventSystems.EventSystem>(FindObjectsSortMode.None).Length, Is.EqualTo(1), "UI clicks require one active EventSystem.");
             Canvas.ForceUpdateCanvases();
             var button = Object.FindObjectsByType<Button>(FindObjectsSortMode.None).First(b => b.name == name);
             var rect = button.GetComponent<RectTransform>(); var point = RectTransformUtility.WorldToScreenPoint(null, rect.TransformPoint(rect.rect.center));
+            var hits = new System.Collections.Generic.List<UnityEngine.EventSystems.RaycastResult>();
+            UnityEngine.EventSystems.EventSystem.current.RaycastAll(new UnityEngine.EventSystems.PointerEventData(UnityEngine.EventSystems.EventSystem.current) { position = point }, hits);
+            TestContext.WriteLine($"UI_CLICK {name} point={point} screen={Screen.width}x{Screen.height} active={button.isActiveAndEnabled} interactable={button.interactable} hits={string.Join(",", hits.Select(h => h.gameObject.name))}");
             InputSystem.QueueStateEvent(mouse, new MouseState { position = point }); yield return null;
             InputSystem.QueueStateEvent(mouse, new MouseState { position = point, buttons = 1 }); yield return null;
             InputSystem.QueueStateEvent(mouse, new MouseState { position = point }); yield return null; yield return null;
@@ -52,6 +56,17 @@ namespace Roguelite.Tests
             float deadline = Time.realtimeSinceStartup + 10;
             while (session.IsLoading && Time.realtimeSinceStartup < deadline) yield return null;
             Assert.That(session.IsLoading, Is.False); yield return null;
+        }
+        [UnityTest]
+        public IEnumerator MouseChangesVolumeAndPersistsSetting()
+        {
+            var session = Object.FindFirstObjectByType<GameBootstrap>();
+            yield return Click("Vol -");
+            Assert.That(session.Profile.settings.masterVolume, Is.EqualTo(0.9f).Within(0.001f));
+            Assert.That(AudioListener.volume, Is.EqualTo(0.9f).Within(0.001f));
+            var data = JsonUtility.FromJson<SaveData>(System.IO.File.ReadAllText(session.SavePath));
+            Assert.That(data.profile.settings.masterVolume, Is.EqualTo(0.9f).Within(0.001f));
+            Assert.That(Object.FindObjectsByType<Text>(FindObjectsSortMode.None).Any(t => t.text.Contains("Runs do not resume")), Is.True);
         }
         [UnityTest]
         public IEnumerator MouseNavigatesMenuWeaponRewardAndResultButtons()

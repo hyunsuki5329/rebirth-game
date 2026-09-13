@@ -8,6 +8,12 @@ namespace Roguelite
     {
         public RunFlowConfig config;
         public RebirthConfig rebirthConfig;
+        [Tooltip("Empty uses Application.persistentDataPath. An explicit directory supports isolated QA profiles.")]
+        public string profileDirectory = "";
+        public string SavePath => store.FilePath;
+        public string SaveNotice { get; private set; } = "";
+        public string SaveError { get; private set; } = "";
+        private ProfileFileStore store;
         public RebirthSystem RebirthRules { get; private set; }
         public RunFlow Flow { get; private set; }
         public ProfileData Profile => Flow.Profile;
@@ -18,15 +24,37 @@ namespace Roguelite
         private void Awake()
         {
             DontDestroyOnLoad(gameObject);
-            Flow = new RunFlow(new ProfileData(), config.victoryRetention, config.deathRetention); nextSeed = config.firstSeed;
+            var weaponIds = System.Array.ConvertAll(config.weapons, weapon => weapon.id);
+            var upgradeIds = rebirthConfig == null ? System.Array.Empty<string>() : System.Array.ConvertAll(rebirthConfig.upgrades, upgrade => upgrade.id);
+            store = new ProfileFileStore(string.IsNullOrEmpty(profileDirectory) ? Application.persistentDataPath : profileDirectory,
+                new SaveCodec(weaponIds, upgradeIds));
+            var loaded = store.Load(); SaveNotice = loaded.Notice;
+            Flow = new RunFlow(loaded.Profile, config.victoryRetention, config.deathRetention); nextSeed = config.firstSeed;
+            AudioListener.volume = Profile.settings.masterVolume;
             if (rebirthConfig != null) RebirthRules = rebirthConfig.CreateRules();
+            RetrySave();
         }
         public bool CanRebirth => !IsLoading && Flow.Phase == RunFlowPhase.Hub && RebirthRules != null && RebirthRules.CanRebirth(Profile);
-        public bool Rebirth() => CanRebirth && RebirthRules.TryRebirth(Profile);
+        public bool Rebirth()
+        {
+            if (!CanRebirth || !RebirthRules.TryRebirth(Profile)) return false;
+            RetrySave(); return true;
+        }
+        public bool RetrySave()
+        {
+            bool success = store.TrySave(Profile, out string error); SaveError = error; return success;
+        }
+        public bool SetMasterVolume(float volume)
+        {
+            if (float.IsNaN(volume) || float.IsInfinity(volume) || volume < 0 || volume > 1) return false;
+            Profile.settings.masterVolume = volume; AudioListener.volume = volume; RetrySave(); return true;
+        }
         public bool BuyUpgrade(int index)
         {
             if (IsLoading || Flow.Phase != RunFlowPhase.Hub || rebirthConfig == null || index < 0 || index >= rebirthConfig.upgrades.Length) return false;
-            var upgrade = rebirthConfig.upgrades[index]; return RebirthRules.TryBuy(Profile, upgrade.id, upgrade.pointCost);
+            var upgrade = rebirthConfig.upgrades[index];
+            if (!RebirthRules.TryBuy(Profile, upgrade.id, upgrade.pointCost)) return false;
+            RetrySave(); return true;
         }
         public bool SelectWeapon(int index)
         {
@@ -75,7 +103,8 @@ namespace Roguelite
             Flow.Begin(Dungeon.Run); Dungeon.RunEnded += OnRunEnded;
             IsLoading = false;
         }
-        private void OnRunEnded(RunOutcome outcome) => Flow.Finish(Dungeon.Run, outcome);
+        private void OnRunEnded(RunOutcome outcome)
+        { if (Flow.Finish(Dungeon.Run, outcome)) RetrySave(); }
         private void UnbindDungeon()
         {
             if (Dungeon != null) Dungeon.RunEnded -= OnRunEnded;

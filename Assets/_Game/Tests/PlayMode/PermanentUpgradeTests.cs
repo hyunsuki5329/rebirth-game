@@ -8,12 +8,12 @@ namespace Roguelite.Tests
 {
     public class PermanentUpgradeTests
     {
-        [UnityTearDown] public IEnumerator Cleanup() { foreach (var s in Object.FindObjectsByType<GameBootstrap>(FindObjectsSortMode.None)) Object.Destroy(s.gameObject); yield return null; }
+        [UnityTearDown] public IEnumerator Cleanup() { foreach (var s in Object.FindObjectsByType<GameBootstrap>(FindObjectsSortMode.None)) Object.Destroy(s.gameObject); yield return null; SaveSessionFixture.Cleanup(); }
         private IEnumerator Ready(GameBootstrap s) { while (s.IsLoading) yield return null; yield return null; }
         [UnityTest]
         public IEnumerator HubRebirthAppliesBothUpgradesWithoutMutatingPlayerAsset()
         {
-            yield return SceneManager.LoadSceneAsync("MainMenu"); yield return null; yield return null;
+            yield return SaveSessionFixture.Load();
             var session = Object.FindFirstObjectByType<GameBootstrap>(); session.OpenHub(); yield return Ready(session);
             session.Profile.totalClears = 1; session.Profile.bankGold = 300;
             Assert.That(session.Rebirth(), Is.True); Assert.That(session.BuyUpgrade(0), Is.True); Assert.That(session.BuyUpgrade(0), Is.False);
