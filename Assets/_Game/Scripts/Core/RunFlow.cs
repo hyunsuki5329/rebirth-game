@@ -27,6 +27,11 @@ namespace Roguelite.Core
             if (Phase != RunFlowPhase.MainMenu && Phase != RunFlowPhase.Result) return false;
             Phase = RunFlowPhase.Hub; return true;
         }
+        public bool EnterMenu()
+        {
+            if (Phase != RunFlowPhase.Hub) return false;
+            Phase = RunFlowPhase.MainMenu; return true;
+        }
         public bool Begin(RunState run)
         {
             if (Phase != RunFlowPhase.Hub || run == null) return false;

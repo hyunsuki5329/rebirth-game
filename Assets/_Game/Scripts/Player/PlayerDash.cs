@@ -31,7 +31,7 @@ namespace Roguelite
         }
         public bool RequestDash(Vector2 facing)
         {
-            if (!isActiveAndEnabled || facing.sqrMagnitude < 0.001f ||
+            if (!isActiveAndEnabled || Time.timeScale == 0 || facing.sqrMagnitude < 0.001f ||
                 TryGetComponent<PlayerHealth>(out var health) && health.IsDead || !model.TryStart(Time.timeAsDouble)) return false;
             canceled = false; direction = facing.normalized; wasActive = true; Started?.Invoke(); return true;
         }

@@ -24,7 +24,7 @@ namespace Roguelite
         }
         public bool TryBegin(Vector2 facing)
         {
-            if (!isActiveAndEnabled || owner.IsDead || IsBusy || facing.sqrMagnitude < 0.001f) return false;
+            if (!isActiveAndEnabled || Time.timeScale == 0 || owner.IsDead || IsBusy || facing.sqrMagnitude < 0.001f) return false;
             Direction = facing.normalized;
             impactAt = Time.time + data.attack.windup;
             activeUntil = impactAt + data.attack.activeTime;
@@ -37,6 +37,7 @@ namespace Roguelite
         }
         private void Update()
         {
+            if (Time.timeScale == 0) return;
             if (owner.IsDead) { Cancel(); return; }
             if (!pending || Time.time < impactAt) return;
             pending = false;

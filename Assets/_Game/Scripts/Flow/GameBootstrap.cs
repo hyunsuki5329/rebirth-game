@@ -19,6 +19,7 @@ namespace Roguelite
         public ProfileData Profile => Flow.Profile;
         public DungeonManager Dungeon { get; private set; }
         public bool IsLoading { get; private set; }
+        public GamePause Pause { get; private set; }
         public int SelectedWeapon { get; private set; }
         private int nextSeed;
         private void Awake()
@@ -32,6 +33,7 @@ namespace Roguelite
             Flow = new RunFlow(loaded.Profile, config.victoryRetention, config.deathRetention); nextSeed = config.firstSeed;
             AudioListener.volume = Profile.settings.masterVolume;
             if (rebirthConfig != null) RebirthRules = rebirthConfig.CreateRules();
+            Pause = gameObject.AddComponent<GamePause>(); Pause.Initialize(this);
             RetrySave();
         }
         public bool CanRebirth => !IsLoading && Flow.Phase == RunFlowPhase.Hub && RebirthRules != null && RebirthRules.CanRebirth(Profile);
@@ -66,9 +68,19 @@ namespace Roguelite
             if (IsLoading || !Flow.EnterHub()) return false;
             StartCoroutine(LoadHub()); return true;
         }
+        public bool OpenMenu()
+        {
+            if (IsLoading || !Flow.EnterMenu()) return false;
+            StartCoroutine(LoadMenu()); return true;
+        }
+        private IEnumerator LoadMenu()
+        {
+            IsLoading = true; Pause.Resume(); UnbindDungeon();
+            yield return SceneManager.LoadSceneAsync("MainMenu"); IsLoading = false;
+        }
         private IEnumerator LoadHub()
         {
-            IsLoading = true; UnbindDungeon();
+            IsLoading = true; Pause.Resume(); UnbindDungeon();
             yield return SceneManager.LoadSceneAsync("Hub"); IsLoading = false;
         }
         public bool StartRun()

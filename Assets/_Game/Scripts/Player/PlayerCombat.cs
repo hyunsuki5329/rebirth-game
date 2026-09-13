@@ -31,6 +31,7 @@ namespace Roguelite
         }
         private void Update()
         {
+            if (Time.timeScale == 0) return;
             if (health.IsDead) { pending = false; movement.ActionMultiplier = 1; return; }
             if (input.AttackPressed) RequestAttack(aim.Direction);
             if (pending && Time.time >= impactAt) { pending = false; Strike(); }
@@ -38,7 +39,7 @@ namespace Roguelite
         }
         public bool RequestAttack(Vector2 facing)
         {
-            if (!isActiveAndEnabled || health.IsDead || IsAttacking || facing.sqrMagnitude < 0.001f) return false;
+            if (!isActiveAndEnabled || Time.timeScale == 0 || health.IsDead || IsAttacking || facing.sqrMagnitude < 0.001f) return false;
             direction = facing.normalized;
             startedAt = Time.time;
             float speed = Mathf.Max(0.1f, SpeedMultiplier * ItemSpeedMultiplier);

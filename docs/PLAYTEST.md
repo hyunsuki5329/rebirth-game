@@ -20,6 +20,7 @@ Unity에서 `Roguelite > Play Vertical Slice`를 선택한다. MainMenu를 열�
 - 다른 Combo: Dash → 공격 → 공격. 단계 사이에는 1초 이내에 다음 행동을 한다. Cooldown에 거절된 공격 클릭은 Combo로 세지 않는다.
 - 보스는 방향 예고 돌진과 바닥 순차 폭발을 번갈아 사용한다. 공격 후 Recovery가 반격 구간이다.
 - 결과 화면은 획득 Gold와 보존율을 표시한다. Victory는 100%, Death는 50%를 Bank Gold에 한 번만 정산한다. `Return to Hub` 후 다시 시작하면 HP, 아이템, 진화, Momentum과 Run Gold는 초기화된다.
+- Dungeon의 `Pause` 버튼으로 전투와 시간을 멈춘다. 정지 화면에서 볼륨을 조절하거나 `Resume`으로 이어갈 수 있다. Hub의 `Main Menu`는 시작 메뉴로 돌아간다. HUD에 Dash의 남은 Cooldown을 표시한다.
 
 - 첫 승리 후 Bank Gold가 100 이상이면 Hub의 `Rebirth`를 사용할 수 있다. 비용을 소비하고 Point 1, 영구 Gold 배율 2배와 Threat 1을 얻는다. 기존 Unlock과 영구 Upgrade는 유지된다.
 - Vitality는 Point 1로 다음 런 최대 HP를 20 늘린다. Focus는 Point 1로 Combo 단계 사이 허용 시간을 0.25초 늘린다. 각 Upgrade는 한 번만 구매한다.

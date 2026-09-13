@@ -15,6 +15,7 @@ namespace Roguelite
         public void SetTarget(HealthBody value) => target = value;
         private void Update()
         {
+            if (Time.timeScale == 0) return;
             if (health.IsDead || target == null || target.IsDead) { motor.DesiredVelocity = Vector2.zero; attack.Cancel(); return; }
             Vector2 delta = target.transform.position - transform.position;
             Tick(delta);

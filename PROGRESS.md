@@ -1,7 +1,7 @@
 # Vertical Slice Progress
 
 ## Current Milestone
-M11 — Save/Load validated. EditMode 57/57, PlayMode 59/59 ordinary tests and two separate-process relaunch checks 1/1 each passed. M10 committed as ae04d21; M11 ready for commit.
+M12 — integration validated. EditMode 60/60 and PlayMode 63/63 ordinary tests passed; independent review complete. M11 committed as a4f2c31; M12 ready for commit.
 
 ## Completed Work
 - M0 foundation (a859db1), M1 player/input (3706a6a), M2 combat (ad5bc2b), M3 enemies (f2f9f37), M4 rooms (4f4e2ae), M5 Momentum/Combo (65701e3).
@@ -27,13 +27,13 @@ Source Editor startup/screenshots confirmed applied artwork and Bow selection. T
 MANUAL_PLAYTEST_REQUIRED — responsiveness, combat feel, ordinary-player combo difficulty and visual readability. Art currently uses static idle sprites and rotating held weapons. Human-only checks do not prevent subsequent implementation under the user's instructions.
 
 ## Known Issues
-No known failing M0–M11 automated check. Pause integration and Windows build remain M12/M13. Human pacing/feel/readability checks remain MANUAL_PLAYTEST_REQUIRED. Referenced .github/agents prompt files remain absent; their contents are not inferred.
+No known failing M0–M12 automated check. Windows build/runtime smoke and final requirement audit remain M13. Human pacing/feel/readability checks remain MANUAL_PLAYTEST_REQUIRED. Referenced .github/agents prompt files remain absent; their contents are not inferred.
 
 ## Remaining Work
-M12–M13 in order, each with tests and commit; outstanding human playtests. Full goal remains unfinished.
+M13 Windows Development Build, build execution/full-loop smoke, relaunch-save verification, final requirement audit and commit; outstanding human playtests. Full goal remains unfinished.
 
 ## Next Action
-Commit validated M11, then begin M12 pause/input/time integration, HUD cooldown and complete normal-route/shortcut/death/evolution flow checks. Do not mark the goal complete before M13 build and execution QA.
+Commit validated M12, then implement M13 build tooling and standalone execution verification. Do not mark the goal complete before every verifiable M13 requirement is proved.
 
 ## Latest follow-up — weapon grip
 Bow orientation corrected; all weapons use explicit grip anchoring with hand markers. Added melee swing, Bow drawing-hand/recoil and front/back layering. EditMode 40/40 and PlayMode 41/41 passed; no game exceptions or compile errors in final logs. Independent review completed. Source Editor shows updated rendering; final visual feel remains MANUAL_PLAYTEST_REQUIRED. M7 follow-up completed; see docs/qa/m07.md.
@@ -54,3 +54,8 @@ Data-driven Rebirth cost/multiplier, one-time HP/Combo upgrades, preserved meta 
 Added schemaVersion 1 envelope, Profile Settings, stable-ID/value validation and a file store with temporary-file flush/replace, backup recovery and preservation of corrupt/unsupported primary and backup originals. Expected I/O failures return an explicit error without changing the caller's Profile or previous valid file. Failed preservation blocks writes. GameBootstrap now loads/saves through persistentDataPath by default; settlement, Rebirth, purchases and volume changes save, with failure/retry and recovery notices. Tests use isolated QA profiles. Session tests 5/5 and separate Unity-process write/read checks 1/1 each passed. Review's backup-preservation issue reproduced, fixed and re-reviewed; final EditMode 57/57 passed. The first full PlayMode run exposed a volume-click test failure; the cause and final resolution are recorded below.
 
 Final resolution: reproduced duplicate EventSystems in the test fixture, moved isolated session creation to sceneLoaded after old-scene cleanup, and added a one-EventSystem assertion. Affected sequence 9/9 and final full PlayMode 59/59 ordinary tests passed. Both explicit relaunch tests were then rerun in separate processes, 1/1 each. No compile/critical game errors or duplicate EventSystem warnings in final logs; independent review complete. M11 verifiable DoD is satisfied; docs/qa/m11.md records evidence and manual limitations.
+
+## M12 completed
+Added owned pause/time/audio restoration, Pause/Resume and pause-volume UI, Hub-to-MainMenu navigation, HUD Dash cooldown and controls. Actual mouse tests prove frozen actors/HP/cooldown, usable volume and successful resume/menu return. Fixed Input Contract is unchanged.
+
+Test-driver navigation was corrected for waypoint tolerance, obstacles, exit triggers and wall-contact escape; all movement still uses physical input/collision. Full-suite physical Safe/Shortcut Bow victories, Rebirth/next run/session reload, natural enemy Death→Hub and active-enemy Dagger evolution + Safe victory passed. Dagger ended at Gold 118/HP36; Bow Safe 116/HP100 and Shortcut 122/HP100. No runtime combat/stat cheats were added. Full EditMode 60/60 and ordinary PlayMode 63/63 passed, including Prefab/data audit. Two explicit process-relaunch checks retain separate M11 passing evidence. Final logs are free of compile/critical game errors; independent review complete. docs/qa/m12.md records input/API scope, evidence and MANUAL_PLAYTEST_REQUIRED limitations.

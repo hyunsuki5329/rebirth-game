@@ -27,7 +27,7 @@ namespace Roguelite
         private void Update()
         {
             if (session == null) return;
-            bool settingsVisible = session.Flow.Phase == RunFlowPhase.MainMenu || session.Flow.Phase == RunFlowPhase.Hub;
+            bool settingsVisible = session.Flow.Phase == RunFlowPhase.MainMenu || session.Flow.Phase == RunFlowPhase.Hub || session.Pause.IsPaused;
             volume.gameObject.SetActive(settingsVisible); quieter.gameObject.SetActive(settingsVisible); louder.gameObject.SetActive(settingsVisible);
             volume.text = $"Master volume {session.Profile.settings.masterVolume:P0}";
             quieter.interactable = louder.interactable = !session.IsLoading;

@@ -37,6 +37,7 @@ namespace Roguelite
                 weapons[i] = ButtonAt(hub.transform, session.config.weapons[i].name, 40 + i * 230, 190, () => session.SelectWeapon(index));
             }
             start = ButtonAt(hub.transform, "Enter Dungeon", 40, 275, () => session.StartRun());
+            ButtonAt(hub.transform, "Main Menu", 280, 275, () => session.OpenMenu());
             rebirthText = TextAt(hub.transform, "", 40, 350, 18);
             rebirth = ButtonAt(hub.transform, "Rebirth", 40, 465, () => session.Rebirth());
             upgrades = new Button[session.rebirthConfig != null ? session.rebirthConfig.upgrades.Length : 0];
@@ -57,6 +58,7 @@ namespace Roguelite
                 int choice = i;
                 rewards[i] = ButtonAt(hud.transform, "Reward", 18 + i * 225, 185, () => session.Dungeon.ChooseReward(choice));
             }
+            canvas.AddComponent<PauseMenu>().Initialize(session);
             canvas.AddComponent<SettingsView>().Initialize(session);
         }
         private void Update()
@@ -99,6 +101,8 @@ namespace Roguelite
                 var weapon = player.GetComponent<WeaponController>();
                 hudText.text += $"\nCombo: {player.GetComponent<ComboSystem>().LastCompleted ?? "-"}" +
                     (weapon.Current.canEvolve ? (weapon.Progress.Evolved ? " | EVOLVED" : $" | Evolution {weapon.Progress.ComboCount}/{weapon.Current.evolutionCombos}") : "");
+                hudText.text += $" | Dash {player.GetComponent<PlayerDash>().CooldownRemaining:0.0}s";
+                hudText.text += "\nWASD move | Shift hold sprint | Space dash | Mouse aim | Left click attack";
                 if (dungeon.Boss != null) hudText.text += $"\nRift Warden: {dungeon.Boss.GetComponent<EnemyHealth>().Current:0} HP | {dungeon.Boss.Phase}";
                 for (int i = 0; i < rewards.Length; i++)
                 {

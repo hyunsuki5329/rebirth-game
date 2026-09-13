@@ -58,6 +58,35 @@ namespace Roguelite.Tests
             Assert.That(session.IsLoading, Is.False); yield return null;
         }
         [UnityTest]
+        public IEnumerator PauseFreezesCombatTimersAndInputsThenResumesAndReturnsToMenu()
+        {
+            var session = Object.FindFirstObjectByType<GameBootstrap>();
+            yield return Click("Enter Hub"); yield return Loaded(session);
+            yield return Click("Enter Dungeon"); yield return Loaded(session);
+            var player = session.Dungeon.Player; var dash = player.GetComponent<PlayerDash>();
+            var combat = player.GetComponent<PlayerCombat>(); int attacks = 0; combat.AttackStarted += () => attacks++;
+            Assert.That(dash.RequestDash(Vector2.right), Is.True);
+            yield return Click("Pause"); Assert.That(session.Pause.IsPaused, Is.True);
+            float clock = Time.time, cooldown = dash.CooldownRemaining, hp = player.Current;
+            Vector3 position = player.transform.position;
+            var enemyPositions = session.Dungeon.Room.Enemies.Select(e => e.transform.position).ToArray();
+            Assert.That(Time.timeScale, Is.Zero); Assert.That(AudioListener.pause, Is.True);
+            Assert.That(combat.RequestAttack(Vector2.right), Is.False); Assert.That(dash.RequestDash(Vector2.up), Is.False);
+            yield return Click("Vol -"); yield return new WaitForSecondsRealtime(0.3f);
+            Assert.That(Time.time, Is.EqualTo(clock)); Assert.That(dash.CooldownRemaining, Is.EqualTo(cooldown));
+            Assert.That(player.Current, Is.EqualTo(hp)); Assert.That(player.transform.position, Is.EqualTo(position));
+            Assert.That(session.Dungeon.Room.Enemies.Select(e => e.transform.position).ToArray(), Is.EqualTo(enemyPositions));
+            Assert.That(player.GetComponent<PlayerInputReader>().Move, Is.EqualTo(Vector2.zero)); Assert.That(attacks, Is.Zero);
+            Assert.That(session.Profile.settings.masterVolume, Is.EqualTo(0.9f).Within(0.001));
+            yield return Click("Resume"); Assert.That(session.Pause.IsPaused, Is.False); Assert.That(Time.timeScale, Is.EqualTo(1));
+            yield return new WaitForSeconds(0.1f); Assert.That(dash.CooldownRemaining, Is.LessThan(cooldown)); Assert.That(attacks, Is.Zero);
+            player.Receive(10000, Vector2.zero); yield return null;
+            yield return Click("Return to Hub"); yield return Loaded(session);
+            yield return Click("Main Menu"); yield return Loaded(session);
+            Assert.That(session.Flow.Phase, Is.EqualTo(RunFlowPhase.MainMenu)); Assert.That(session.Dungeon, Is.Null);
+            Assert.That(Time.timeScale, Is.EqualTo(1)); Assert.That(AudioListener.pause, Is.False);
+        }
+        [UnityTest]
         public IEnumerator MouseChangesVolumeAndPersistsSetting()
         {
             var session = Object.FindFirstObjectByType<GameBootstrap>();
