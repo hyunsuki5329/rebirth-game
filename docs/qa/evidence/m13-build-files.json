@@ -1,0 +1,1482 @@
+[
+  {
+    "path": "Builds/Windows/ActionRoguelite.exe",
+    "bytes": 667136,
+    "sha256": "56C28AFBA054092826B7A8A80BA3767DAA87967F182C0C562EB2F98799175B7A"
+  },
+  {
+    "path": "Builds/Windows/UnityCrashHandler64.exe",
+    "bytes": 1728936,
+    "sha256": "AE5DB232862C121F59D77F30D4C6BBB7246A5AC5F48ACC25A55ECCA4ED5F7570"
+  },
+  {
+    "path": "Builds/Windows/UnityPlayer.dll",
+    "bytes": 84343728,
+    "sha256": "A56336022AB3C15EC474C09198F8389BD3448BB54D67C928EEFE20B1C77686C2"
+  },
+  {
+    "path": "Builds/Windows/WinPixEventRuntime.dll",
+    "bytes": 58368,
+    "sha256": "81ADCFD8253C3489BE720DA7E30F16004DC9A1F02A8B418C6C3AEF4993032E6D"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/app.info",
+    "bytes": 22,
+    "sha256": "176585114941A18A1AD787308056EE52BF5A3408DD641E163EB66A2CC35B3AAB"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/boot.config",
+    "bytes": 375,
+    "sha256": "38F13DBF121F8FEF9B0E2227259040492D4516E14B5E344DF94ADFD2213AE4DF"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/globalgamemanagers",
+    "bytes": 220020,
+    "sha256": "FAA0122F2A3801BA2BBE44E2CE47429D20411E6BF0E90FDB38C463B0FD73E325"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/globalgamemanagers.assets",
+    "bytes": 1005672,
+    "sha256": "3D54BB90D8E81D9858E67AB0EB608063425B0681AB04B062CE6BE7C3B6930F5D"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/globalgamemanagers.assets.resS",
+    "bytes": 6176992,
+    "sha256": "F122983B2E999B7F97C5B76FF4A4D07663DF0407E3D921D2826AA61D3671A70A"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/level0",
+    "bytes": 1580,
+    "sha256": "BCE25114CD662E35FF220C9CBD1924F8E01B6F0CD9D1D1278798BDA4BA8095DB"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/level1",
+    "bytes": 1228,
+    "sha256": "88134C1B99697FC724B2886373171BD22FCEE790BB55B8353007C5D9B7593647"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/level2",
+    "bytes": 2168,
+    "sha256": "EF266C5A15BE0ADED16498A1BA7D073D8C8436A722BD2FE945E20C96F3CED539"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/resources.assets",
+    "bytes": 348968,
+    "sha256": "2D9C30008C87C261B6978277FD478B044D75BC246CAC3FE573EF8909E2C6942A"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/resources.assets.resS",
+    "bytes": 7232,
+    "sha256": "F12F30B4C1648273E460DAB9F8EC974E616980F7A3027D54AC4CA0F19BA89CD3"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/RuntimeInitializeOnLoads.json",
+    "bytes": 4635,
+    "sha256": "41E34BDFDE15DEF56B10314DB847F69CEB19E39DAEB427B9596CC5B86EBF1A06"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/ScriptingAssemblies.json",
+    "bytes": 4360,
+    "sha256": "546F1CD70D68813C2C1E2CBF019066AD87D97C62AB8D5FE4F2AC25CF9ABBF95B"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/sharedassets0.assets",
+    "bytes": 7484,
+    "sha256": "0BCB572296F0ADF049DE17B494BEC3EFD4F2899D6132E2769699B4DBD792193B"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/sharedassets0.assets.resS",
+    "bytes": 2546464,
+    "sha256": "A84CF1DFF8796881F24243539F20C3D53FBCC076AC4FDEC981653F694645EA49"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/sharedassets1.assets",
+    "bytes": 277,
+    "sha256": "2E1FF49B275ACCCEECD8C2BEC99A7F5322BF77680A5A22DC943C0208E5650B10"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/sharedassets2.assets",
+    "bytes": 48428,
+    "sha256": "D41708AD9BE4F2E1B7F1DD7CD8D8600AEA42BD5ACD95F12FAC706D7CB3847636"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/sharedassets2.assets.resS",
+    "bytes": 3164160,
+    "sha256": "2F5DBA2D63022316A3E5F822C084B2887513708B34A6D6E35484953203188682"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Assembly-CSharp.dll",
+    "bytes": 3584,
+    "sha256": "BC6E5C894CD2E7A2B67194A376461F2678E1EEC82D562A199F0C3D7986BFDD87"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Assembly-CSharp.pdb",
+    "bytes": 17248,
+    "sha256": "36FF4CC86D496C362D752D4084BA9BD5BE47C00873994629754C98B1D450525E"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Game.Core.dll",
+    "bytes": 16896,
+    "sha256": "2D8C56145FCF64C3C9E46C4CB0288406EC87D34CA7E4140C3DDA3C96E04085DB"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Game.Core.pdb",
+    "bytes": 16604,
+    "sha256": "23BE2C161500432711A8C912B53F3EDFF69729CFDC7773432C2458418891EA89"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Game.Runtime.dll",
+    "bytes": 100352,
+    "sha256": "ECC0FB50A5C14D90D8022B2D3C6EE399D57383C4D27B54477D80D51C93C6CF58"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Game.Runtime.pdb",
+    "bytes": 50148,
+    "sha256": "33B5B39A3D53214CF468087340C9F22529EA61E57B9D12BE7B41680E43BE61E7"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Mono.Security.dll",
+    "bytes": 241152,
+    "sha256": "82DF31404DEF10FFD69C09E3A8C454E76552F3A37675D1B7B8C743CFD3D1AF6F"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/mscorlib.dll",
+    "bytes": 4632064,
+    "sha256": "194417662B72E9FDC29DF44AA07FB693A9CF2194D84E327231F3EEFF1104AE0F"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/netstandard.dll",
+    "bytes": 90112,
+    "sha256": "6AE62E082DC494A2433984177F60CA4DB5FAE69B1F360A8B33754172B310B8C5"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/System.ComponentModel.Composition.dll",
+    "bytes": 257024,
+    "sha256": "9373A420101D4C674B9F74BCE93A45C58DDB3548C130D9B65AB87235D0A4ED30"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/System.Configuration.dll",
+    "bytes": 124928,
+    "sha256": "D3ACB14B8EBAF7482D2D3E26E8C04685299E2B471A513A30508BD0CAB8336354"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/System.Core.dll",
+    "bytes": 1113088,
+    "sha256": "EBF140BF5F8D49CCAC20C14935625B0AE0A46C30AA4F90B2808F3B9678822470"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/System.Data.DataSetExtensions.dll",
+    "bytes": 29696,
+    "sha256": "79A01061129709358567A9254684BA52BA66371E01E0354E7FA4852A9F62E59F"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/System.Data.dll",
+    "bytes": 2125312,
+    "sha256": "5D0807269BFCF112AA844951232EF105BBB642ABB1E14C2E78DD70FB9245E98A"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/System.dll",
+    "bytes": 2641920,
+    "sha256": "9E8A5190797E35428B1AE9BCE6D47D39A1DBC3E974F14239E44678913DC6194A"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/System.Drawing.dll",
+    "bytes": 489984,
+    "sha256": "76DCA8FBE098C285B03DE79369F9F2AA141DEC44DE99EBCC0478C7E762024204"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/System.EnterpriseServices.dll",
+    "bytes": 44544,
+    "sha256": "D8A3D6C1929EC028793FF07DF92781C03EBB38C63005D4C12C35E3116D04FCAF"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/System.IO.Compression.dll",
+    "bytes": 114688,
+    "sha256": "7370DC2D3A6F02DBDA1A69CA596F2AE96FC464809B3BBCA6071FC1FC1EDFBB2D"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/System.IO.Compression.FileSystem.dll",
+    "bytes": 18432,
+    "sha256": "40EF91246D44D6C4D8A1505E1210B0C54963A12938BA0458959BB064D62F36F4"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/System.Net.Http.dll",
+    "bytes": 122880,
+    "sha256": "C46D5B5DC68AF8CE1B34E8ACE4372B157E2E85AB63D6B5EEA938CA71DC7FB064"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/System.Numerics.dll",
+    "bytes": 119296,
+    "sha256": "74F6771AEDD33262470E8E653FC0F4E04A659BCDADBEB44B2F8826FBA7053F77"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/System.Runtime.dll",
+    "bytes": 12288,
+    "sha256": "E0A7334B7BA419AAAB6BD3BB6992D693E689341A9178172C9BF99C2AA6A085BD"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/System.Runtime.Serialization.dll",
+    "bytes": 934400,
+    "sha256": "2AA92FB930200DDB3C9C3FFAAFF39BD6CDC6D689F19614F6C3B84A15060800F0"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/System.Security.dll",
+    "bytes": 320000,
+    "sha256": "95A29120E164E5BDB7FF5DCB2CB4641E5EA0ACA7C1AD0854B0E9B2B0FF5ABE2D"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/System.ServiceModel.Internals.dll",
+    "bytes": 215040,
+    "sha256": "6738A31088136D38A50354371FEB83A4FD1558ACCA2A5F8B165C34A859E08C47"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/System.Transactions.dll",
+    "bytes": 35328,
+    "sha256": "CFAC784408E3B7DA6C6E94EC04C162C6D902372FAB19353C02AEDA3464CE185F"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/System.Xml.dll",
+    "bytes": 3160064,
+    "sha256": "F90799A0C38F3D45E390F9768AB467BF681A052E1B807F4C59FABEF5F7EDAFFA"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/System.Xml.Linq.dll",
+    "bytes": 136704,
+    "sha256": "ED219710472B837FDDF45CC73C912E04B4D6B8CA833EA074EC1F73BC00157B05"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.AI.Navigation.dll",
+    "bytes": 24576,
+    "sha256": "17AEF3F1582B400A0F16B33084F3521535564FCE1579114C56B15F6C1524443E"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.AI.Navigation.pdb",
+    "bytes": 24736,
+    "sha256": "1C5267324142B5DCCDDE295A4BB21F4BF4CDE89B763410E250D85E7DFC5B8C60"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.Burst.dll",
+    "bytes": 327680,
+    "sha256": "1C54878F7EEB2A939852961D782870C67788FABC5EB305A59246E27F07B692DD"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.Burst.pdb",
+    "bytes": 217892,
+    "sha256": "99FC8443E40EA8D62E05A9141DAF8D8E87758B9A298DF11188D8B7A71CFB3707"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.Burst.Unsafe.dll",
+    "bytes": 5632,
+    "sha256": "9D9C1FF52411DECBEE5D9F0D1CD61EBEAA222077AA77A52101EA3DEBAFAE98E2"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.Collections.dll",
+    "bytes": 478208,
+    "sha256": "85E43074A59E511B0D90A6BF40742CD8CE869D3F6FD43D93BC8ED08CDA348D5B"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.Collections.LowLevel.ILSupport.dll",
+    "bytes": 5120,
+    "sha256": "FF50383F807F9692E4913B97E47D86FEFCB8FAA33D6D48CD3E3FD6FC7FFB448D"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.Collections.pdb",
+    "bytes": 304796,
+    "sha256": "8B737FC2615071AC287D73D2EDD8E7BAC1D2184F5D81AEB707BD41EAE7845FB2"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.InputSystem.dll",
+    "bytes": 1226240,
+    "sha256": "272126B08FC7A9252EC26D88510A21958CB0892E59A80FA07373DC39E146F800"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.InputSystem.ForUI.dll",
+    "bytes": 16384,
+    "sha256": "9A887BEF68A921F92AC707A58F80CE93BF30BAECF2484954BA214CE7D9ADC5D0"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.InputSystem.ForUI.pdb",
+    "bytes": 20396,
+    "sha256": "B74F416D99B61E108CCB64F514658D193134C1AC3E0C25D5447B693290AECB31"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.InputSystem.pdb",
+    "bytes": 563256,
+    "sha256": "B647F0F269F1DE40564C3547359735F534FE2B86AEC0112BA51F266F3D048207"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.InternalAPIEngineBridge.004.dll",
+    "bytes": 4096,
+    "sha256": "1706BB5DE213CF4551CBFE79A62AE44BA92B12DCE973FDDC2D191037717886BF"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.InternalAPIEngineBridge.004.pdb",
+    "bytes": 15848,
+    "sha256": "CBE20503B3CF38FA621C8138268CA8E74D8ED86724D4BB5CF4FEC9CCEC89CA52"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.Mathematics.dll",
+    "bytes": 871424,
+    "sha256": "6416CFFE3D140C9593579DD4388369F337843A944134341B4599B44D2B046DB2"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.Mathematics.pdb",
+    "bytes": 510636,
+    "sha256": "EBCAA5905A63DC18E17030F9A44B6F88AA3A92AFA8CAA6AAB2D610FB0EAA5D0B"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.Multiplayer.Center.Common.dll",
+    "bytes": 8704,
+    "sha256": "E754F66BB9A83D814EF43B445AA68F73D669DB509988AF44327A741201297BBD"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.Multiplayer.Center.Common.pdb",
+    "bytes": 16872,
+    "sha256": "600F31A2F82881D65774EF2FC9766D0E1A501EE910E2208B666779D40B648533"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.RenderPipeline.Universal.ShaderLibrary.dll",
+    "bytes": 7680,
+    "sha256": "7A27C6AA95A80A66B2C0306724667BC46F9BC35836C2020A005DDD9253EA1478"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.RenderPipeline.Universal.ShaderLibrary.pdb",
+    "bytes": 15908,
+    "sha256": "F78F3E58EC43113846E54696A1976DB6A7756AC94D13F7B87D0ECA7401105528"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.RenderPipelines.Core.Runtime.dll",
+    "bytes": 1230336,
+    "sha256": "AA10C49DDF63B101AC5DA907CB01E87757CB7C8C91CB6CD24E5D9DAA432D0C0B"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.RenderPipelines.Core.Runtime.pdb",
+    "bytes": 456160,
+    "sha256": "D2E27EA309643AF28102771D98D8F9B97D7916FF997A18D6CBA0402497B2F677"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.RenderPipelines.Core.Runtime.Shared.dll",
+    "bytes": 4608,
+    "sha256": "670E3935DE8B8E534222DBAEDE7FDAFA4A62E1D50F420EBCE64516B11EE5F7DE"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.RenderPipelines.Core.Runtime.Shared.pdb",
+    "bytes": 15760,
+    "sha256": "C5FFAC3B7EE9975E80DF939694B6326196B3470D0A815CCBD10A0499506A4E18"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.dll",
+    "bytes": 3584,
+    "sha256": "6C2AA20233770D2B7AC998A5958CCCB102B7E26F6E533EEDAD8EA5052E593063"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.pdb",
+    "bytes": 15604,
+    "sha256": "816763A30210582D2484CBA70A4DED136211C33E572EEC3DD27BC71069208F59"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.RenderPipelines.GPUDriven.Runtime.dll",
+    "bytes": 243712,
+    "sha256": "BEB3E80F9A8404A6E0BE14040FA016DC40872EDC7B883B66A869A162B9481A5E"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.RenderPipelines.GPUDriven.Runtime.pdb",
+    "bytes": 122064,
+    "sha256": "BBED327CEAA8BE5B2708F5660DEE4D109CC9455F3A4B17FD178BDBC3B3A4A99B"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll",
+    "bytes": 3584,
+    "sha256": "A8BF9F8323C8D0ECCC024B22E46E586283201653A89DD9C4C08984E565672312"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.pdb",
+    "bytes": 15604,
+    "sha256": "7F625367E22BCBEE4D5D5F8F9EDFD658B41868B7626A3B2A19398EA2191A0849"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.RenderPipelines.Universal.2D.Runtime.dll",
+    "bytes": 243200,
+    "sha256": "EFCB3899838F52B7A5CE66B88BAE370A9E4A52F513F8E87E5C7D7D0B409517C7"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.RenderPipelines.Universal.2D.Runtime.pdb",
+    "bytes": 151328,
+    "sha256": "E7068AEB1B957E8245B7B2235809184C0DAF3D48FA3B995ACF42DD1BD139556E"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.RenderPipelines.Universal.Config.Runtime.dll",
+    "bytes": 4096,
+    "sha256": "3D7B8AA5CDD7D2E1617032CF27B0E15EFE233F12280201F7F1740E2C3E9E3442"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.RenderPipelines.Universal.Config.Runtime.pdb",
+    "bytes": 15688,
+    "sha256": "05A307C3C8FF92432474DD841E418C915AF89D64A6E6AA60DFEBC9D44DAA63D3"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.RenderPipelines.Universal.Runtime.dll",
+    "bytes": 755200,
+    "sha256": "2DE0A020762483E4A9FE8B0CBAAB48FFAA3DBE75B73581A0D0683B6D8294AF65"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.RenderPipelines.Universal.Runtime.pdb",
+    "bytes": 307668,
+    "sha256": "E659A2BFE37A8D79D4F4565A11CCE3139DA5AEF0D67D35EFDBEBE255906ACF20"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.RenderPipelines.Universal.Shaders.dll",
+    "bytes": 3584,
+    "sha256": "BFFFCBCCF079D7CFE246F7DC3AC15A82543884FD3E57BC84B9F202C5B40F3807"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.RenderPipelines.Universal.Shaders.pdb",
+    "bytes": 15592,
+    "sha256": "AE95EBA0D42270CB16CE6ABD7C9FD14E8500F72C222A9673710431E3CAA0502F"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.TextMeshPro.dll",
+    "bytes": 496640,
+    "sha256": "05421688F6B93A279E455A4F3C29DBE139E7F0FDA14A0A937407D9CF00382ADB"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.TextMeshPro.pdb",
+    "bytes": 251456,
+    "sha256": "9B70715DCCC6F0A07C248CD088F4397AB15705F4E1C8393E0543DCAEDEDFBF03"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.Timeline.dll",
+    "bytes": 136704,
+    "sha256": "71C68BC7C53483F688B55E9525C125F9D803BF76907300F01AA670AC5D6A94F1"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.Timeline.pdb",
+    "bytes": 85384,
+    "sha256": "57E44B82E3F97E9069A83CD78207021DE14C62659E7455E16C0EBED6DDB185F8"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.UnifiedRayTracing.Runtime.dll",
+    "bytes": 100352,
+    "sha256": "729D0F279A17FD7B0E5EB5394E87410F541D7CF2B4AC58AD10CD1BD9D1DAB5A5"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.UnifiedRayTracing.Runtime.pdb",
+    "bytes": 54928,
+    "sha256": "C9131696784EB0041CF198D0BC8E08A4250EB1BA2D5CC3BFD28E5ED8E0D330BE"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll",
+    "bytes": 86016,
+    "sha256": "ED7CE205F66EAFE39BBB5D084D42E7FE11CB4B386FF208E5D5110891BE0B7B37"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.VisualScripting.Core.dll",
+    "bytes": 593408,
+    "sha256": "262C769A238BAB07EF7080E8B8439732825A98F10C622002D96340E911F541BD"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.VisualScripting.Core.pdb",
+    "bytes": 312236,
+    "sha256": "B5B5DC0EF5B10A360FF101DDE1BED8C06E5E125BFF009BE7FCDE360ED9780680"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.VisualScripting.DocCodeExamples.dll",
+    "bytes": 6144,
+    "sha256": "854CC839673F9062565006451CD721D54A04671CE813F1C2D0CBD460CA118E32"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.VisualScripting.DocCodeExamples.pdb",
+    "bytes": 16288,
+    "sha256": "723C34BB047F74227A50E4267027C1CED1EB00ED43B3B428A5D7D69CA20FE814"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.VisualScripting.Flow.dll",
+    "bytes": 361472,
+    "sha256": "3313A30DFBE1153D2C622DA4EAC48ECEF65D6D2D94E73078611D03100CB24201"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.VisualScripting.Flow.pdb",
+    "bytes": 200440,
+    "sha256": "5228A8CBDCD486D0D0D6883F14A10C3F96ED84816C3E41110DD9E73002585410"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.VisualScripting.State.dll",
+    "bytes": 28672,
+    "sha256": "355DB0887FB55A14D9D89FF2402132911B3955FB1C65E5A741927A995AAAF337"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/Unity.VisualScripting.State.pdb",
+    "bytes": 27424,
+    "sha256": "24DDC0DD038A094D156592D417822482DA3526BC8E5598FD36B4243C95451D01"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.AccessibilityModule.dll",
+    "bytes": 51120,
+    "sha256": "C8249B9CA23640F7959C529D61F2EED1C86B715D364ED17E494CFAA324001E4A"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.AccessibilityModule.pdb",
+    "bytes": 23076,
+    "sha256": "2DA85588671E8BA9EB32776B9FBCE2A980ADCB1D028B473223F0524552802DC1"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.AdaptivePerformanceModule.dll",
+    "bytes": 125352,
+    "sha256": "385CC1158FB02325535A6DF613811204AFEB7E3F240737A1FC2ADD0BD976B49E"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.AdaptivePerformanceModule.pdb",
+    "bytes": 53316,
+    "sha256": "B420B6386FA94FE71940E5B676E0FD5E3005E67DBB2423BBCEB648759F8E6422"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.AIModule.dll",
+    "bytes": 77224,
+    "sha256": "71F41D664D48128F5135884413F21EA9FA86B6CE9A4F053B5081BF286D7CCB99"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.AIModule.pdb",
+    "bytes": 20664,
+    "sha256": "9584A5CA5B4AF549E737AE92F169EFFE0B5CB9F2B35B82EA1D5B76EF9E86477D"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.AMDModule.dll",
+    "bytes": 21928,
+    "sha256": "AA68B148F2E74C334AE8BD38DDEAFF055730AEADA6F809697521EBD8920CE988"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.AMDModule.pdb",
+    "bytes": 12032,
+    "sha256": "047C2D1E63B8887C2A28D7965F53D9757ED3CB52E1CD82B077C935E1E8B9454F"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.AndroidJNIModule.dll",
+    "bytes": 121776,
+    "sha256": "8E008A125F9CD1417F84780EEB7DE840E0F2C749EF92A9D87910637F9B5F9B58"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.AndroidJNIModule.pdb",
+    "bytes": 50232,
+    "sha256": "4BDDB2C1C9F10D5A16DC0266F365EDE06AE3896EF10758A37C4D50438697885C"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.AnimationModule.dll",
+    "bytes": 225200,
+    "sha256": "E2952B9C0D9405A52F9B0E5CC72FCC14B63F23A20562E354C42CE2697C74836B"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.AnimationModule.pdb",
+    "bytes": 60776,
+    "sha256": "E8795A50F6BA64B19A16212B099AD9A4726E5C1544E7626A1961D17DB43DDF6F"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.ARModule.dll",
+    "bytes": 25520,
+    "sha256": "B36CDE8F19C92FAEF74723BC362E69DE210181323BD55F1C4ACEFE47F2CDA4A4"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.ARModule.pdb",
+    "bytes": 10012,
+    "sha256": "F98F6E3C28C373B343A6061D1A30B501B608CE92E6D43DB33EF754476FD92535"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.AssetBundleModule.dll",
+    "bytes": 41896,
+    "sha256": "8D542E27040BDD47D416A5D9D388059642A18DA0DFBF18EB350E17597CA21BAD"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.AssetBundleModule.pdb",
+    "bytes": 14152,
+    "sha256": "8D21E5F4DB4DCEC53B8FCC20882D9BD253563F85DA71AFE28FB4D2C443796B24"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.AudioModule.dll",
+    "bytes": 142760,
+    "sha256": "E340DE4E194C183136A86F45FB17DF334435775ED0680679B4C5D8370DEF04D9"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.AudioModule.pdb",
+    "bytes": 35200,
+    "sha256": "9B3FD9AAA3986FB9E600FC559E396F2F22F2A647246A71809CD98D267CACE665"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.ClothModule.dll",
+    "bytes": 36272,
+    "sha256": "1B33DD16FE1022981108455221D5D608DF9C42F9875A673C1EDB39B0A232C3DF"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.ClothModule.pdb",
+    "bytes": 10580,
+    "sha256": "4BA5B31D1FA10D8E10E0682188099E9F03CF8BD6E1B458F2DFD0F38A85AB4755"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.ClusterInputModule.dll",
+    "bytes": 28080,
+    "sha256": "A7FBA2EAB6EE716D637ECB0F377CEFB16979C7C1D26592D48EAA0665D3640FB0"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.ClusterInputModule.pdb",
+    "bytes": 9396,
+    "sha256": "C38265C655C20168144394CB8995E88A9114ADE06FF22A536FCF374EDFE4C027"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.ClusterRendererModule.dll",
+    "bytes": 26536,
+    "sha256": "D9DBF5F9AB23959510D457A7A263DCE628AA6F85490717E322BBED4DACD39C74"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.ClusterRendererModule.pdb",
+    "bytes": 10004,
+    "sha256": "E1600F446B6328F988BF7EA757DC9B498B41E13586B2464DA7CDB894A878EC50"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.ContentLoadModule.dll",
+    "bytes": 32680,
+    "sha256": "B7292CD077C601278BAC76B65EFE15DF43EFC52C13ED4913F8FD9DCAAC908016"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.ContentLoadModule.pdb",
+    "bytes": 11176,
+    "sha256": "2CD988E675B60F40CC926C830388F34D146883AB1EF8ACFE41BAA62236FE1BBE"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.CoreModule.dll",
+    "bytes": 1985968,
+    "sha256": "6E113749845967506284BC65E85D28B527A4C4C99AF73F0433AF9B4ED5ABFBC8"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.CoreModule.pdb",
+    "bytes": 573696,
+    "sha256": "DF5447D91297F05F50F50D0534B07F910B68BB940235635E62E457CB0A193BBE"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.CrashReportingModule.dll",
+    "bytes": 26544,
+    "sha256": "8B3141BDC0C6BBEF38DC74FA71021C9E54AF76B2B1A37B63E49B39CFC9271BD6"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.CrashReportingModule.pdb",
+    "bytes": 10008,
+    "sha256": "8E423C0F7EACB205A9E4F072D6EAD6DEF1FAED071F5481B7E52C28E69F38EED8"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.DirectorModule.dll",
+    "bytes": 41896,
+    "sha256": "AD25A8F620E97EC1962A5CB2D5369485108673922B47B2CADF0B4239C94CE647"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.DirectorModule.pdb",
+    "bytes": 13920,
+    "sha256": "9D210F8DA84C23FD755E099410676F86194CCEF7447C68FB84C95502E2354387"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.dll",
+    "bytes": 197544,
+    "sha256": "8F5656476F57134B88F230538FFF8ABB66EAC6BF3AC087DAA86D64D88D9D39EB"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.DSPGraphModule.dll",
+    "bytes": 31664,
+    "sha256": "688F7CBED6213DF3BD5CE6A5C6DAC92B0F3D0530841B88E82C69BCE5A2C1827E"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.DSPGraphModule.pdb",
+    "bytes": 9604,
+    "sha256": "4BF1D2D61C907AB2A4AE1194ADAFAC725049EC687208DF4F734E5E546D51BFE4"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.GameCenterModule.dll",
+    "bytes": 45992,
+    "sha256": "5BB7513B5B76E44F118323FDD27302DF224DB134BD9C6818F008A3DD6BF95534"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.GameCenterModule.pdb",
+    "bytes": 17488,
+    "sha256": "2C3FAE70530F3DDDD78F31EC2630BD538692087D7DEB54D0C12BFE4FBE75C8E9"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.GIModule.dll",
+    "bytes": 24488,
+    "sha256": "53D4BD69745EE83D5C4F0760F92B9EFDB099489FDFC64528AF9A1C95B0ADFEB8"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.GIModule.pdb",
+    "bytes": 9276,
+    "sha256": "63DCCF906F85380D2FDE85E8C4612C6A11DFE5C734BF4B6A626E29532B65A145"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.GraphicsStateCollectionSerializerModule.dll",
+    "bytes": 14256,
+    "sha256": "86EA17B6E8515403416DDFA2A08F4658B27D956CC28585F488A85D3E8939A358"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.GraphicsStateCollectionSerializerModule.pdb",
+    "bytes": 9304,
+    "sha256": "E6FE3C5041D870D90D7AD7CE45D53B908ED5868F9EE76147D6D7281688118481"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.GridModule.dll",
+    "bytes": 30632,
+    "sha256": "AAC2D49A3B8F3D853CD318F0D67CBD8CFFBE0F5F8F9CE288AAEC85F25F46C5DB"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.GridModule.pdb",
+    "bytes": 10132,
+    "sha256": "BE97B83A737655F3644ED7948C8231BAE5FCB4812EA1ED65BD471C7EBB643474"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.HierarchyCoreModule.dll",
+    "bytes": 109488,
+    "sha256": "BF800CC45F5C0354F9AD2EA22E0C1463BBFCC111C18247FEA92C24BAF4F45938"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.HierarchyCoreModule.pdb",
+    "bytes": 36440,
+    "sha256": "BA009AD2936554FE4FBB068B50BED3D1644B5979B4576CF5D48FC0949A8D95DE"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.HierarchyModule.dll",
+    "bytes": 102312,
+    "sha256": "6A5D008A26EAED4289FFEE5DEAF6628CD708211674B9FBD2C243C465B022F748"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.HierarchyModule.pdb",
+    "bytes": 47660,
+    "sha256": "99CC02B0D57E372058BFFFF525A942D324BC2049199961403AC2B5670EF6ECF0"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.HotReloadModule.dll",
+    "bytes": 24488,
+    "sha256": "A58A336E1F65A20FDAA79EF547388367540203AB07D9211D0F322F9FBB202C66"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.HotReloadModule.pdb",
+    "bytes": 9276,
+    "sha256": "4C5E3E42F62E56DFF41532D71D847CA1C1EF9A7656A75B463D8E9B19873647F3"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.IdentifiersModule.dll",
+    "bytes": 16808,
+    "sha256": "9E32C80CB919FA932D33200FC1B840F028D9BADD6BAFDF540305EE51354D98D1"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.IdentifiersModule.pdb",
+    "bytes": 9760,
+    "sha256": "F29F897F33F4BCA66D04114348EDBADA66D7C3A2829E655E99CED23FA5120FC6"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.ImageConversionModule.dll",
+    "bytes": 31152,
+    "sha256": "48DEEF77C0900F884D3A62530914188D6916519D415CD5196505A0DD2BA11B2D"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.ImageConversionModule.pdb",
+    "bytes": 10616,
+    "sha256": "95BC973FEE3888BB8A6ECF9D786A9FB7935092DC6D28AE456BFFB3AAA2F55B4B"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.IMGUIModule.dll",
+    "bytes": 214448,
+    "sha256": "59079367D288EE1AFC510AE174E6BD3373D44DFFDCF39CD6A3D81F4AE72CC6A8"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.IMGUIModule.pdb",
+    "bytes": 90484,
+    "sha256": "CC5E04AF14394A8020015DA6C819D151A0BF7A6AE6234487E5E9DA1AD24701BA"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.InputForUIModule.dll",
+    "bytes": 57768,
+    "sha256": "6B80E1F8E768DE2769FE874111C1CB63AB21B8EB662FC0F208F9F45E7AA47625"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.InputForUIModule.pdb",
+    "bytes": 26108,
+    "sha256": "9725A5009667C9DF729BFE8F56679C93CFA6E0161532700A362D479691454C2C"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.InputLegacyModule.dll",
+    "bytes": 45488,
+    "sha256": "3FE0A3B1C2DCBF8430D053BE5523C9DB768601624069C593D981FE5D89262C41"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.InputLegacyModule.pdb",
+    "bytes": 15384,
+    "sha256": "6C04FBC424556F2F473125FF9911302CE158638527B6E935A3FF22B14C83DF12"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.InputModule.dll",
+    "bytes": 28584,
+    "sha256": "C7555F9E890B65D52806D11BE2A18E79AD9E20DD3D9B7950C344B0E98269146B"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.InputModule.pdb",
+    "bytes": 10644,
+    "sha256": "083B1A7F70F91B8E062AF0AE569F30173F5F082422D345B3042031C0542B104D"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.InsightsModule.dll",
+    "bytes": 14256,
+    "sha256": "7823F02C0FD49945DB4611A061F76F952F3BEA5F1888E8A3EE32432A42564367"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.InsightsModule.pdb",
+    "bytes": 9600,
+    "sha256": "0CC18A40EE9D160604A710DD43C3ACEBC9BB90359D95E66D11C24D3CDFB1383D"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.JSONSerializeModule.dll",
+    "bytes": 27056,
+    "sha256": "7D596DAB3F41E563D3CADACFF3F9259B662D764A1EFCBFEAE7CE680F7BB503BD"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.JSONSerializeModule.pdb",
+    "bytes": 9900,
+    "sha256": "22857AB648D8D941A4171DD878B831F1E5F124056D48A249CA0DB14FA8268FC0"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.LocalizationModule.dll",
+    "bytes": 27056,
+    "sha256": "D37F7FC4D38C8EA2462194E69B4EA33F88BE334A1E7ED222F200F2E707564BAD"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.LocalizationModule.pdb",
+    "bytes": 9696,
+    "sha256": "762386A83674BB7777BEB37AC7302A40EDA8B71FF6D7BDDC32A4847DA335B6FE"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.MarshallingModule.dll",
+    "bytes": 83888,
+    "sha256": "2424626F708E2ABF2CC58F1FE5E5093805AACE99CD4E9F90B52C84DDAEC993B3"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.MarshallingModule.pdb",
+    "bytes": 14288,
+    "sha256": "6FEDCB922F34DA7A029F69580A41714727A9F2741ADCFE2EE6E828AC74466ACB"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.MultiplayerModule.dll",
+    "bytes": 17832,
+    "sha256": "B0E7CA214C64D51D2FD6703AEBDAD36B2426E6F090EF93038B3BCF08AC7ECD58"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.MultiplayerModule.pdb",
+    "bytes": 10368,
+    "sha256": "1980CB440FA8530076D1A2479988EF070DC47B0A310B6C362D351229CC1AC6B0"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.NVIDIAModule.dll",
+    "bytes": 40880,
+    "sha256": "9401CE6E59D01797DDFFC4DB283DBD7CC8ED5E9D9516CF536E0AD9A4650D3BED"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.NVIDIAModule.pdb",
+    "bytes": 16444,
+    "sha256": "810417BB3A8820B423FB4E6E2BD04990BDA09D4B9C5A954B03A8A08AFA730306"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.ParticleSystemModule.dll",
+    "bytes": 171944,
+    "sha256": "CA47A718F791E2104377E7CFE218210314A957DC1BCFB70102417ADB73B4A430"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.ParticleSystemModule.pdb",
+    "bytes": 40464,
+    "sha256": "4259A9E44175AE680A75604E848F3142C434CD3DE726C757E657E3B9C5994E85"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.pdb",
+    "bytes": 12676,
+    "sha256": "7F038B7BC68CA659396E5B929E85B48FF3087C40394F54879A007311D2B82B9A"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.PerformanceReportingModule.dll",
+    "bytes": 25008,
+    "sha256": "35E66ED8F5D0FBD8B25479AE75625B4A17CD41519DBF605970DB154757C254E2"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.PerformanceReportingModule.pdb",
+    "bytes": 9480,
+    "sha256": "71D64555E2C6FDBFDEE431651EFC9A859EA60A54481B510DE7DA2BCAC46D9688"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.Physics2DModule.dll",
+    "bytes": 586664,
+    "sha256": "A13A44E7344BA20D6FCD5ABDE493D2A159DCD4010BE1A016F6A0EB877F007766"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.Physics2DModule.pdb",
+    "bytes": 135156,
+    "sha256": "3CB1CBF9B94CA28BB38A56E369A00073B41B824074A2000D868F5B2AD2480CC6"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.PhysicsBackendPhysXModule.dll",
+    "bytes": 14256,
+    "sha256": "33AE23327A5D59EE0743AB0C5DF0B0264CCF4F292D2F0807BC8CEF40EFB5A813"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.PhysicsBackendPhysXModule.pdb",
+    "bytes": 9296,
+    "sha256": "00249E78260F203211D27C14A24F33A2EC90602A10F627BE8A9E77A08D1EAE8D"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.PhysicsModule.dll",
+    "bytes": 183720,
+    "sha256": "6112016FB7DF440B4AF9FF6D1E05CDB1D7F5DAE652CF19E3CBDC6A2CA4699D0A"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.PhysicsModule.pdb",
+    "bytes": 46224,
+    "sha256": "3DF315983E183A1AD58CDC009889FE8A15665A0B663433E6E401BC783864CA7D"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.PropertiesModule.dll",
+    "bytes": 134064,
+    "sha256": "8063760DF50B181D9F9C90DB6FAD2A34C06EF5FB02F26467384B3AEC5D14DC76"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.PropertiesModule.pdb",
+    "bytes": 62772,
+    "sha256": "6FBDF3C9E812304C9E02A86B93FFEFACE96DE6FF8541FEF7F2CB531732417760"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.RenderAs2DModule.dll",
+    "bytes": 25520,
+    "sha256": "52C9A1536D88FEDC62DF201840D435A745C16B6448B86F6E22F91902E4D92C8B"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.RenderAs2DModule.pdb",
+    "bytes": 9324,
+    "sha256": "C3A58050F8816331EDEE37B30038F9671E337ED1304B496FBAB5C9A2F1F94E99"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll",
+    "bytes": 24488,
+    "sha256": "F59D4C5E3C08DB5F532117E76B16F5D5C4D5219BA584EE94312BB7D54C399311"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.pdb",
+    "bytes": 9336,
+    "sha256": "E6B0624094B6016EC2D841994C2960F84AB49CA0236FA87D0FB597350254CCA5"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.ScreenCaptureModule.dll",
+    "bytes": 26544,
+    "sha256": "F04CDF78234BF6387AABAD5AACB327542F5A8BDCCA533EFF7401C6EEE3206E36"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.ScreenCaptureModule.pdb",
+    "bytes": 9880,
+    "sha256": "C3D54AE7DEE235B3FE8C26BEB76A3295C85E1FACD74F930450BB583F4C428977"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.ShaderRuntimeModule.dll",
+    "bytes": 25512,
+    "sha256": "1396CB6600B39B593D0A58221C978D513DD289E1DFF71A2EB2C6B2B60D1356E1"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.ShaderRuntimeModule.pdb",
+    "bytes": 9316,
+    "sha256": "4625F8597E97412A65495463D7AF15BE3CE2E53A013F8823FFD25F8CC60D5ADA"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.ShaderVariantAnalyticsModule.dll",
+    "bytes": 24488,
+    "sha256": "7A26B6FCC298B6D2251E551B7BC6FC4910CF029C9A0DC0C6CB412B722A7FCF5E"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.ShaderVariantAnalyticsModule.pdb",
+    "bytes": 9400,
+    "sha256": "9B4007F3D4E614D0011F572E93E5065E3E4AD1D98208691303E37466DA081D0A"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.SharedInternalsModule.dll",
+    "bytes": 38320,
+    "sha256": "8DB34ACFC413AEB640D9A618CC65964E3C6BE6C2DBE3F5F9EB3FA3156FBF34F3"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.SharedInternalsModule.pdb",
+    "bytes": 14288,
+    "sha256": "CC2F373B2A0B9B9C40D2FD1A75F24F1211D0DBF02D8A0FD65CDF7B847FE95DD8"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.SpriteMaskModule.dll",
+    "bytes": 28584,
+    "sha256": "C77D26F5AE1EE1CFD733D51FA9B3E44687F47AB49CB8A1E5F951FB326CFE498D"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.SpriteMaskModule.pdb",
+    "bytes": 9608,
+    "sha256": "733680F47FAF0281FB766F347F99A7F59DBE157F35B30183761C0435254016E7"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.SpriteShapeModule.dll",
+    "bytes": 32688,
+    "sha256": "AD172378591DEE76CC2D08D5A004A92AC4CE469FA1CC3A962854E29F04448CCA"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.SpriteShapeModule.pdb",
+    "bytes": 10932,
+    "sha256": "33DEA112D2D96758DA2C3D5C2D91478D5B848C59AEEFC5235ADD606BE2655DC3"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.StreamingModule.dll",
+    "bytes": 26024,
+    "sha256": "56877FF28757655FFEFA1DAF4A4255B668616277C3C84DF8F51F0DAEECBF4B92"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.StreamingModule.pdb",
+    "bytes": 9352,
+    "sha256": "7AF0C0F2D4498F038748368C2E86D1BEE74E99155F072D11546161BE81DFA4B5"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.SubstanceModule.dll",
+    "bytes": 29104,
+    "sha256": "AEDDBE082D614D20F56D26A0CB415118C17E76763094CAE3ED85567FD0F517BA"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.SubstanceModule.pdb",
+    "bytes": 11480,
+    "sha256": "A8518A761F5B1B11847FFA3BD464A20654CE65B9DD07828E0DD00743C31985A9"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.SubsystemsModule.dll",
+    "bytes": 41896,
+    "sha256": "1372E9608F65909BAF934B33FB04A8EB55BB386ED9D88E56840FFFE9BC7D8B19"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.SubsystemsModule.pdb",
+    "bytes": 16020,
+    "sha256": "C83FA4CA5DEFDBEFCBFB845A26CF48577C134A378D51271A340A3567E4C68BF1"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.TerrainModule.dll",
+    "bytes": 134056,
+    "sha256": "407E8D6C30C7FEFBCC7D888E0086F5EF8743531BFCBBC04BB11762B12558A759"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.TerrainModule.pdb",
+    "bytes": 33988,
+    "sha256": "8F34B096FD6F9EB91E9C765ED234C0C63B9A188B4A952D1015A6C1B4B67B189B"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.TerrainPhysicsModule.dll",
+    "bytes": 25520,
+    "sha256": "E8C19BD79F9D840B6AE34AD78ADAC43581C03DCB9CC375BFDBC682E8A349F4B2"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.TerrainPhysicsModule.pdb",
+    "bytes": 9740,
+    "sha256": "3763701B23C001FE265E2413A3016005A175856C132C07E8A0E890F314BFC620"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll",
+    "bytes": 81832,
+    "sha256": "1E9EC852583E53600D166D6688C62AA0E29D8EC26CEABFD9AAB5319FD098203A"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.TextCoreFontEngineModule.pdb",
+    "bytes": 29312,
+    "sha256": "29A659E37012FE16BE9BA3FF1CFBFCD9D46460E85A37944F8D65D465E80A1E27"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll",
+    "bytes": 334760,
+    "sha256": "4345D56BEA3D26F7ABA127754D95D6A1A9B754491FF5CD01D707E90219EEDE5B"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.TextCoreTextEngineModule.pdb",
+    "bytes": 153964,
+    "sha256": "EED9B5D70E39A8DF78ACD407F95575C37030A2A45610108434431E64868890B6"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.TextRenderingModule.dll",
+    "bytes": 39336,
+    "sha256": "41D9B82516A161F4E33B33EC54CCBF4FF520A546DFC0278D9D89342CF48E187F"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.TextRenderingModule.pdb",
+    "bytes": 15380,
+    "sha256": "F1EDFA86CF2CBCF822E894CA4E023002E623CDC3DAC13B695F456FD0D698E625"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.TilemapModule.dll",
+    "bytes": 58800,
+    "sha256": "742B401342DB4188A1D438CF42CFF503D927F87182615E52D463CE13BB8D5AEF"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.TilemapModule.pdb",
+    "bytes": 19112,
+    "sha256": "29DC479E3F6F5C98204E7BB6BA1EF8F9E2A4909A7BDEB8506BB9F3C5392DE53D"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.TLSModule.dll",
+    "bytes": 32176,
+    "sha256": "E824D1CF3BDF44AE67B05D795E3A64CA351B4E71F283E37FF55C8312F59692B7"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.TLSModule.pdb",
+    "bytes": 9296,
+    "sha256": "0EF0C20D4E7C2F9F4B967BCEAC3C2F0787F4EB8ED6A01288D9B892485F53FE44"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UI.dll",
+    "bytes": 295424,
+    "sha256": "0A9547976AE0DC159FC6AC79FD93DC68F84682FF5DC9A291609A4D899EA8F794"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UI.pdb",
+    "bytes": 180732,
+    "sha256": "7A5445950758AEABB5CB3FBFD2AA02AAFBF45C3F98D573A1320C22021298B3E4"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UIElementsModule.dll",
+    "bytes": 2452392,
+    "sha256": "F791CDEE383A20EF998BE28112BB4C0600528945289F9138FF4A6D5352946E16"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UIElementsModule.pdb",
+    "bytes": 1099896,
+    "sha256": "56D0C32D0295C04CC6374F64CF27428F8FE4DB604F86343F04CD84845CB1BF17"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UIModule.dll",
+    "bytes": 50088,
+    "sha256": "8490946BA29A169115BF4D3E549D42A0A5E9B1C4FB49B28D0DEA97B19C21AF99"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UIModule.pdb",
+    "bytes": 13980,
+    "sha256": "A57B3D2F66EA882FA998DB4D4DD745367DB8790478E70CE15D593F14A4722941"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UmbraModule.dll",
+    "bytes": 24496,
+    "sha256": "1FE54406A037F8F8BF0E4B648137B5D796E92716EE16D9120DED96B023E47F64"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UmbraModule.pdb",
+    "bytes": 9276,
+    "sha256": "AA7FB94403321FB41E91C7215892A6DCE6D3D4FADF1B6BBEED0EEFAF3349DBC9"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll",
+    "bytes": 35752,
+    "sha256": "903A192BF5D0CB1B7C99826CCFD67401161949ECC0EB6C07EE350216526E53C3"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.pdb",
+    "bytes": 13756,
+    "sha256": "902B40875575B81A14CC833569CC04B8B4A2C8AE527ABFD4F6314DA27163ADEF"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UnityAnalyticsModule.dll",
+    "bytes": 60848,
+    "sha256": "37C8DE9C5B3B5014C491EB70DB235BED73CB717C25D2C0A4438F3C9FADDF009E"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UnityAnalyticsModule.pdb",
+    "bytes": 18000,
+    "sha256": "E45815DCF44FCF168772F65FFE0DF612EC569B410921D0152D4A711EF8C6F6C0"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UnityConnectModule.dll",
+    "bytes": 27560,
+    "sha256": "D795553835CB0A6BBD2D13BA36799323BFBFBDF6DBE3ED709F490B80D8E8AF5A"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UnityConnectModule.pdb",
+    "bytes": 9872,
+    "sha256": "77270EBA77918654B142B440FEBADB774A1D92BFEDA49AC20207CB9F5E781041"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UnityConsentModule.dll",
+    "bytes": 16304,
+    "sha256": "8252EEEF40749B9B8D1015569A3DD0148EE5B8C2445821781476165A82713AF3"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UnityConsentModule.pdb",
+    "bytes": 9904,
+    "sha256": "C226072AE4E3C725AF82756D08CA40B685761F4272516D72E429FBF87FA02157"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UnityCurlModule.dll",
+    "bytes": 26032,
+    "sha256": "4119615947F88D586CA33CC9B217FE2F81ADA01E49214D2B9B73B186CD233E41"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UnityCurlModule.pdb",
+    "bytes": 9668,
+    "sha256": "EE9727B7A6C57CA8F90630864882913B022A2249273C5DC3F8C6087DDC896577"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll",
+    "bytes": 28592,
+    "sha256": "F1498767358FA09C93691D7907F67300EE3BEE396413B978E948C83B1E2CF48C"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.pdb",
+    "bytes": 10848,
+    "sha256": "E8080653AF27AEAC0FE60DFF4DE0C6DDFBE3CCF9F78E36A609017F28B588C797"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll",
+    "bytes": 28592,
+    "sha256": "FD8D815A45915F17EC9F63FDA402769746EA28251A408A5F439C62F4A8AF2729"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UnityWebRequestAudioModule.pdb",
+    "bytes": 10648,
+    "sha256": "9F6CB6A73DFC6E3B1BC24E48A173B42B8144DBC9149D5240F33D4549461707B1"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UnityWebRequestModule.dll",
+    "bytes": 70064,
+    "sha256": "9D777E08BFE9B9C12FF69C5BBA91A0EC67B6712C03AA62896EB892FA8FBB4009"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UnityWebRequestModule.pdb",
+    "bytes": 28484,
+    "sha256": "6E883C459428AC38886F17B30EB9ED5B768AA0B207582ADAD0842A39067DF31E"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll",
+    "bytes": 27560,
+    "sha256": "C983A36F4ECF311A8AC2F067A943612BDFDB04DD1D4B0902FE23B8C22B800CAA"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UnityWebRequestTextureModule.pdb",
+    "bytes": 10816,
+    "sha256": "7505887D6071BD86B3D96145C9804284D2AD8384900341E20289C4C7D29AC1EB"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll",
+    "bytes": 36776,
+    "sha256": "71A0DFA0AECD73F7935D58F90B24EA56ADC8C7866495EF3528E1A128F1F36A14"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.UnityWebRequestWWWModule.pdb",
+    "bytes": 13716,
+    "sha256": "4C4A1956FBA5EFD6E9F92CDF777C2CE009B29C7E034C48E297177DB468C01874"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.VectorGraphicsModule.dll",
+    "bytes": 252840,
+    "sha256": "8D8AABF185A7238AC0E205C708305A9D1DA2BA6160D497AAAC70F439EE1671F6"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.VectorGraphicsModule.pdb",
+    "bytes": 143320,
+    "sha256": "95067F8A771845784A16148F033DE3DB7F9142E968C1FB6B6BA544E6FB23ECEB"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.VehiclesModule.dll",
+    "bytes": 31656,
+    "sha256": "2946F811E0B6E3EE9748D39B916E78F418A70C4157177EFA946B8AECA90CA86D"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.VehiclesModule.pdb",
+    "bytes": 10516,
+    "sha256": "A3B25B709937D41E91AB01B330B9B999CBD936FAD913ACEDB7E3D1CA15FD150D"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.VFXModule.dll",
+    "bytes": 78248,
+    "sha256": "5C62F2E10B2559AE6333487DFB94C82C2E128A074F4777D9E69A74C8E522AE6E"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.VFXModule.pdb",
+    "bytes": 18784,
+    "sha256": "43D8CF5A288A9D81CBC30532825BD6AD8AC336C332D7C97B21F4D2137DE6E7E0"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.VideoModule.dll",
+    "bytes": 49072,
+    "sha256": "33E1F716564B7FC9169C7AD9B4B433B2E7AB3EAF760E83CC658C49BF216DBF51"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.VideoModule.pdb",
+    "bytes": 14164,
+    "sha256": "DDAA5334205E1FE942811190C494A9D996C8EAF8470EC786D31E70CE0BFC89C3"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.VirtualTexturingModule.dll",
+    "bytes": 42920,
+    "sha256": "8A0E54D097692EB82C8863B1D3F2319E1794E43F57B9E4D77A0EA728711173F8"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.VirtualTexturingModule.pdb",
+    "bytes": 13524,
+    "sha256": "9D8C25B853D56EC6A7A1FFD987C916CCB94B10C0C0472C5F11F85B135B4C259C"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.VRModule.dll",
+    "bytes": 31664,
+    "sha256": "881678FD43267960701BFFE14B698FC40FBAB28247B675C2E18C5578DCD6C0D2"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.VRModule.pdb",
+    "bytes": 10404,
+    "sha256": "034E3228A06CB3317F84AE15E2BC45EDDD558564E38FE0A2F7302CE9F6D93474"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.WindModule.dll",
+    "bytes": 26536,
+    "sha256": "3DB21BBC42641B0DBFE8CC802045C623BB45EC725E84734114330AC59889C18F"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.WindModule.pdb",
+    "bytes": 9412,
+    "sha256": "E067AA46FB82CBDDB52FD0A768EE833E3B60C75347BACE4C0236C19D85D13129"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.XRModule.dll",
+    "bytes": 88496,
+    "sha256": "B3F56678282A17A731C9328F1C32D1203F4388FBA7188060D9F5CB9B44C198D7"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Managed/UnityEngine.XRModule.pdb",
+    "bytes": 24288,
+    "sha256": "42E0EAFC6976B62B4F6BA48BED18F55547EB033FDCE6C02CFCF9301C6083285C"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Plugins/x86_64/lib_burst_generated.dll",
+    "bytes": 482304,
+    "sha256": "6EECD8798615B919107A65C2314537BF8A6DC35EC71FC473A13880D36429C39A"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Plugins/x86_64/lib_burst_generated.pdb",
+    "bytes": 2940928,
+    "sha256": "C4DE4A5D69E505179CC3A632FB129306C8B766885AE929386F5E1D94BE3FA090"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Plugins/x86_64/libonigwrap.dll",
+    "bytes": 551336,
+    "sha256": "C22DB1E7BE04C50EB47E67362BF705830BB95DF30C02C22DD7ADD835EE777583"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Resources/unity default resources",
+    "bytes": 5883716,
+    "sha256": "32B58BDB9CF090212B46A8CA7436DCDAE89E4EF43E9D55A835233C21D1347734"
+  },
+  {
+    "path": "Builds/Windows/ActionRoguelite_Data/Resources/unity_builtin_extra",
+    "bytes": 397816,
+    "sha256": "03FB33A3885536096B224A3D90FD62B58A735526626CEC97E17DA416E4F789FE"
+  },
+  {
+    "path": "Builds/Windows/D3D12/D3D12Core.dll",
+    "bytes": 4725304,
+    "sha256": "625BD40005B1C3708695D5256ECF230D278E6B8EDBA5A88AF70F3D91324F3052"
+  },
+  {
+    "path": "Builds/Windows/D3D12/d3d12SDKLayers.dll",
+    "bytes": 4930104,
+    "sha256": "C0730CC70D3250D3DE19C04C17845BA9E70EECAF502D684D1409195EBC5B5959"
+  },
+  {
+    "path": "Builds/Windows/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll",
+    "bytes": 7828904,
+    "sha256": "49FBAD5379FFA912DA6B9122DA57F4D00D38660CDEC5F6B5B8E2BE6FF79A057C"
+  },
+  {
+    "path": "Builds/Windows/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll",
+    "bytes": 611248,
+    "sha256": "CA1013A9AF2FB4A4E9E2B39C34281BA2E6416490071DE0FDD022D02A6AAD0D45"
+  },
+  {
+    "path": "Builds/Windows/MonoBleedingEdge/etc/mono/browscap.ini",
+    "bytes": 311984,
+    "sha256": "4DDD50F31FB968F30BEDEFC253A46DC3F2890192D05CDAA9E0A64A056EEE807E"
+  },
+  {
+    "path": "Builds/Windows/MonoBleedingEdge/etc/mono/config",
+    "bytes": 3815,
+    "sha256": "5776169973A26A387B8B3E5C0F2301A7AB9A6DD7C7D3EFA22A96ABC47FBF8662"
+  },
+  {
+    "path": "Builds/Windows/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx",
+    "bytes": 60575,
+    "sha256": "751861040B69EA63A3827507B7C8DA9C7F549DC181C1C8AF4B7CA78CC97D710A"
+  },
+  {
+    "path": "Builds/Windows/MonoBleedingEdge/etc/mono/2.0/machine.config",
+    "bytes": 29066,
+    "sha256": "E91782A27FA39FC6C1D6EE8B08529F5D35052310D0006034B878EB04B8F2AF30"
+  },
+  {
+    "path": "Builds/Windows/MonoBleedingEdge/etc/mono/2.0/settings.map",
+    "bytes": 2622,
+    "sha256": "49C6160F9D54AF4270A3B4E997FC4A8301F79B9E2070118FA46DDBCBBC44F9A2"
+  },
+  {
+    "path": "Builds/Windows/MonoBleedingEdge/etc/mono/2.0/web.config",
+    "bytes": 11635,
+    "sha256": "CF2B54339E069B9E42F7D6795EECBF562C50C1011F4CA8F65F578FE52D97FF92"
+  },
+  {
+    "path": "Builds/Windows/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser",
+    "bytes": 1605,
+    "sha256": "8A1082057AC5681DCD4E9C227ED7FB8EB42AC1618963B5DE3B65739DD77E2741"
+  },
+  {
+    "path": "Builds/Windows/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx",
+    "bytes": 60575,
+    "sha256": "751861040B69EA63A3827507B7C8DA9C7F549DC181C1C8AF4B7CA78CC97D710A"
+  },
+  {
+    "path": "Builds/Windows/MonoBleedingEdge/etc/mono/4.0/machine.config",
+    "bytes": 33598,
+    "sha256": "E60AEC2C5115D65B3ACB3C55EA21576DBD770F579166C017125571E46AE560ED"
+  },
+  {
+    "path": "Builds/Windows/MonoBleedingEdge/etc/mono/4.0/settings.map",
+    "bytes": 2622,
+    "sha256": "CE1DB1AD8A9512073164E3ECCDC193F7EDA036E1A9733CAEC4635DE21B2865C8"
+  },
+  {
+    "path": "Builds/Windows/MonoBleedingEdge/etc/mono/4.0/web.config",
+    "bytes": 18802,
+    "sha256": "E38BB8CC68FE5B4EDECDFD288D094B9E8CED7629039B2A347682ABA0D8BD7492"
+  },
+  {
+    "path": "Builds/Windows/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser",
+    "bytes": 1605,
+    "sha256": "8A1082057AC5681DCD4E9C227ED7FB8EB42AC1618963B5DE3B65739DD77E2741"
+  },
+  {
+    "path": "Builds/Windows/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx",
+    "bytes": 60575,
+    "sha256": "751861040B69EA63A3827507B7C8DA9C7F549DC181C1C8AF4B7CA78CC97D710A"
+  },
+  {
+    "path": "Builds/Windows/MonoBleedingEdge/etc/mono/4.5/machine.config",
+    "bytes": 34056,
+    "sha256": "EE950004B576FB28DC85F4B0435ED04BF96612DE2E8B53BE84D07AFE85A0DE6C"
+  },
+  {
+    "path": "Builds/Windows/MonoBleedingEdge/etc/mono/4.5/settings.map",
+    "bytes": 2622,
+    "sha256": "CE1DB1AD8A9512073164E3ECCDC193F7EDA036E1A9733CAEC4635DE21B2865C8"
+  },
+  {
+    "path": "Builds/Windows/MonoBleedingEdge/etc/mono/4.5/web.config",
+    "bytes": 18811,
+    "sha256": "C4CBDDD4FD9347B58CC5A72B36DC4BA1AD2BB699E65869D05CD3FB9865F0D824"
+  },
+  {
+    "path": "Builds/Windows/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser",
+    "bytes": 1605,
+    "sha256": "8A1082057AC5681DCD4E9C227ED7FB8EB42AC1618963B5DE3B65739DD77E2741"
+  },
+  {
+    "path": "Builds/Windows/MonoBleedingEdge/etc/mono/mconfig/config.xml",
+    "bytes": 25817,
+    "sha256": "0C56E34C69124510FA8C19E7B4C2CA6C1C4FF460AE19F798DD0CA035809E396D"
+  },
+  {
+    "path": "Builds/Windows/My Game_BurstDebugInformation_DoNotShip/Data/Plugins/x86_64/lib_burst_generated.txt",
+    "bytes": 193280,
+    "sha256": "F7DA5E7691E27565BA058E848A0B749F0336572698A6805DC4A3446EE6B6E26F"
+  }
+]

@@ -1,7 +1,7 @@
 # Vertical Slice Progress
 
 ## Current Milestone
-M12 — integration validated. EditMode 60/60 and PlayMode 63/63 ordinary tests passed; independent review complete. M11 committed as a4f2c31; M12 ready for commit.
+M13 — build and final QA in progress. M12 committed as c245e01 after EditMode 60/60 and PlayMode 63/63 ordinary tests passed; independent review complete.
 
 ## Completed Work
 - M0 foundation (a859db1), M1 player/input (3706a6a), M2 combat (ad5bc2b), M3 enemies (f2f9f37), M4 rooms (4f4e2ae), M5 Momentum/Combo (65701e3).
@@ -33,7 +33,10 @@ No known failing M0–M12 automated check. Windows build/runtime smoke and final
 M13 Windows Development Build, build execution/full-loop smoke, relaunch-save verification, final requirement audit and commit; outstanding human playtests. Full goal remains unfinished.
 
 ## Next Action
-Commit validated M12, then implement M13 build tooling and standalone execution verification. Do not mark the goal complete before every verifiable M13 requirement is proved.
+Inspect the live m13-play Unity process/result, then complete the requirement audit, standalone visual inspection, final QA evidence and M13 commit before marking the goal complete. README and docs/qa/m13.md are now present.
+
+## M13 verification update
+Windows Development Build succeeded with zero errors/warnings. Actual standalone Safe Route Boss victory (Gold 116/HP 100), Rebirth, upgrade/settings save and next Threat 1 run passed using isolated QA profile m13-fd01721e95a9. After explicit termination of the held hidden player, a separate executable process verified every serialized Profile field and no mid-run resume. Reports are preserved in docs/qa/evidence/m13-smoke-*.json. Full EditMode 61/61 passed; latest full PlayMode m13-play was launched as PID 7100 and its terminal result still requires inspection. Independent M13 code review found no actionable blockers. Hidden standalone window was absent from native window inventory; visual verification is not claimed. Final audit, remaining verification and M13 commit are still pending. Goal remains active.
 
 ## Latest follow-up — weapon grip
 Bow orientation corrected; all weapons use explicit grip anchoring with hand markers. Added melee swing, Bow drawing-hand/recoil and front/back layering. EditMode 40/40 and PlayMode 41/41 passed; no game exceptions or compile errors in final logs. Independent review completed. Source Editor shows updated rendering; final visual feel remains MANUAL_PLAYTEST_REQUIRED. M7 follow-up completed; see docs/qa/m07.md.

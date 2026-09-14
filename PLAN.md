@@ -1,14 +1,14 @@
 # 2D Action Roguelite Vertical Slice Plan
 
 **작성일:** 2026-09-08
-**상태:** 프로젝트 분석과 설계 완료용 계획. 게임 구현은 시작하지 않음. 모든 Milestone은 미착수다.
+**상태:** M0–M13 구현·자동 검증 완료. 최종 Windows 개발 빌드와 별도 프로세스 Save 재실행 검증 통과. 사람 조작 체감 항목은 MANUAL_PLAYTEST_REQUIRED로 유지한다. 아래 초기 분석과 설계 기록은 작성 당시의 내용이며 현재 증빙은 PROGRESS.md 및 docs/qa/vertical-slice-checklist.md를 따른다.
 **Goal:** 작은 던전 한 런과 Rebirth 이후 다음 런까지 연결되는 플레이 가능한 Vertical Slice를 만든다.
 **Architecture:** C# 핵심 규칙, Unity 컴포넌트, ScriptableObject 설정을 분리한다. 기능별 책임을 나누되 범용 프레임워크를 먼저 만들지 않는다.
 **Tech Stack:** Unity 6000.3.23f1 / C# / Input System / URP / Unity Test Framework / Git / VS Code.
 **Spec:** 사용자가 제공한 개발 요청 및 루트 `AGENTS.md`의 12개 프로젝트 규칙. 본 문서에 첫 구현 범위와 설계 결정을 함께 기록한다.
 **실행 방법:** 후속 구현 요청 시 executing-plans 절차로 Milestone별 작업과 검증을 진행한다. 이 문서 작성은 구현 착수나 완료를 의미하지 않는다.
 
-## 1. 현재 프로젝트 분석
+## 1. 초기 프로젝트 분석 (2026-09-08 기록)
 
 파일을 직접 확인한 결과이며 Editor 실행, Console 정상 여부, 실제 빌드 성공은 이번 단계에서 검증하지 않았다.
 
@@ -151,10 +151,10 @@ Core/Runtime/EditMode/PlayMode asmdef를 최소 분리하고 기능마다 어셈
 **Goal:** 재현 가능한 2D 프로젝트와 버전 관리 기반을 준비한다.
 
 **Implementation Tasks**
-- [ ] AGENTS.md를 프로젝트 지침의 단일 원본으로 사용한다(파일명 정정 완료). 동일 내용의 AGENT.md가 다시 발견되면 AGENTS.md로 통합하고 제거하거나 참조 안내만 남긴다. 이 파일명·통합 방침은 다시 질문하지 않는다. 서로 충돌하는 실제 지침이 발견된 경우에만 사용자에게 질문한다.
-- [ ] Git을 초기화하고 Library/Temp/Obj/Logs/UserSettings/Builds를 제외한다. Assets의 .meta, ProjectSettings, manifest/packages-lock과 지침은 추적한다.
-- [ ] Unity 버전, VS Code 편집 연동, 패키지 로드와 필수 2D 기반을 확인한다. Orthographic Camera/XY Plane/Rigidbody2D/Collider2D/SpriteRenderer/Gravity 0을 기준 씬에서 검증한다. 기존 URP를 유지할 수 있고 2D Renderer 전환은 완료 조건이 아니다. 불필요 패키지는 참조 확인 후에만 정리한다.
-- [ ] 폴더/asmdef/PlayerTest 씬과 테스트 실행 기반을 구성한다.
+- [x] AGENTS.md를 프로젝트 지침의 단일 원본으로 사용한다(파일명 정정 완료). 동일 내용의 AGENT.md가 다시 발견되면 AGENTS.md로 통합하고 제거하거나 참조 안내만 남긴다. 이 파일명·통합 방침은 다시 질문하지 않는다. 서로 충돌하는 실제 지침이 발견된 경우에만 사용자에게 질문한다.
+- [x] Git을 초기화하고 Library/Temp/Obj/Logs/UserSettings/Builds를 제외한다. Assets의 .meta, ProjectSettings, manifest/packages-lock과 지침은 추적한다.
+- [x] Unity 버전, VS Code 편집 연동, 패키지 로드와 필수 2D 기반을 확인한다. Orthographic Camera/XY Plane/Rigidbody2D/Collider2D/SpriteRenderer/Gravity 0을 기준 씬에서 검증한다. 기존 URP를 유지할 수 있고 2D Renderer 전환은 완료 조건이 아니다. 불필요 패키지는 참조 확인 후에만 정리한다.
+- [x] 폴더/asmdef/PlayerTest 씬과 테스트 실행 기반을 구성한다.
 
 **Dependencies:** 없음. 로컬 Editor 설치와 실행 가능 여부는 이 단계에서 확인한다.
 
@@ -169,9 +169,9 @@ Core/Runtime/EditMode/PlayMode asmdef를 최소 분리하고 기능마다 어셈
 **Goal:** 반응성이 좋은 이동/Sprint/Dash/조준을 독립 검증한다.
 
 **Implementation Tasks**
-- [ ] 기존 Input Actions를 Move/Aim/Attack/Dash/Sprint 계약으로 수정하고 UI 맵을 유지한다.
-- [ ] InputReader, Movement, Sprint, Dash, Motor2D를 분리하고 속도 데이터를 연결한다.
-- [ ] 벽 충돌, 무입력 Dash, Hold 해제, 포커스 상실, 카메라 추적과 조준 표시를 구현한다.
+- [x] 기존 Input Actions를 Move/Aim/Attack/Dash/Sprint 계약으로 수정하고 UI 맵을 유지한다.
+- [x] InputReader, Movement, Sprint, Dash, Motor2D를 분리하고 속도 데이터를 연결한다.
+- [x] 벽 충돌, 무입력 Dash, Hold 해제, 포커스 상실, 카메라 추적과 조준 표시를 구현한다.
 
 **Dependencies:** M0.
 
@@ -186,9 +186,9 @@ Core/Runtime/EditMode/PlayMode asmdef를 최소 분리하고 기능마다 어셈
 **Goal:** 공격·피해·넉백·사망의 공통 계약을 만든다.
 
 **Implementation Tasks**
-- [ ] 마우스 방향 기본 공격, Hitbox/Hurtbox, attackId 중복 방지, 팀 구분을 구현한다. 준비/회복/이동 배율은 임시 기본 공격 설정으로 제공하고 M6에서 무기 데이터로 확장한다. 유효 AttackStarted/DashStarted 및 Hit/Kill 이벤트를 연결한다.
-- [ ] 순수 Damage 계산, PlayerHealth, 넉백 우선권과 사망 1회 처리를 구현한다.
-- [ ] 공격 예고/유효 범위와 피격 색상/효과를 Placeholder로 보여준다.
+- [x] 마우스 방향 기본 공격, Hitbox/Hurtbox, attackId 중복 방지, 팀 구분을 구현한다. 준비/회복/이동 배율은 임시 기본 공격 설정으로 제공하고 M6에서 무기 데이터로 확장한다. 유효 AttackStarted/DashStarted 및 Hit/Kill 이벤트를 연결한다.
+- [x] 순수 Damage 계산, PlayerHealth, 넉백 우선권과 사망 1회 처리를 구현한다.
+- [x] 공격 예고/유효 범위와 피격 색상/효과를 Placeholder로 보여준다.
 
 **Dependencies:** M1.
 
@@ -203,9 +203,9 @@ Core/Runtime/EditMode/PlayMode asmdef를 최소 분리하고 기능마다 어셈
 **Goal:** 행동이 다른 일반 적 3종과 싸울 수 있다.
 
 **Implementation Tasks**
-- [ ] Chaser는 접근 근접 공격, Ranged는 거리 유지와 예고 투사체, Charger는 예고 후 직선 돌진/회복을 구현한다.
-- [ ] EnemyData, AI/Attack/Health를 분리하고 Elite modifier 적용 지점을 둔다.
-- [ ] 벽/플레이어/적 충돌 레이어와 원거리 투사체 수명을 설정한다.
+- [x] Chaser는 접근 근접 공격, Ranged는 거리 유지와 예고 투사체, Charger는 예고 후 직선 돌진/회복을 구현한다.
+- [x] EnemyData, AI/Attack/Health를 분리하고 Elite modifier 적용 지점을 둔다.
+- [x] 벽/플레이어/적 충돌 레이어와 원거리 투사체 수명을 설정한다.
 
 **Dependencies:** M2.
 
@@ -220,9 +220,9 @@ Core/Runtime/EditMode/PlayMode asmdef를 최소 분리하고 기능마다 어셈
 **Goal:** 여러 방과 기본 보상을 진행할 수 있다.
 
 **Implementation Tasks**
-- [ ] Combat/Reward/Elite/Shortcut/Boss 타입과 작은 Room graph/Seed 선택을 구현한다.
-- [ ] 입장/문 잠금/모든 적 처치/출구 해제/다음 방을 구현한다. 빈 방과 잘못된 spawn 데이터도 검사한다.
-- [ ] RunState 생성/초기화와 최소 RewardService를 도입하고 Room Gold 1회 지급을 연결한다. 테스트 씬에서 새 RunState를 시작할 수 있게 한다. 실제 보상 선택 확장은 M6에서 한다.
+- [x] Combat/Reward/Elite/Shortcut/Boss 타입과 작은 Room graph/Seed 선택을 구현한다.
+- [x] 입장/문 잠금/모든 적 처치/출구 해제/다음 방을 구현한다. 빈 방과 잘못된 spawn 데이터도 검사한다.
+- [x] RunState 생성/초기화와 최소 RewardService를 도입하고 Room Gold 1회 지급을 연결한다. 테스트 씬에서 새 RunState를 시작할 수 있게 한다. 실제 보상 선택 확장은 M6에서 한다.
 
 **Dependencies:** M3. Boss 전투와 Shortcut 위험은 각각 M8/M7에서 완성한다.
 
@@ -237,9 +237,9 @@ Core/Runtime/EditMode/PlayMode asmdef를 최소 분리하고 기능마다 어셈
 **Goal:** 공격적 행동과 전투 행동 조합에 보상을 준다.
 
 **Implementation Tasks**
-- [ ] Momentum 증가/유예/감소/상한과 공격 속도·Gold modifier를 구현한다. 전투 시간은 주입 가능하게 하여 UI 없이 정지/재개를 검증한다.
-- [ ] 데이터 기반 Combo 2개, 시간 창, 불일치 접두사 재시작과 중복 발동 규칙을 구현한다.
-- [ ] HUD에 Momentum, Combo 피드백을 표시하고 무효 Dash/공격 스팸을 차단한다.
+- [x] Momentum 증가/유예/감소/상한과 공격 속도·Gold modifier를 구현한다. 전투 시간은 주입 가능하게 하여 UI 없이 정지/재개를 검증한다.
+- [x] 데이터 기반 Combo 2개, 시간 창, 불일치 접두사 재시작과 중복 발동 규칙을 구현한다.
+- [x] HUD에 Momentum, Combo 피드백을 표시하고 무효 Dash/공격 스팸을 차단한다.
 
 **Dependencies:** M4의 전투 이벤트와 RewardService.
 
@@ -254,11 +254,11 @@ Core/Runtime/EditMode/PlayMode asmdef를 최소 분리하고 기능마다 어셈
 **Goal:** 4개 무기 스타일(사용자 추가 요청 Bow 포함), 런 빌드 변화와 1개 진화를 체험한다.
 
 **Implementation Tasks**
-- [ ] Dagger의 빠른 짧은 연계, Sword의 중간 범위 부채꼴, Greatsword의 긴 준비/넓은 타격/큰 넉백을 데이터와 공격 구현으로 구분한다.
-- [ ] 공격 중 이동 배율과 무기별 Combo 정의를 적용한다. 현재 테스트 씬에 임시 무기 선택 UI를 제공하고 실제 Hub 연결은 M9에서 수행한다.
-- [ ] 아이템 3개와 Seed 기반 보상 선택, 중복 처리 규칙을 구현한다.
-- [ ] 사용자 추가 요청인 Bow를 네 번째 무기로 제공한다. 기존 마우스 조준/왼쪽 클릭 계약을 유지하고 단일 화살의 명중, 벽 차단, 수명, 방 전환 정리와 Momentum 연계를 검증한다.
-- [ ] Dagger Combo 3회 성공을 초기 진화 조건으로 두고 진화 후 Combo 마무리에 관통 파동을 추가한다. 조건은 데이터화하며 해당 무기를 선택하면 한 런 안에 달성 가능하게 한다.
+- [x] Dagger의 빠른 짧은 연계, Sword의 중간 범위 부채꼴, Greatsword의 긴 준비/넓은 타격/큰 넉백을 데이터와 공격 구현으로 구분한다.
+- [x] 공격 중 이동 배율과 무기별 Combo 정의를 적용한다. 현재 테스트 씬에 임시 무기 선택 UI를 제공하고 실제 Hub 연결은 M9에서 수행한다.
+- [x] 아이템 3개와 Seed 기반 보상 선택, 중복 처리 규칙을 구현한다.
+- [x] 사용자 추가 요청인 Bow를 네 번째 무기로 제공한다. 기존 마우스 조준/왼쪽 클릭 계약을 유지하고 단일 화살의 명중, 벽 차단, 수명, 방 전환 정리와 Momentum 연계를 검증한다.
+- [x] Dagger Combo 3회 성공을 초기 진화 조건으로 두고 진화 후 Combo 마무리에 관통 파동을 추가한다. 조건은 데이터화하며 해당 무기를 선택하면 한 런 안에 달성 가능하게 한다.
 
 **Dependencies:** M5.
 
@@ -273,9 +273,9 @@ Core/Runtime/EditMode/PlayMode asmdef를 최소 분리하고 기능마다 어셈
 **Goal:** 실제 위험과 보상이 있는 경로 선택을 제공한다.
 
 **Implementation Tasks**
-- [ ] Safe 2방과 Elite Shortcut 1방 분기를 연결하고 선택 전에 위험/보상을 표시한다.
-- [ ] Elite에 예고형 추가 공격 modifier를 주고 위험 방 Gold 보너스와 희귀 보상 확률을 데이터화한다.
-- [ ] 출구의 색·형태·텍스트를 구분한다. 선택 확정 후 반대 경로 보상 중복 획득을 차단한다.
+- [x] Safe 2방과 Elite Shortcut 1방 분기를 연결하고 선택 전에 위험/보상을 표시한다.
+- [x] Elite에 예고형 추가 공격 modifier를 주고 위험 방 Gold 보너스와 희귀 보상 확률을 데이터화한다.
+- [x] 출구의 색·형태·텍스트를 구분한다. 선택 확정 후 반대 경로 보상 중복 획득을 차단한다.
 
 **Dependencies:** M6.
 
@@ -290,9 +290,9 @@ Core/Runtime/EditMode/PlayMode asmdef를 최소 분리하고 기능마다 어셈
 **Goal:** 일반 적과 다른 최종 전투를 제공한다.
 
 **Implementation Tasks**
-- [ ] 패턴 1은 방향 예고 후 돌진, 패턴 2는 바닥 위험 구역 예고 후 순차 폭발로 구성한다.
-- [ ] 패턴 선택/준비/공격/회복 상태와 안전 구간을 구현한다.
-- [ ] Boss 입장 잠금, 체력 UI, 사망 시 승리 신호와 잔여 위험 제거를 연결한다.
+- [x] 패턴 1은 방향 예고 후 돌진, 패턴 2는 바닥 위험 구역 예고 후 순차 폭발로 구성한다.
+- [x] 패턴 선택/준비/공격/회복 상태와 안전 구간을 구현한다.
+- [x] Boss 입장 잠금, 체력 UI, 사망 시 승리 신호와 잔여 위험 제거를 연결한다.
 
 **Dependencies:** M7.
 
@@ -307,9 +307,9 @@ Core/Runtime/EditMode/PlayMode asmdef를 최소 분리하고 기능마다 어셈
 **Goal:** Main Menu부터 Hub 복귀와 재화 확인까지 연결한다.
 
 **Implementation Tasks**
-- [ ] Main Menu/Hub/Dungeon 씬과 RunFlow 상태 전환, 최소 GameBootstrap 연결을 구현한다. 앞 단계 테스트 씬의 구성을 실제 흐름에 연결한다.
-- [ ] Victory/Death 결과, 획득액/보존율/Bank Gold를 표시하고 Run ID로 정산을 한 번만 적용한다.
-- [ ] Hub 무기 선택, 다음 런 시작과 모든 런 전용 상태 초기화를 구현한다. Profile은 이 단계에서 메모리에 유지한다.
+- [x] Main Menu/Hub/Dungeon 씬과 RunFlow 상태 전환, 최소 GameBootstrap 연결을 구현한다. 앞 단계 테스트 씬의 구성을 실제 흐름에 연결한다.
+- [x] Victory/Death 결과, 획득액/보존율/Bank Gold를 표시하고 Run ID로 정산을 한 번만 적용한다.
+- [x] Hub 무기 선택, 다음 런 시작과 모든 런 전용 상태 초기화를 구현한다. Profile은 이 단계에서 메모리에 유지한다.
 
 **Dependencies:** M8.
 
@@ -324,9 +324,9 @@ Core/Runtime/EditMode/PlayMode asmdef를 최소 분리하고 기능마다 어셈
 **Goal:** Rebirth 전후의 영구 성장과 세계 변화를 체험한다.
 
 **Implementation Tasks**
-- [ ] 조건/비용 확인, Count/Point/데이터 기반 Gold 배율, Upgrade 2개와 구매 로직을 구현한다. 비용 100과 기존 10% 공식은 후보로만 취급하며 첫 Rebirth 도달 시간과 이후 성장 체감에 맞게 조정한다.
-- [ ] Hub에 유지/소비 항목과 Threat 증가를 표시한다. Run 중에는 Rebirth를 허용하지 않는다.
-- [ ] Threat 1의 Ranged 3방향 패턴과 보상 변화를 다음 런에 적용한다.
+- [x] 조건/비용 확인, Count/Point/데이터 기반 Gold 배율, Upgrade 2개와 구매 로직을 구현한다. 비용 100과 기존 10% 공식은 후보로만 취급하며 첫 Rebirth 도달 시간과 이후 성장 체감에 맞게 조정한다.
+- [x] Hub에 유지/소비 항목과 Threat 증가를 표시한다. Run 중에는 Rebirth를 허용하지 않는다.
+- [x] Threat 1의 Ranged 3방향 패턴과 보상 변화를 다음 런에 적용한다.
 
 **Dependencies:** M9.
 
@@ -341,11 +341,11 @@ Core/Runtime/EditMode/PlayMode asmdef를 최소 분리하고 기능마다 어셈
 **Goal:** 메타 성장과 설정이 재실행 후 유지된다.
 
 **Implementation Tasks**
-- [ ] schemaVersion과 안정된 데이터 ID를 가진 저장 DTO를 정의한다. Count/Gold 배율/Point/Upgrade/Unlock/Settings/Bank Gold/정산 ID를 포함한다.
-- [ ] persistentDataPath에 단일 Profile 파일을 저장한다. 가능하면 임시 파일 작성 후 교체하여 기존 정상 파일 손상을 줄인다. Unity 에셋 참조는 직렬화하지 않는다. 별도 원자적 트랜잭션/복구 프레임워크는 요구하지 않는다.
-- [ ] 파일이 없으면 기본 Profile을 생성한다. 손상된 파일은 보존하고 유효한 백업이 있으면 사용하며, 없으면 복구 안내 후 기본 Profile로 시작한다. 지원하지 않는 schemaVersion은 원본을 보존하고 안내한다. schemaVersion별 로더 확장 지점만 유지하며 가상의 v1→v2 migration이나 migration 테스트 framework는 필수가 아니다.
-- [ ] Settings의 기본값과 볼륨 등 첫 설정 변경 경로를 최소 UI로 제공한다. M12는 이 경로와 일시정지 메뉴를 통합한다.
-- [ ] 결과 정산/Rebirth/구매/설정 변경 시 저장한다. 저장 실패 시 원래 Profile을 유지하고 재시도를 표시한다.
+- [x] schemaVersion과 안정된 데이터 ID를 가진 저장 DTO를 정의한다. Count/Gold 배율/Point/Upgrade/Unlock/Settings/Bank Gold/정산 ID를 포함한다.
+- [x] persistentDataPath에 단일 Profile 파일을 저장한다. 가능하면 임시 파일 작성 후 교체하여 기존 정상 파일 손상을 줄인다. Unity 에셋 참조는 직렬화하지 않는다. 별도 원자적 트랜잭션/복구 프레임워크는 요구하지 않는다.
+- [x] 파일이 없으면 기본 Profile을 생성한다. 손상된 파일은 보존하고 유효한 백업이 있으면 사용하며, 없으면 복구 안내 후 기본 Profile로 시작한다. 지원하지 않는 schemaVersion은 원본을 보존하고 안내한다. schemaVersion별 로더 확장 지점만 유지하며 가상의 v1→v2 migration이나 migration 테스트 framework는 필수가 아니다.
+- [x] Settings의 기본값과 볼륨 등 첫 설정 변경 경로를 최소 UI로 제공한다. M12는 이 경로와 일시정지 메뉴를 통합한다.
+- [x] 결과 정산/Rebirth/구매/설정 변경 시 저장한다. 저장 실패 시 원래 Profile을 유지하고 재시도를 표시한다.
 
 **Dependencies:** M10. 스키마 경계는 M9 Profile 도입 때부터 지킨다.
 
@@ -360,9 +360,9 @@ Core/Runtime/EditMode/PlayMode asmdef를 최소 분리하고 기능마다 어셈
 **Goal:** 모든 요구 시스템이 하나의 정상 플레이에서 연결된다.
 
 **Implementation Tasks**
-- [ ] M9의 GameBootstrap과 앞 단계 UI를 연결하여 전체 흐름 UI, HP/Momentum/Dash cooldown, 조작 안내, 보상·진화·Threat 피드백을 통합한다.
-- [ ] 일시정지/설정/메뉴 이동 시 입력과 시간이 일관되게 정지·복구되도록 한다.
-- [ ] 데이터 참조 검증과 필요한 경우에만 측정에 근거한 최적화를 수행한다.
+- [x] M9의 GameBootstrap과 앞 단계 UI를 연결하여 전체 흐름 UI, HP/Momentum/Dash cooldown, 조작 안내, 보상·진화·Threat 피드백을 통합한다.
+- [x] 일시정지/설정/메뉴 이동 시 입력과 시간이 일관되게 정지·복구되도록 한다.
+- [x] 데이터 참조 검증과 필요한 경우에만 측정에 근거한 최적화를 수행한다.
 
 **Dependencies:** M11 및 M0~10의 검증 증빙.
 
@@ -377,10 +377,10 @@ Core/Runtime/EditMode/PlayMode asmdef를 최소 분리하고 기능마다 어셈
 **Goal:** Editor 밖에서 실행 가능한 검증된 빌드를 만든다.
 
 **Implementation Tasks**
-- [ ] EditMode/PlayMode 전체를 실행하고 Windows Development Build를 만든다.
-- [ ] Build 실행 Smoke Test로 Main Menu → Hub → Dungeon → Boss → Hub → Rebirth → 다음 Run을 확인한다. 재실행 후 Save를 확인하고 Editor/Player 로그를 점검한다.
-- [ ] 검증한 Windows 환경과 알려진 제한을 기록한다. 정확한 최소사양 확정, 정식 배포용 Build 최적화와 본격적인 CPU/GPU profiling은 후속 Polish Goal로 둔다.
-- [ ] README에 실행/조작/빌드/테스트/저장 위치/알려진 제한을 기록하고 완료 commit을 남긴다.
+- [x] EditMode/PlayMode 전체를 실행하고 Windows Development Build를 만든다.
+- [x] Build 실행 Smoke Test로 Main Menu → Hub → Dungeon → Boss → Hub → Rebirth → 다음 Run을 확인한다. 재실행 후 Save를 확인하고 Editor/Player 로그를 점검한다.
+- [x] 검증한 Windows 환경과 알려진 제한을 기록한다. 정확한 최소사양 확정, 정식 배포용 Build 최적화와 본격적인 CPU/GPU profiling은 후속 Polish Goal로 둔다.
+- [x] README에 실행/조작/빌드/테스트/저장 위치/알려진 제한을 기록하고 완료 commit을 남긴다.
 
 **Dependencies:** M12. 필요한 Windows 빌드 모듈 설치 여부를 확인한다.
 
@@ -407,7 +407,7 @@ Core/Runtime/EditMode/PlayMode asmdef를 최소 분리하고 기능마다 어셈
 | Save가 후반에 있어 구조 재작성 위험 | M9부터 Profile/Run 분리와 ID 기반 데이터를 사용. 파일 I/O는 M11. |
 | 이전 단계에서 미래 UI/Boss/Bootstrap을 요구할 위험 | M1 입력 비활성화, M4 RunState 초기화, M5 시간 주입, M6 테스트 씬 무기 선택, M7 Boss 입구 노드로 검증. M9 최소 Bootstrap, M11 설정 변경 경로를 제공하고 M12에서 통합. |
 | Save와 QA의 과도한 기반 작업 | schemaVersion 확장 지점과 단일 파일 저장/fallback으로 제한. 가상 migration, 정식 배포 최적화와 본격 profiling은 첫 Slice의 필수가 아니다. |
-| 작은 Slice 대비 시스템 수가 많음 | 1테마/3무기/3적/1Boss/1진화/1분기/Threat 2단계로 제한. 기능 삭제 대신 콘텐츠 상한 적용. |
+| 작은 Slice 대비 시스템 수가 많음 | 1테마/4무기(사용자 추가 Bow 포함)/3적/1Boss/1진화/1분기/Threat 2단계로 제한. 기능 삭제 대신 콘텐츠 상한 적용. |
 
 이 단계에서 확정된 요구 사이의 해결 불가능한 충돌은 발견하지 않았다. 재화 수치, Rebirth 조건, 보상 보존율, 무기 공격 세부 방식은 사용자 요구 자체가 아닌 본 계획의 초기 설계값이며 플레이테스트로 검증한다.
 

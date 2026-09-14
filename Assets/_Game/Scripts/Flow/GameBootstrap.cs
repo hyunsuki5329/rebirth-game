@@ -27,7 +27,8 @@ namespace Roguelite
             DontDestroyOnLoad(gameObject);
             var weaponIds = System.Array.ConvertAll(config.weapons, weapon => weapon.id);
             var upgradeIds = rebirthConfig == null ? System.Array.Empty<string>() : System.Array.ConvertAll(rebirthConfig.upgrades, upgrade => upgrade.id);
-            store = new ProfileFileStore(string.IsNullOrEmpty(profileDirectory) ? Application.persistentDataPath : profileDirectory,
+            string defaultDirectory = QaProfilePath.Resolve(Application.persistentDataPath, System.Environment.GetCommandLineArgs(), Debug.isDebugBuild);
+            store = new ProfileFileStore(string.IsNullOrEmpty(profileDirectory) ? defaultDirectory : profileDirectory,
                 new SaveCodec(weaponIds, upgradeIds));
             var loaded = store.Load(); SaveNotice = loaded.Notice;
             Flow = new RunFlow(loaded.Profile, config.victoryRetention, config.deathRetention); nextSeed = config.firstSeed;

@@ -1,6 +1,7 @@
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
 using System.Collections.Generic;
 using UnityEngine;
-namespace Roguelite.Tests
+namespace Roguelite.QA
 {
     internal static class PlaytestNavigation
     {
@@ -47,3 +48,4 @@ namespace Roguelite.Tests
         }
     }
 }
+#endif

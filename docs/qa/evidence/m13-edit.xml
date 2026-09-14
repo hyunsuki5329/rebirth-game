@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="61" result="Passed" total="61" passed="61" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.322472">
+  <test-suite type="TestSuite" id="1000" name="My Game" fullname="My Game" runstate="Runnable" testcasecount="61" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.322472" total="61" passed="61" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1092" name="Game.EditModeTests.dll" fullname="D:/Unity Project/My Game/.validation/Library/ScriptAssemblies/Game.EditModeTests.dll" runstate="Runnable" testcasecount="61" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.316791" total="61" passed="61" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="19844" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1093" name="Roguelite" fullname="Roguelite" runstate="Runnable" testcasecount="61" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.316479" total="61" passed="61" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1094" name="Tests" fullname="Roguelite.Tests" runstate="Runnable" testcasecount="61" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.316252" total="61" passed="61" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="AssetReferenceTests" fullname="Roguelite.Tests.AssetReferenceTests" classname="Roguelite.Tests.AssetReferenceTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.088611" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1002" name="AllGameScenesAndPrefabsHaveResolvableScripts" fullname="Roguelite.Tests.AssetReferenceTests.AllGameScenesAndPrefabsHaveResolvableScripts" methodname="AllGameScenesAndPrefabsHaveResolvableScripts" classname="Roguelite.Tests.AssetReferenceTests" runstate="Runnable" seed="1262972994" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.078137" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1003" name="BowAssetTests" fullname="Roguelite.Tests.BowAssetTests" classname="Roguelite.Tests.BowAssetTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.008281" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1004" name="BowHasProjectileDataAndPointFilteredTransparentArt" fullname="Roguelite.Tests.BowAssetTests.BowHasProjectileDataAndPointFilteredTransparentArt" methodname="BowHasProjectileDataAndPointFilteredTransparentArt" classname="Roguelite.Tests.BowAssetTests" runstate="Runnable" seed="704239765" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.007032" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1005" name="DamageTests" fullname="Roguelite.Tests.DamageTests" classname="Roguelite.Tests.DamageTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.004291" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="ParameterizedMethod" id="1011" name="DamageIsNonnegativeAndAppliesMultiplierBeforeArmor" fullname="Roguelite.Tests.DamageTests.DamageIsNonnegativeAndAppliesMultiplierBeforeArmor" classname="Roguelite.Tests.DamageTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.001522" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1006" name="DamageIsNonnegativeAndAppliesMultiplierBeforeArmor(10,1.5f,2,13)" fullname="Roguelite.Tests.DamageTests.DamageIsNonnegativeAndAppliesMultiplierBeforeArmor(10,1.5f,2,13)" methodname="DamageIsNonnegativeAndAppliesMultiplierBeforeArmor" classname="Roguelite.Tests.DamageTests" runstate="Runnable" seed="92213628" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000554" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1007" name="DamageIsNonnegativeAndAppliesMultiplierBeforeArmor(10,1,50,0)" fullname="Roguelite.Tests.DamageTests.DamageIsNonnegativeAndAppliesMultiplierBeforeArmor(10,1,50,0)" methodname="DamageIsNonnegativeAndAppliesMultiplierBeforeArmor" classname="Roguelite.Tests.DamageTests" runstate="Runnable" seed="48139839" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000091" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1008" name="DamageIsNonnegativeAndAppliesMultiplierBeforeArmor(-10,1,0,0)" fullname="Roguelite.Tests.DamageTests.DamageIsNonnegativeAndAppliesMultiplierBeforeArmor(-10,1,0,0)" methodname="DamageIsNonnegativeAndAppliesMultiplierBeforeArmor" classname="Roguelite.Tests.DamageTests" runstate="Runnable" seed="2066418866" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000047" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1009" name="DamageIsNonnegativeAndAppliesMultiplierBeforeArmor(10,-1,0,0)" fullname="Roguelite.Tests.DamageTests.DamageIsNonnegativeAndAppliesMultiplierBeforeArmor(10,-1,0,0)" methodname="DamageIsNonnegativeAndAppliesMultiplierBeforeArmor" classname="Roguelite.Tests.DamageTests" runstate="Runnable" seed="1598283352" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000056" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1010" name="DamageIsNonnegativeAndAppliesMultiplierBeforeArmor(10,1,-5,10)" fullname="Roguelite.Tests.DamageTests.DamageIsNonnegativeAndAppliesMultiplierBeforeArmor(10,1,-5,10)" methodname="DamageIsNonnegativeAndAppliesMultiplierBeforeArmor" classname="Roguelite.Tests.DamageTests" runstate="Runnable" seed="725074023" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000062" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1012" name="OverkillClampsHealthAndDeathOccursOnlyOnce" fullname="Roguelite.Tests.DamageTests.OverkillClampsHealthAndDeathOccursOnlyOnce" methodname="OverkillClampsHealthAndDeathOccursOnlyOnce" classname="Roguelite.Tests.DamageTests" runstate="Runnable" seed="764153480" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000615" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1013" name="PlayerPrefabContainsCombatAndHealthContracts" fullname="Roguelite.Tests.DamageTests.PlayerPrefabContainsCombatAndHealthContracts" methodname="PlayerPrefabContainsCombatAndHealthContracts" classname="Roguelite.Tests.DamageTests" runstate="Runnable" seed="516521379" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.001199" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1014" name="DungeonTests" fullname="Roguelite.Tests.DungeonTests" classname="Roguelite.Tests.DungeonTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.004824" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="ParameterizedMethod" id="1018" name="BothRoutesReachBossWithoutCycles" fullname="Roguelite.Tests.DungeonTests.BothRoutesReachBossWithoutCycles" classname="Roguelite.Tests.DungeonTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.003081" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1016" name="BothRoutesReachBossWithoutCycles(False,4)" fullname="Roguelite.Tests.DungeonTests.BothRoutesReachBossWithoutCycles(False,4)" methodname="BothRoutesReachBossWithoutCycles" classname="Roguelite.Tests.DungeonTests" runstate="Runnable" seed="236669615" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.002513" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1017" name="BothRoutesReachBossWithoutCycles(True,3)" fullname="Roguelite.Tests.DungeonTests.BothRoutesReachBossWithoutCycles(True,3)" methodname="BothRoutesReachBossWithoutCycles" classname="Roguelite.Tests.DungeonTests" runstate="Runnable" seed="916001783" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000126" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1019" name="RoomRewardsAreOneTimeAndNewRunResetsGold" fullname="Roguelite.Tests.DungeonTests.RoomRewardsAreOneTimeAndNewRunResetsGold" methodname="RoomRewardsAreOneTimeAndNewRunResetsGold" classname="Roguelite.Tests.DungeonTests" runstate="Runnable" seed="100561162" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000680" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1015" name="SameSeedProducesSameRoomChoices" fullname="Roguelite.Tests.DungeonTests.SameSeedProducesSameRoomChoices" methodname="SameSeedProducesSameRoomChoices" classname="Roguelite.Tests.DungeonTests" runstate="Runnable" seed="1849763242" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000265" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1020" name="EnemyDefinitionTests" fullname="Roguelite.Tests.EnemyDefinitionTests" classname="Roguelite.Tests.EnemyDefinitionTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.003670" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="ParameterizedMethod" id="1030" name="EachEnemyPrefabHasItsOwnBehaviorAndCombatComponents" fullname="Roguelite.Tests.EnemyDefinitionTests.EachEnemyPrefabHasItsOwnBehaviorAndCombatComponents" classname="Roguelite.Tests.EnemyDefinitionTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.002000" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1027" name="EachEnemyPrefabHasItsOwnBehaviorAndCombatComponents(&quot;Chaser&quot;)" fullname="Roguelite.Tests.EnemyDefinitionTests.EachEnemyPrefabHasItsOwnBehaviorAndCombatComponents(&quot;Chaser&quot;)" methodname="EachEnemyPrefabHasItsOwnBehaviorAndCombatComponents" classname="Roguelite.Tests.EnemyDefinitionTests" runstate="Runnable" seed="336800417" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000913" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1028" name="EachEnemyPrefabHasItsOwnBehaviorAndCombatComponents(&quot;Ranged&quot;)" fullname="Roguelite.Tests.EnemyDefinitionTests.EachEnemyPrefabHasItsOwnBehaviorAndCombatComponents(&quot;Ranged&quot;)" methodname="EachEnemyPrefabHasItsOwnBehaviorAndCombatComponents" classname="Roguelite.Tests.EnemyDefinitionTests" runstate="Runnable" seed="1973513032" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000279" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1029" name="EachEnemyPrefabHasItsOwnBehaviorAndCombatComponents(&quot;Charger&quot;)" fullname="Roguelite.Tests.EnemyDefinitionTests.EachEnemyPrefabHasItsOwnBehaviorAndCombatComponents(&quot;Charger&quot;)" methodname="EachEnemyPrefabHasItsOwnBehaviorAndCombatComponents" classname="Roguelite.Tests.EnemyDefinitionTests" runstate="Runnable" seed="463544848" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000208" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="ParameterizedMethod" id="1026" name="RangedEnemyRetreatsHoldsAndApproaches" fullname="Roguelite.Tests.EnemyDefinitionTests.RangedEnemyRetreatsHoldsAndApproaches" classname="Roguelite.Tests.EnemyDefinitionTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.001136" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1021" name="RangedEnemyRetreatsHoldsAndApproaches(1,-1)" fullname="Roguelite.Tests.EnemyDefinitionTests.RangedEnemyRetreatsHoldsAndApproaches(1,-1)" methodname="RangedEnemyRetreatsHoldsAndApproaches" classname="Roguelite.Tests.EnemyDefinitionTests" runstate="Runnable" seed="2145692592" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000239" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1022" name="RangedEnemyRetreatsHoldsAndApproaches(3.5f,0)" fullname="Roguelite.Tests.EnemyDefinitionTests.RangedEnemyRetreatsHoldsAndApproaches(3.5f,0)" methodname="RangedEnemyRetreatsHoldsAndApproaches" classname="Roguelite.Tests.EnemyDefinitionTests" runstate="Runnable" seed="1855130047" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000053" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1023" name="RangedEnemyRetreatsHoldsAndApproaches(4,0)" fullname="Roguelite.Tests.EnemyDefinitionTests.RangedEnemyRetreatsHoldsAndApproaches(4,0)" methodname="RangedEnemyRetreatsHoldsAndApproaches" classname="Roguelite.Tests.EnemyDefinitionTests" runstate="Runnable" seed="10783631" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000040" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1024" name="RangedEnemyRetreatsHoldsAndApproaches(4.5f,0)" fullname="Roguelite.Tests.EnemyDefinitionTests.RangedEnemyRetreatsHoldsAndApproaches(4.5f,0)" methodname="RangedEnemyRetreatsHoldsAndApproaches" classname="Roguelite.Tests.EnemyDefinitionTests" runstate="Runnable" seed="943144824" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000024" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1025" name="RangedEnemyRetreatsHoldsAndApproaches(6,1)" fullname="Roguelite.Tests.EnemyDefinitionTests.RangedEnemyRetreatsHoldsAndApproaches(6,1)" methodname="RangedEnemyRetreatsHoldsAndApproaches" classname="Roguelite.Tests.EnemyDefinitionTests" runstate="Runnable" seed="1966480585" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000026" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+          <test-suite type="TestFixture" id="1031" name="FoundationTests" fullname="Roguelite.Tests.FoundationTests" classname="Roguelite.Tests.FoundationTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.004047" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1032" name="PlayerTestSceneSupportsVisibleZeroGravity2DPhysics" fullname="Roguelite.Tests.FoundationTests.PlayerTestSceneSupportsVisibleZeroGravity2DPhysics" methodname="PlayerTestSceneSupportsVisibleZeroGravity2DPhysics" classname="Roguelite.Tests.FoundationTests" runstate="Runnable" seed="1811270282" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.003528" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1033" name="MomentumComboTests" fullname="Roguelite.Tests.MomentumComboTests" classname="Roguelite.Tests.MomentumComboTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.003951" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1035" name="BothCombosRecognizeAndTimeoutOrResetClearsProgress" fullname="Roguelite.Tests.MomentumComboTests.BothCombosRecognizeAndTimeoutOrResetClearsProgress" methodname="BothCombosRecognizeAndTimeoutOrResetClearsProgress" classname="Roguelite.Tests.MomentumComboTests" runstate="Runnable" seed="1011706814" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.001247" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1034" name="MomentumGraceDecayClampAndPartitionAreDeterministic" fullname="Roguelite.Tests.MomentumComboTests.MomentumGraceDecayClampAndPartitionAreDeterministic" methodname="MomentumGraceDecayClampAndPartitionAreDeterministic" classname="Roguelite.Tests.MomentumComboTests" runstate="Runnable" seed="1382953039" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000841" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1036" name="PrefixRecoveryAndLongestThenPriorityThenIdChooseOneCompletion" fullname="Roguelite.Tests.MomentumComboTests.PrefixRecoveryAndLongestThenPriorityThenIdChooseOneCompletion" methodname="PrefixRecoveryAndLongestThenPriorityThenIdChooseOneCompletion" classname="Roguelite.Tests.MomentumComboTests" runstate="Runnable" seed="847347294" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000484" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1037" name="MovementRulesTests" fullname="Roguelite.Tests.MovementRulesTests" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.005516" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1045" name="DashCooldownStartsAtEndAndRejectsRepeatedStarts" fullname="Roguelite.Tests.MovementRulesTests.DashCooldownStartsAtEndAndRejectsRepeatedStarts" methodname="DashCooldownStartsAtEndAndRejectsRepeatedStarts" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="165481748" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000859" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1046" name="InvalidDashDurationCannotCreateInfiniteSpeed" fullname="Roguelite.Tests.MovementRulesTests.InvalidDashDurationCannotCreateInfiniteSpeed" methodname="InvalidDashDurationCannotCreateInfiniteSpeed" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="1739316508" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000749" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1043" name="MovementClampsDiagonalButPreservesAnalogMagnitude" fullname="Roguelite.Tests.MovementRulesTests.MovementClampsDiagonalButPreservesAnalogMagnitude" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.002315" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1038" name="MovementClampsDiagonalButPreservesAnalogMagnitude(1,0,False,5)" fullname="Roguelite.Tests.MovementRulesTests.MovementClampsDiagonalButPreservesAnalogMagnitude(1,0,False,5)" methodname="MovementClampsDiagonalButPreservesAnalogMagnitude" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="224742059" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000568" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1039" name="MovementClampsDiagonalButPreservesAnalogMagnitude(1,1,False,5)" fullname="Roguelite.Tests.MovementRulesTests.MovementClampsDiagonalButPreservesAnalogMagnitude(1,1,False,5)" methodname="MovementClampsDiagonalButPreservesAnalogMagnitude" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="377552095" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000100" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1040" name="MovementClampsDiagonalButPreservesAnalogMagnitude(1,1,True,7.5f)" fullname="Roguelite.Tests.MovementRulesTests.MovementClampsDiagonalButPreservesAnalogMagnitude(1,1,True,7.5f)" methodname="MovementClampsDiagonalButPreservesAnalogMagnitude" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="1500719871" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000184" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1041" name="MovementClampsDiagonalButPreservesAnalogMagnitude(0,0,True,0)" fullname="Roguelite.Tests.MovementRulesTests.MovementClampsDiagonalButPreservesAnalogMagnitude(0,0,True,0)" methodname="MovementClampsDiagonalButPreservesAnalogMagnitude" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="369363781" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000044" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1042" name="MovementClampsDiagonalButPreservesAnalogMagnitude(0.5f,0,False,2.5f)" fullname="Roguelite.Tests.MovementRulesTests.MovementClampsDiagonalButPreservesAnalogMagnitude(0.5f,0,False,2.5f)" methodname="MovementClampsDiagonalButPreservesAnalogMagnitude" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="1551248012" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000057" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1044" name="SprintReleaseImmediatelyRestoresWalkingSpeed" fullname="Roguelite.Tests.MovementRulesTests.SprintReleaseImmediatelyRestoresWalkingSpeed" methodname="SprintReleaseImmediatelyRestoresWalkingSpeed" classname="Roguelite.Tests.MovementRulesTests" runstate="Runnable" seed="26088036" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000315" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1047" name="PauseContractTests" fullname="Roguelite.Tests.PauseContractTests" classname="Roguelite.Tests.PauseContractTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.002473" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1049" name="MenuTransitionCannotBypassAnActiveRunOrDiscardProfile" fullname="Roguelite.Tests.PauseContractTests.MenuTransitionCannotBypassAnActiveRunOrDiscardProfile" methodname="MenuTransitionCannotBypassAnActiveRunOrDiscardProfile" classname="Roguelite.Tests.PauseContractTests" runstate="Runnable" seed="413312122" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000785" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1048" name="SessionExposesOwnedPauseController" fullname="Roguelite.Tests.PauseContractTests.SessionExposesOwnedPauseController" methodname="SessionExposesOwnedPauseController" classname="Roguelite.Tests.PauseContractTests" runstate="Runnable" seed="1598088506" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000269" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1050" name="PixelArtTests" fullname="Roguelite.Tests.PixelArtTests" classname="Roguelite.Tests.PixelArtTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.005385" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1051" name="ActorArtAndAllHeldWeaponsAreBoundWithoutChangingColliders" fullname="Roguelite.Tests.PixelArtTests.ActorArtAndAllHeldWeaponsAreBoundWithoutChangingColliders" methodname="ActorArtAndAllHeldWeaponsAreBoundWithoutChangingColliders" classname="Roguelite.Tests.PixelArtTests" runstate="Runnable" seed="1465219551" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.004300" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1052" name="PlayerPrefabTests" fullname="Roguelite.Tests.PlayerPrefabTests" classname="Roguelite.Tests.PlayerPrefabTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.002133" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1053" name="PlayerPrefabHasSeparatedInputAndSinglePhysicsMotor" fullname="Roguelite.Tests.PlayerPrefabTests.PlayerPrefabHasSeparatedInputAndSinglePhysicsMotor" methodname="PlayerPrefabHasSeparatedInputAndSinglePhysicsMotor" classname="Roguelite.Tests.PlayerPrefabTests" runstate="Runnable" seed="419894652" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.001330" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1054" name="QaProfilePathTests" fullname="Roguelite.Tests.QaProfilePathTests" classname="Roguelite.Tests.QaProfilePathTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.002040" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1055" name="NormalLaunchUsesDefaultPathAndDevelopmentProfileStaysUnderQaRoot" fullname="Roguelite.Tests.QaProfilePathTests.NormalLaunchUsesDefaultPathAndDevelopmentProfileStaysUnderQaRoot" methodname="NormalLaunchUsesDefaultPathAndDevelopmentProfileStaysUnderQaRoot" classname="Roguelite.Tests.QaProfilePathTests" runstate="Runnable" seed="475578852" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.001074" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1056" name="RebirthProfileTests" fullname="Roguelite.Tests.RebirthProfileTests" classname="Roguelite.Tests.RebirthProfileTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.001806" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1057" name="ProfileOwnsPersistentRebirthAndUpgradeState" fullname="Roguelite.Tests.RebirthProfileTests.ProfileOwnsPersistentRebirthAndUpgradeState" methodname="ProfileOwnsPersistentRebirthAndUpgradeState" classname="Roguelite.Tests.RebirthProfileTests" runstate="Runnable" seed="1461905586" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000584" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1058" name="RebirthTests" fullname="Roguelite.Tests.RebirthTests" classname="Roguelite.Tests.RebirthTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.003780" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1059" name="EligibilityExactCostPointsAndPersistentUpgradesAreAtomic" fullname="Roguelite.Tests.RebirthTests.EligibilityExactCostPointsAndPersistentUpgradesAreAtomic" methodname="EligibilityExactCostPointsAndPersistentUpgradesAreAtomic" classname="Roguelite.Tests.RebirthTests" runstate="Runnable" seed="1520478646" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.001801" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1060" name="PermanentGrowthAndThreatRewardAreIndependentlyMeasurable" fullname="Roguelite.Tests.RebirthTests.PermanentGrowthAndThreatRewardAreIndependentlyMeasurable" methodname="PermanentGrowthAndThreatRewardAreIndependentlyMeasurable" classname="Roguelite.Tests.RebirthTests" runstate="Runnable" seed="1648913637" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.001132" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1061" name="RoomClearTests" fullname="Roguelite.Tests.RoomClearTests" classname="Roguelite.Tests.RoomClearTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.002707" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1062" name="DoorWaitsForEveryRegisteredEnemyAndClearFiresOnce" fullname="Roguelite.Tests.RoomClearTests.DoorWaitsForEveryRegisteredEnemyAndClearFiresOnce" methodname="DoorWaitsForEveryRegisteredEnemyAndClearFiresOnce" classname="Roguelite.Tests.RoomClearTests" runstate="Runnable" seed="1616335552" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.001427" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1063" name="EmptyRewardRoomIsAlreadyClear" fullname="Roguelite.Tests.RoomClearTests.EmptyRewardRoomIsAlreadyClear" methodname="EmptyRewardRoomIsAlreadyClear" classname="Roguelite.Tests.RoomClearTests" runstate="Runnable" seed="607059620" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000205" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1064" name="RoomDefinitionTests" fullname="Roguelite.Tests.RoomDefinitionTests" classname="Roguelite.Tests.RoomDefinitionTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.001571" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1065" name="EmptyCombatAndMissingSpawnAreInvalidButEmptyRewardIsValid" fullname="Roguelite.Tests.RoomDefinitionTests.EmptyCombatAndMissingSpawnAreInvalidButEmptyRewardIsValid" methodname="EmptyCombatAndMissingSpawnAreInvalidButEmptyRewardIsValid" classname="Roguelite.Tests.RoomDefinitionTests" runstate="Runnable" seed="915578686" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.001062" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1066" name="RunConclusionTests" fullname="Roguelite.Tests.RunConclusionTests" classname="Roguelite.Tests.RunConclusionTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.001031" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1067" name="SimultaneousDeathWinsAndResultCannotBeAppliedTwice" fullname="Roguelite.Tests.RunConclusionTests.SimultaneousDeathWinsAndResultCannotBeAppliedTwice" methodname="SimultaneousDeathWinsAndResultCannotBeAppliedTwice" classname="Roguelite.Tests.RunConclusionTests" runstate="Runnable" seed="1118181574" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000495" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1068" name="RunFlowTests" fullname="Roguelite.Tests.RunFlowTests" classname="Roguelite.Tests.RunFlowTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.001279" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1069" name="VictoryAndDeathSettleOnceAndOldEventsCannotPayNewRun" fullname="Roguelite.Tests.RunFlowTests.VictoryAndDeathSettleOnceAndOldEventsCannotPayNewRun" methodname="VictoryAndDeathSettleOnceAndOldEventsCannotPayNewRun" classname="Roguelite.Tests.RunFlowTests" runstate="Runnable" seed="417427497" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000815" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1070" name="RunLoopAssetTests" fullname="Roguelite.Tests.RunLoopAssetTests" classname="Roguelite.Tests.RunLoopAssetTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.001090" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1071" name="MainMenuHubAndDungeonScenesExist" fullname="Roguelite.Tests.RunLoopAssetTests.MainMenuHubAndDungeonScenesExist" methodname="MainMenuHubAndDungeonScenesExist" classname="Roguelite.Tests.RunLoopAssetTests" runstate="Runnable" seed="1153776366" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000447" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1072" name="SaveContractTests" fullname="Roguelite.Tests.SaveContractTests" classname="Roguelite.Tests.SaveContractTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000703" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1073" name="ProfileIncludesSettingsAndSaveCodecExists" fullname="Roguelite.Tests.SaveContractTests.ProfileIncludesSettingsAndSaveCodecExists" methodname="ProfileIncludesSettingsAndSaveCodecExists" classname="Roguelite.Tests.SaveContractTests" runstate="Runnable" seed="457509192" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000208" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1074" name="SaveSerializationTests" fullname="Roguelite.Tests.SaveSerializationTests" classname="Roguelite.Tests.SaveSerializationTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.141250" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1075" name="AllRequiredFieldsRoundTripAndMissingFileCreatesDefault" fullname="Roguelite.Tests.SaveSerializationTests.AllRequiredFieldsRoundTripAndMissingFileCreatesDefault" methodname="AllRequiredFieldsRoundTripAndMissingFileCreatesDefault" classname="Roguelite.Tests.SaveSerializationTests" runstate="Runnable" seed="2133807169" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.023185" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1082" name="FailedReplacementKeepsPreviousFileAndAllowsRetryWithoutChangingProfile" fullname="Roguelite.Tests.SaveSerializationTests.FailedReplacementKeepsPreviousFileAndAllowsRetryWithoutChangingProfile" methodname="FailedReplacementKeepsPreviousFileAndAllowsRetryWithoutChangingProfile" classname="Roguelite.Tests.SaveSerializationTests" runstate="Runnable" seed="1307792600" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.023576" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1079" name="InvalidOrUnsupportedFileIsPreservedWithSafeDefault" fullname="Roguelite.Tests.SaveSerializationTests.InvalidOrUnsupportedFileIsPreservedWithSafeDefault" classname="Roguelite.Tests.SaveSerializationTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.035209" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1076" name="InvalidOrUnsupportedFileIsPreservedWithSafeDefault(&quot;{}&quot;)" fullname="Roguelite.Tests.SaveSerializationTests.InvalidOrUnsupportedFileIsPreservedWithSafeDefault(&quot;{}&quot;)" methodname="InvalidOrUnsupportedFileIsPreservedWithSafeDefault" classname="Roguelite.Tests.SaveSerializationTests" runstate="Runnable" seed="919220761" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.009145" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1077" name="InvalidOrUnsupportedFileIsPreservedWithSafeDefault(&quot;not json&quot;)" fullname="Roguelite.Tests.SaveSerializationTests.InvalidOrUnsupportedFileIsPreservedWithSafeDefault(&quot;not json&quot;)" methodname="InvalidOrUnsupportedFileIsPreservedWithSafeDefault" classname="Roguelite.Tests.SaveSerializationTests" runstate="Runnable" seed="1698334765" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.012919" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1078" name="InvalidOrUnsupportedFileIsPreservedWithSafeDefault(&quot;{\&quot;schemaVersion\&quot;:99,\&quot;profile\&quot;:{}}&quot;)" fullname="Roguelite.Tests.SaveSerializationTests.InvalidOrUnsupportedFileIsPreservedWithSafeDefault(&quot;{\&quot;schemaVersion\&quot;:99,\&quot;profile\&quot;:{}}&quot;)" methodname="InvalidOrUnsupportedFileIsPreservedWithSafeDefault" classname="Roguelite.Tests.SaveSerializationTests" runstate="Runnable" seed="538259845" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.011683" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1081" name="InvalidPrimaryAndBackupBothSurviveFallbackAndLaterSaves" fullname="Roguelite.Tests.SaveSerializationTests.InvalidPrimaryAndBackupBothSurviveFallbackAndLaterSaves" methodname="InvalidPrimaryAndBackupBothSurviveFallbackAndLaterSaves" classname="Roguelite.Tests.SaveSerializationTests" runstate="Runnable" seed="1554603895" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.026151" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1084" name="UnknownIdsAndInvalidNumbersAreRejectedRatherThanSilentlyApplied" fullname="Roguelite.Tests.SaveSerializationTests.UnknownIdsAndInvalidNumbersAreRejectedRatherThanSilentlyApplied" methodname="UnknownIdsAndInvalidNumbersAreRejectedRatherThanSilentlyApplied" classname="Roguelite.Tests.SaveSerializationTests" runstate="Runnable" seed="2086669300" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000805" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1083" name="UnwritableLocationReportsFailureWithoutMutatingProfile" fullname="Roguelite.Tests.SaveSerializationTests.UnwritableLocationReportsFailureWithoutMutatingProfile" methodname="UnwritableLocationReportsFailureWithoutMutatingProfile" classname="Roguelite.Tests.SaveSerializationTests" runstate="Runnable" seed="1340093057" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.002119" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1080" name="ValidBackupRecoversAfterCorruptionAndSurvivesNextWrite" fullname="Roguelite.Tests.SaveSerializationTests.ValidBackupRecoversAfterCorruptionAndSurvivesNextWrite" methodname="ValidBackupRecoversAfterCorruptionAndSurvivesNextWrite" classname="Roguelite.Tests.SaveSerializationTests" runstate="Runnable" seed="1610585836" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.028599" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1085" name="ShortcutRewardTests" fullname="Roguelite.Tests.ShortcutRewardTests" classname="Roguelite.Tests.ShortcutRewardTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.009190" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1086" name="SeededRareRollHonorsChanceBoundsAndElitePremium" fullname="Roguelite.Tests.ShortcutRewardTests.SeededRareRollHonorsChanceBoundsAndElitePremium" methodname="SeededRareRollHonorsChanceBoundsAndElitePremium" classname="Roguelite.Tests.ShortcutRewardTests" runstate="Runnable" seed="1853814593" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.008465" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1087" name="VerticalSliceReferenceTests" fullname="Roguelite.Tests.VerticalSliceReferenceTests" classname="Roguelite.Tests.VerticalSliceReferenceTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.011988" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1088" name="GamePrefabsAndDataHaveNoMissingScriptsOrBrokenSerializedReferences" fullname="Roguelite.Tests.VerticalSliceReferenceTests.GamePrefabsAndDataHaveNoMissingScriptsOrBrokenSerializedReferences" methodname="GamePrefabsAndDataHaveNoMissingScriptsOrBrokenSerializedReferences" classname="Roguelite.Tests.VerticalSliceReferenceTests" runstate="Runnable" seed="602126103" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.011479" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1089" name="WeaponTests" fullname="Roguelite.Tests.WeaponTests" classname="Roguelite.Tests.WeaponTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.001269" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1090" name="EvolutionStartsOnThirdQualifyingComboAndRemainsEvolved" fullname="Roguelite.Tests.WeaponTests.EvolutionStartsOnThirdQualifyingComboAndRemainsEvolved" methodname="EvolutionStartsOnThirdQualifyingComboAndRemainsEvolved" classname="Roguelite.Tests.WeaponTests" runstate="Runnable" seed="981616910" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000344" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1091" name="ItemStatsStackAdditivelyAndChoicesAreDistinctAndSeeded" fullname="Roguelite.Tests.WeaponTests.ItemStatsStackAdditivelyAndChoicesAreDistinctAndSeeded" methodname="ItemStatsStackAdditivelyAndChoicesAreDistinctAndSeeded" classname="Roguelite.Tests.WeaponTests" runstate="Runnable" seed="2124908373" result="Passed" start-time="2026-09-14 00:09:25Z" end-time="2026-09-14 00:09:25Z" duration="0.000438" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/User/AppData/LocalLow/DefaultCompany/My Game\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

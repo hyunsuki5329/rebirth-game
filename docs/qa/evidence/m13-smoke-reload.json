@@ -1,0 +1,17 @@
+{
+    "passed": true,
+    "mode": "reload",
+    "error": "",
+    "unity": "6000.3.23f1",
+    "graphics": "NVIDIA GeForce RTX 4060 Ti",
+    "profilePath": "C:/Users/User/AppData/LocalLow/DefaultCompany/My Game\\QA\\m13-fd01721e95a9\\profile.json",
+    "checks": [
+        "MainMenu bootstrap exists",
+        "MainMenu reached",
+        "initial save succeeds",
+        "previous-process expected profile exists",
+        "all Profile fields survive process restart",
+        "restart does not resume a run",
+        "PASS"
+    ]
+}
